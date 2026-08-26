@@ -1,31 +1,37 @@
 import { Link } from 'react-router-dom'
-import { NAV_LINKS, SITE_LINKS } from '@/data'
+import { NAV_KEYS, SITE_LINKS } from '@/data'
+import { useLang } from '@/i18n'
+import { Logo } from './Logo'
 
 export function Footer() {
+  const { t, path } = useLang()
   return (
     <footer className="border-t border-line mt-6">
       <div className="container-x py-12 grid grid-cols-[1.4fr_1fr_1fr_1fr] max-[900px]:grid-cols-2 max-[560px]:grid-cols-1 gap-8">
         <div>
-          <div className="font-head font-black text-[17px] text-white flex items-center gap-2.5 mb-3"><i className="w-2.5 h-2.5 rounded-full bg-accent shadow-[0_0_12px_#00f0ff]" />CONSOLE<span className="text-accent">ARCHIVE</span></div>
-          <p className="text-[13px] text-muted max-w-[380px]">人类游戏机历史档案。从 1972 到 2026，记录每一台改变行业的机器，以及它们为什么重要。</p>
+          <Logo className="mb-3" />
+          <p className="text-[13px] text-muted max-w-[380px]">{t.footer.blurb}</p>
         </div>
         <div>
-          <div className="label text-accent2 mb-3">Pages</div>
-          <ul className="grid gap-1.5 text-[13.5px]">{NAV_LINKS.map((l) => <li key={l.to}><Link to={l.to} className="text-[#c5c9d0] hover:text-white transition-colors">{l.label}</Link></li>)}</ul>
+          <div className="label text-accent2 mb-3">{t.footer.pages}</div>
+          <ul className="grid gap-1.5 text-[13.5px]">{NAV_KEYS.map((l) => <li key={l.to}><Link to={path(l.to)} className="text-[#c5c9d0] hover:text-white transition-colors">{t.nav[l.key]}</Link></li>)}</ul>
         </div>
         <div>
-          <div className="label text-accent2 mb-3">Links</div>
+          <div className="label text-accent2 mb-3">{t.footer.links}</div>
           <ul className="grid gap-1.5 text-[13.5px]">
-            <li><a href={SITE_LINKS.repo} target="_blank" rel="noreferrer" className="text-[#c5c9d0] hover:text-white transition-colors">GitHub 开源仓库 ↗</a></li>
-            <li><a href={SITE_LINKS.blog} target="_blank" rel="noreferrer" className="text-[#c5c9d0] hover:text-white transition-colors">作者博客 tanzhuo.xyz ↗</a></li>
+            <li><a href={SITE_LINKS.repo} target="_blank" rel="noreferrer" className="text-[#c5c9d0] hover:text-white transition-colors">{t.footer.repo}</a></li>
+            <li><a href={SITE_LINKS.blog} target="_blank" rel="noreferrer" className="text-[#c5c9d0] hover:text-white transition-colors">{t.footer.blog}</a></li>
           </ul>
         </div>
         <div>
-          <div className="label text-accent2 mb-3">Stack</div>
-          <ul className="grid gap-1.5 text-[13.5px] text-[#c5c9d0]"><li>Vite · React 19 · TypeScript</li><li>Tailwind CSS v4 · React Router</li><li>图片：Wikimedia Commons</li></ul>
+          <div className="label text-accent2 mb-3">{t.footer.stack}</div>
+          <ul className="grid gap-1.5 text-[13.5px] text-[#c5c9d0]"><li>Vite · React 19 · TypeScript</li><li>Tailwind CSS v4 · React Router</li><li>{t.footer.images}</li></ul>
         </div>
       </div>
-      <div className="border-t border-line"><div className="container-x py-5 text-[12px] text-muted flex justify-between flex-wrap gap-2"><span>© 2026 Console Archive · <a href={SITE_LINKS.blog} target="_blank" rel="noreferrer" className="hover:text-white">{SITE_LINKS.author}</a> · <a href={SITE_LINKS.repo} target="_blank" rel="noreferrer" className="hover:text-white">MIT 开源</a></span><span className="font-head">1972 — 2026 · 9 GENERATIONS</span></div></div>
+      <div className="border-t border-line"><div className="container-x py-5 text-[12px] text-muted flex justify-between flex-wrap gap-2">
+        <span>© 2026 Console Archive · <a href={SITE_LINKS.blog} target="_blank" rel="noreferrer" className="hover:text-white">{SITE_LINKS.author}</a> · <a href={SITE_LINKS.repo} target="_blank" rel="noreferrer" className="hover:text-white">{t.footer.mit}</a></span>
+        <span className="font-head">{t.footer.gens}</span>
+      </div></div>
     </footer>
   )
 }

@@ -53,6 +53,7 @@ body::after {
   mask-image: linear-gradient(#000 60%, transparent);
 }
 ::selection { background: rgba(0,240,255,.3); }
+html[lang='ja'] body, html[lang='ja'] .font-display { font-family: 'Noto Sans JP', 'Noto Sans SC', system-ui, sans-serif; }
 
 /* ---------- utilities ---------- */
 @utility glass {

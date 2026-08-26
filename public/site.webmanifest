@@ -1,0 +1,14 @@
+{
+  "name": "Console Archive — 人类游戏机历史档案",
+  "short_name": "Console Archive",
+  "description": "从 1972 到 2026 的家用游戏机与掌机演进档案",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0b0f",
+  "theme_color": "#0a0b0f",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

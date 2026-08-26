@@ -309,7 +309,16 @@
         "合金装备",
         "生化危机"
       ],
-      "price": "¥39,800 / $299"
+      "price": "¥39,800 / $299",
+      "hw": {
+        "cpuMHz": 33.8,
+        "cores": 1,
+        "gflops": 0.0,
+        "ramMB": 3,
+        "storageGB": null,
+        "usd": 299,
+        "year": 1994
+      }
     },
     {
       "id": "ps2",
@@ -332,7 +341,16 @@
         "战神 II",
         "最终幻想 X"
       ],
-      "price": "¥39,800 / $299"
+      "price": "¥39,800 / $299",
+      "hw": {
+        "cpuMHz": 294.9,
+        "cores": 1,
+        "gflops": 6.2,
+        "ramMB": 32,
+        "storageGB": null,
+        "usd": 299,
+        "year": 2000
+      }
     },
     {
       "id": "ps3",
@@ -355,7 +373,16 @@
         "最后生还者",
         "黑暗之魂"
       ],
-      "price": "$499 / $599"
+      "price": "$499 / $599",
+      "hw": {
+        "cpuMHz": 3200,
+        "cores": 8,
+        "gflops": 192,
+        "ramMB": 512,
+        "storageGB": 60,
+        "usd": 599,
+        "year": 2006
+      }
     },
     {
       "id": "ps4",
@@ -378,7 +405,16 @@
         "战神（2018）",
         "漫威蜘蛛侠"
       ],
-      "price": "$399（Pro $399）"
+      "price": "$399（Pro $399）",
+      "hw": {
+        "cpuMHz": 1600,
+        "cores": 8,
+        "gflops": 1840,
+        "ramMB": 8192,
+        "storageGB": 500,
+        "usd": 399,
+        "year": 2013
+      }
     },
     {
       "id": "ps5",
@@ -401,7 +437,16 @@
         "艾尔登法环",
         "漫威蜘蛛侠 2"
       ],
-      "price": "$499 / 数字版 $399（Pro $699）"
+      "price": "$499 / 数字版 $399（Pro $699）",
+      "hw": {
+        "cpuMHz": 3500,
+        "cores": 8,
+        "gflops": 10280,
+        "ramMB": 16384,
+        "storageGB": 825,
+        "usd": 499,
+        "year": 2020
+      }
     },
     {
       "id": "xbox",
@@ -424,7 +469,16 @@
         "忍者龙剑传",
         "星球大战：旧共和国武士"
       ],
-      "price": "$299"
+      "price": "$299",
+      "hw": {
+        "cpuMHz": 733,
+        "cores": 1,
+        "gflops": 20,
+        "ramMB": 64,
+        "storageGB": 8,
+        "usd": 299,
+        "year": 2001
+      }
     },
     {
       "id": "xbox360",
@@ -447,7 +501,16 @@
         "战争机器",
         "上古卷轴 V：天际"
       ],
-      "price": "$299 / $399"
+      "price": "$299 / $399",
+      "hw": {
+        "cpuMHz": 3200,
+        "cores": 3,
+        "gflops": 240,
+        "ramMB": 512,
+        "storageGB": 20,
+        "usd": 399,
+        "year": 2005
+      }
     },
     {
       "id": "xboxone",
@@ -470,7 +533,16 @@
         "光环 5",
         "战争机器 5"
       ],
-      "price": "$499（含 Kinect）"
+      "price": "$499（含 Kinect）",
+      "hw": {
+        "cpuMHz": 1750,
+        "cores": 8,
+        "gflops": 1310,
+        "ramMB": 8192,
+        "storageGB": 500,
+        "usd": 499,
+        "year": 2013
+      }
     },
     {
       "id": "xseries",
@@ -493,7 +565,16 @@
         "极限竞速 Motorsport",
         "星空"
       ],
-      "price": "X $499 / S $299"
+      "price": "X $499 / S $299",
+      "hw": {
+        "cpuMHz": 3800,
+        "cores": 8,
+        "gflops": 12150,
+        "ramMB": 16384,
+        "storageGB": 1000,
+        "usd": 499,
+        "year": 2020
+      }
     },
     {
       "id": "fc",
@@ -516,7 +597,16 @@
         "塞尔达传说",
         "魂斗罗"
       ],
-      "price": "¥14,800 / $179"
+      "price": "¥14,800 / $179",
+      "hw": {
+        "cpuMHz": 1.79,
+        "cores": 1,
+        "gflops": 0.0,
+        "ramMB": 0.004,
+        "storageGB": null,
+        "usd": 179,
+        "year": 1983
+      }
     },
     {
       "id": "sfc",
@@ -539,7 +629,16 @@
         "塞尔达传说：众神的三角力量",
         "超时空之钥"
       ],
-      "price": "¥25,000 / $199"
+      "price": "¥25,000 / $199",
+      "hw": {
+        "cpuMHz": 3.58,
+        "cores": 1,
+        "gflops": 0.0,
+        "ramMB": 0.19,
+        "storageGB": null,
+        "usd": 199,
+        "year": 1990
+      }
     },
     {
       "id": "n64",
@@ -562,7 +661,16 @@
         "塞尔达传说：时光之笛",
         "黄金眼 007"
       ],
-      "price": "¥25,000 / $199"
+      "price": "¥25,000 / $199",
+      "hw": {
+        "cpuMHz": 93.75,
+        "cores": 1,
+        "gflops": 0.1,
+        "ramMB": 4,
+        "storageGB": null,
+        "usd": 199,
+        "year": 1996
+      }
     },
     {
       "id": "gc",
@@ -585,7 +693,16 @@
         "塞尔达传说：风之杖",
         "生化危机 4"
       ],
-      "price": "¥25,000 / $199"
+      "price": "¥25,000 / $199",
+      "hw": {
+        "cpuMHz": 485,
+        "cores": 1,
+        "gflops": 9.4,
+        "ramMB": 40,
+        "storageGB": null,
+        "usd": 199,
+        "year": 2001
+      }
     },
     {
       "id": "wii",
@@ -608,7 +725,16 @@
         "超级马力欧银河",
         "塞尔达传说：黄昏公主"
       ],
-      "price": "¥25,000 / $249"
+      "price": "¥25,000 / $249",
+      "hw": {
+        "cpuMHz": 729,
+        "cores": 1,
+        "gflops": 12,
+        "ramMB": 88,
+        "storageGB": 0.5,
+        "usd": 249,
+        "year": 2006
+      }
     },
     {
       "id": "wiiu",
@@ -631,7 +757,16 @@
         "喷射战士",
         "马力欧赛车 8"
       ],
-      "price": "$299 / $349"
+      "price": "$299 / $349",
+      "hw": {
+        "cpuMHz": 1240,
+        "cores": 3,
+        "gflops": 176,
+        "ramMB": 2048,
+        "storageGB": 32,
+        "usd": 349,
+        "year": 2012
+      }
     },
     {
       "id": "switch",
@@ -654,7 +789,16 @@
         "集合啦！动物森友会",
         "超级马力欧 奥德赛"
       ],
-      "price": "¥29,980 / $299"
+      "price": "¥29,980 / $299",
+      "hw": {
+        "cpuMHz": 1020,
+        "cores": 4,
+        "gflops": 393,
+        "ramMB": 4096,
+        "storageGB": 32,
+        "usd": 299,
+        "year": 2017
+      }
     },
     {
       "id": "switch2",
@@ -677,7 +821,16 @@
         "咚奇刚 蕉力全开",
         "塞尔达传说：王国之泪 Switch 2 版"
       ],
-      "price": "¥49,980 / $449"
+      "price": "¥49,980 / $449",
+      "hw": {
+        "cpuMHz": 1100,
+        "cores": 8,
+        "gflops": 3100,
+        "ramMB": 12288,
+        "storageGB": 256,
+        "usd": 449,
+        "year": 2025
+      }
     },
     {
       "id": "xbw-fc",
@@ -700,7 +853,16 @@
         "魂斗罗",
         "坦克大战"
       ],
-      "price": "约 ¥200–400"
+      "price": "约 ¥200–400",
+      "hw": {
+        "cpuMHz": 1.79,
+        "cores": 1,
+        "gflops": 0.0,
+        "ramMB": 0.004,
+        "storageGB": null,
+        "usd": 50,
+        "year": 1991
+      }
     },
     {
       "id": "xbw-study",
@@ -723,7 +885,16 @@
         "G-BASIC 编程",
         "五笔输入"
       ],
-      "price": "约 ¥300–500"
+      "price": "约 ¥300–500",
+      "hw": {
+        "cpuMHz": 1.79,
+        "cores": 1,
+        "gflops": 0.0,
+        "ramMB": 0.004,
+        "storageGB": null,
+        "usd": 60,
+        "year": 1993
+      }
     },
     {
       "id": "xbw-late",
@@ -746,7 +917,16 @@
         "体感运动",
         "MD 模拟"
       ],
-      "price": "¥200–1,000 不等"
+      "price": "¥200–1,000 不等",
+      "hw": {
+        "cpuMHz": 1000,
+        "cores": 2,
+        "gflops": 2,
+        "ramMB": 512,
+        "storageGB": null,
+        "usd": 80,
+        "year": 2014
+      }
     },
     {
       "id": "steammachine2015",
@@ -769,7 +949,16 @@
         "半条命 2",
         "Dota 2"
       ],
-      "price": "$449–$4,999（视 OEM）"
+      "price": "$449–$4,999（视 OEM）",
+      "hw": {
+        "cpuMHz": 3500,
+        "cores": 4,
+        "gflops": 2000,
+        "ramMB": 8192,
+        "storageGB": 500,
+        "usd": 499,
+        "year": 2015
+      }
     },
     {
       "id": "steamdeck",
@@ -792,7 +981,16 @@
         "哈迪斯",
         "博德之门 3"
       ],
-      "price": "$399 / OLED $549"
+      "price": "$399 / OLED $549",
+      "hw": {
+        "cpuMHz": 3500,
+        "cores": 4,
+        "gflops": 1600,
+        "ramMB": 16384,
+        "storageGB": 512,
+        "usd": 549,
+        "year": 2023
+      }
     },
     {
       "id": "steammachine2026",
@@ -815,7 +1013,16 @@
         "Dota 2",
         "半条命：Alyx（需 VR）"
       ],
-      "price": "以官方公布为准"
+      "price": "以官方公布为准",
+      "hw": {
+        "cpuMHz": 4800,
+        "cores": 6,
+        "gflops": 10000,
+        "ramMB": 16384,
+        "storageGB": 512,
+        "usd": null,
+        "year": 2026
+      }
     },
     {
       "id": "atari2600",
@@ -838,7 +1045,16 @@
         "Space Invaders",
         "Adventure"
       ],
-      "price": "$199"
+      "price": "$199",
+      "hw": {
+        "cpuMHz": 1.19,
+        "cores": 1,
+        "gflops": 0.0,
+        "ramMB": 0.000125,
+        "storageGB": null,
+        "usd": 199,
+        "year": 1977
+      }
     },
     {
       "id": "sms",
@@ -861,7 +1077,16 @@
         "Phantasy Star",
         "Sonic the Hedgehog（8 位版）"
       ],
-      "price": "¥15,000 / $199"
+      "price": "¥15,000 / $199",
+      "hw": {
+        "cpuMHz": 3.58,
+        "cores": 1,
+        "gflops": 0.0,
+        "ramMB": 0.008,
+        "storageGB": null,
+        "usd": 199,
+        "year": 1986
+      }
     },
     {
       "id": "pce",
@@ -884,7 +1109,16 @@
         "R-Type",
         "天外魔境 II"
       ],
-      "price": "¥24,800 / $199"
+      "price": "¥24,800 / $199",
+      "hw": {
+        "cpuMHz": 7.16,
+        "cores": 1,
+        "gflops": 0.0,
+        "ramMB": 0.008,
+        "storageGB": null,
+        "usd": 199,
+        "year": 1987
+      }
     },
     {
       "id": "md",
@@ -907,7 +1141,16 @@
         "怒之铁拳 2",
         "梦幻之星 IV"
       ],
-      "price": "¥21,000 / $189"
+      "price": "¥21,000 / $189",
+      "hw": {
+        "cpuMHz": 7.6,
+        "cores": 1,
+        "gflops": 0.0,
+        "ramMB": 0.064,
+        "storageGB": null,
+        "usd": 189,
+        "year": 1989
+      }
     },
     {
       "id": "neogeo",
@@ -930,7 +1173,16 @@
         "合金弹头",
         "饿狼传说"
       ],
-      "price": "¥58,000 / $649"
+      "price": "¥58,000 / $649",
+      "hw": {
+        "cpuMHz": 12,
+        "cores": 1,
+        "gflops": 0.0,
+        "ramMB": 0.064,
+        "storageGB": null,
+        "usd": 649,
+        "year": 1991
+      }
     },
     {
       "id": "saturn",
@@ -953,7 +1205,16 @@
         "光明力量 III",
         "Panzer Dragoon Saga"
       ],
-      "price": "¥44,800 / $399"
+      "price": "¥44,800 / $399",
+      "hw": {
+        "cpuMHz": 28.6,
+        "cores": 2,
+        "gflops": 0.02,
+        "ramMB": 2,
+        "storageGB": null,
+        "usd": 399,
+        "year": 1995
+      }
     },
     {
       "id": "dc",
@@ -976,7 +1237,16 @@
         "疯狂出租车",
         "索尼克大冒险"
       ],
-      "price": "¥29,800 / $199"
+      "price": "¥29,800 / $199",
+      "hw": {
+        "cpuMHz": 200,
+        "cores": 1,
+        "gflops": 1.4,
+        "ramMB": 16,
+        "storageGB": null,
+        "usd": 199,
+        "year": 1999
+      }
     },
     {
       "id": "rogally",
@@ -999,7 +1269,16 @@
         "艾尔登法环",
         "极限竞速：地平线 5"
       ],
-      "price": "$699（Ally X $799）"
+      "price": "$699（Ally X $799）",
+      "hw": {
+        "cpuMHz": 5100,
+        "cores": 8,
+        "gflops": 8600,
+        "ramMB": 16384,
+        "storageGB": 512,
+        "usd": 699,
+        "year": 2023
+      }
     },
     {
       "id": "legiongo",
@@ -1022,7 +1301,16 @@
         "星空",
         "死亡搁浅"
       ],
-      "price": "$699（Go S $599 / SteamOS 版 $549）"
+      "price": "$699（Go S $599 / SteamOS 版 $549）",
+      "hw": {
+        "cpuMHz": 5100,
+        "cores": 8,
+        "gflops": 8600,
+        "ramMB": 16384,
+        "storageGB": 512,
+        "usd": 699,
+        "year": 2023
+      }
     },
     {
       "id": "msiclaw",
@@ -1045,7 +1333,16 @@
         "哈迪斯 II",
         "FIFA / EA FC"
       ],
-      "price": "$699（8 AI+ $899）"
+      "price": "$699（8 AI+ $899）",
+      "hw": {
+        "cpuMHz": 4800,
+        "cores": 16,
+        "gflops": 4500,
+        "ramMB": 16384,
+        "storageGB": 512,
+        "usd": 699,
+        "year": 2024
+      }
     },
     {
       "id": "rogxboxally",
@@ -1068,7 +1365,16 @@
         "极限竞速：地平线 5",
         "使命召唤（Game Pass）"
       ],
-      "price": "$599（Ally X $999）"
+      "price": "$599（Ally X $999）",
+      "hw": {
+        "cpuMHz": 5000,
+        "cores": 8,
+        "gflops": 10000,
+        "ramMB": 24576,
+        "storageGB": 1024,
+        "usd": 999,
+        "year": 2025
+      }
     },
     {
       "id": "gameboy",
@@ -1091,7 +1397,16 @@
         "宝可梦 红 / 绿",
         "塞尔达传说：织梦岛"
       ],
-      "price": "¥12,500 / $89.99"
+      "price": "¥12,500 / $89.99",
+      "hw": {
+        "cpuMHz": 4.19,
+        "cores": 1,
+        "gflops": 0.0,
+        "ramMB": 0.008,
+        "storageGB": null,
+        "usd": 89.99,
+        "year": 1989
+      }
     },
     {
       "id": "gamegear",
@@ -1114,7 +1429,16 @@
         "Shinobi",
         "Columns"
       ],
-      "price": "¥19,800 / $149.99"
+      "price": "¥19,800 / $149.99",
+      "hw": {
+        "cpuMHz": 3.58,
+        "cores": 1,
+        "gflops": 0.0,
+        "ramMB": 0.008,
+        "storageGB": null,
+        "usd": 149.99,
+        "year": 1991
+      }
     },
     {
       "id": "gba",
@@ -1137,7 +1461,16 @@
         "塞尔达传说：缩小帽",
         "逆转裁判"
       ],
-      "price": "¥9,800 / $99.99"
+      "price": "¥9,800 / $99.99",
+      "hw": {
+        "cpuMHz": 16.78,
+        "cores": 1,
+        "gflops": 0.0,
+        "ramMB": 0.288,
+        "storageGB": null,
+        "usd": 99.99,
+        "year": 2001
+      }
     },
     {
       "id": "ds",
@@ -1160,7 +1493,16 @@
         "宝可梦 钻石 / 珍珠",
         "New 超级马力欧兄弟"
       ],
-      "price": "¥15,000 / $149.99"
+      "price": "¥15,000 / $149.99",
+      "hw": {
+        "cpuMHz": 67,
+        "cores": 2,
+        "gflops": 0.03,
+        "ramMB": 4,
+        "storageGB": null,
+        "usd": 149.99,
+        "year": 2004
+      }
     },
     {
       "id": "psp",
@@ -1183,7 +1525,16 @@
         "战神：奥林匹斯之链",
         "GTA：自由城故事"
       ],
-      "price": "¥19,800 / $249.99"
+      "price": "¥19,800 / $249.99",
+      "hw": {
+        "cpuMHz": 333,
+        "cores": 1,
+        "gflops": 2.6,
+        "ramMB": 32,
+        "storageGB": null,
+        "usd": 249.99,
+        "year": 2005
+      }
     },
     {
       "id": "3ds",
@@ -1206,7 +1557,16 @@
         "动物森友会：新叶",
         "塞尔达传说：众神的三角力量 2"
       ],
-      "price": "¥25,000 / $249.99"
+      "price": "¥25,000 / $249.99",
+      "hw": {
+        "cpuMHz": 268,
+        "cores": 2,
+        "gflops": 4.8,
+        "ramMB": 128,
+        "storageGB": 2,
+        "usd": 249.99,
+        "year": 2011
+      }
     },
     {
       "id": "vita",
@@ -1229,7 +1589,16 @@
         "神秘海域：黄金深渊",
         "女神异闻录 4 黄金版"
       ],
-      "price": "¥24,980 / $249.99"
+      "price": "¥24,980 / $249.99",
+      "hw": {
+        "cpuMHz": 2000,
+        "cores": 4,
+        "gflops": 28,
+        "ramMB": 512,
+        "storageGB": null,
+        "usd": 249.99,
+        "year": 2012
+      }
     }
   ],
   "compare": [

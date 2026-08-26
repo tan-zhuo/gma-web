@@ -1,0 +1,969 @@
+{
+ "consoles": {
+  "ps1": {
+   "name": "PlayStation",
+   "year": "1994 (Japan) / 1995 (West)",
+   "media": "CD-ROM",
+   "sales": "c. 102 million",
+   "cpu": "MIPS R3000A-compatible 32-bit RISC @ 33.8 MHz",
+   "gpu": "Custom GPU, 2D/3D rasteriser, no hardware Z-buffer",
+   "ram": "2 MB main + 1 MB video",
+   "control": "Digital pad; DualShock (dual sticks + rumble) from 1997",
+   "ops": "Open the lid, insert a CD, press power; memory cards save progress. The DualShock's twin-stick layout became the template for thirty years of controllers.",
+   "history": "Sony's entry into consoles. CD-ROM capacity and low media costs, plus developer-friendly policies, ended Nintendo's dominance of the home market and pushed gaming toward adult players.",
+   "perf": "The first mass-market console with usable 3D polygons, but the lack of an FPU and Z-buffer produced its signature texture wobble and polygon jitter.",
+   "tagline": "The console that brought gaming to adult living rooms",
+   "games": [
+    "Final Fantasy VII",
+    "Metal Gear Solid",
+    "Resident Evil"
+   ],
+   "price": "¥39,800 / $299"
+  },
+  "ps2": {
+   "name": "PlayStation 2",
+   "year": "2000",
+   "media": "DVD-ROM / CD-ROM",
+   "sales": "over 155 million (all-time record)",
+   "cpu": "Emotion Engine, MIPS R5900 @ 294.9 MHz with two vector units",
+   "gpu": "Graphics Synthesizer @ 147 MHz, 4 MB embedded VRAM",
+   "ram": "32 MB RDRAM",
+   "control": "DualShock 2 with pressure-sensitive buttons",
+   "ops": "Backward-compatible with PS1 and plays DVD films — early on it was often bought as a cheap DVD player. The later Slim model shrank the console dramatically.",
+   "history": "DVD playback and an enormous library made it the best-selling console ever, with a 13-year life cycle that cemented Sony's dominance of the sixth generation.",
+   "perf": "The Emotion Engine's vector units offered striking theoretical throughput but were hard to program; visual quality depended heavily on developers optimising to the metal.",
+   "tagline": "The best-selling console of all time",
+   "games": [
+    "GTA: San Andreas",
+    "God of War II",
+    "Final Fantasy X"
+   ],
+   "price": "¥39,800 / $299"
+  },
+  "ps3": {
+   "name": "PlayStation 3",
+   "year": "2006",
+   "media": "Blu-ray Disc",
+   "sales": "c. 87.4 million",
+   "cpu": "Cell Broadband Engine @ 3.2 GHz, 1 PPE + 7 SPEs",
+   "gpu": "NVIDIA RSX @ 500 MHz, 256 MB GDDR3",
+   "ram": "256 MB XDR + 256 MB GDDR3",
+   "control": "Sixaxis / DualShock 3 with six-axis motion sensing",
+   "ops": "Built-in hard drive and Wi-Fi; games and updates via PlayStation Network. The $599 launch price was controversial.",
+   "history": "Its Blu-ray drive helped win the HD disc format war, but the ahead-of-its-time Cell architecture made early development difficult and expensive, and Sony lost its market lead in this generation.",
+   "perf": "Well-optimised SPE code could compensate for the RSX's weaknesses, but multiplatform games often ran worse on PS3 than on Xbox 360.",
+   "tagline": "A gamble on Blu-ray and the Cell architecture",
+   "games": [
+    "Uncharted 2",
+    "The Last of Us",
+    "Dark Souls"
+   ],
+   "price": "$499 / $599"
+  },
+  "ps4": {
+   "name": "PlayStation 4 / PS4 Pro",
+   "year": "2013 / 2016 (Pro)",
+   "media": "Blu-ray Disc / digital download",
+   "sales": "c. 117 million",
+   "cpu": "AMD Jaguar 8-core @ 1.6 GHz (Pro: 2.13 GHz)",
+   "gpu": "AMD GCN 18 CUs, 1.84 TFLOPS (Pro: 36 CUs, 4.2 TFLOPS)",
+   "ram": "8 GB GDDR5",
+   "control": "DualShock 4 with touchpad, light bar and Share button",
+   "ops": "One-touch \"Share\" recording became standard; the Pro targeted 4K TVs using checkerboard rendering.",
+   "history": "Sony won the narrative at E3 2013 with no used-game restrictions and a lower price, and PS4 became the runaway winner of the eighth generation. PS4 Pro created the \"mid-generation refresh\" model.",
+   "perf": "The x86 APU made porting easy and development efficient. The Pro's 4.2 TFLOPS was mostly spent on checkerboard 4K rather than native 4K.",
+   "tagline": "The undisputed winner of the eighth generation",
+   "games": [
+    "Bloodborne",
+    "God of War (2018)",
+    "Marvel's Spider-Man"
+   ],
+   "price": "$399 (Pro $399)"
+  },
+  "ps5": {
+   "name": "PlayStation 5 / Slim / Pro",
+   "year": "2020 / 2023 (Slim) / 2024 (Pro)",
+   "media": "UHD Blu-ray / digital (Digital Edition has no drive)",
+   "sales": "over 80 million (mid-2026)",
+   "cpu": "AMD Zen 2 8-core @ 3.5 GHz",
+   "gpu": "AMD RDNA 2 36 CUs, 10.28 TFLOPS (Pro: 60 CUs, c. 16.7 TFLOPS)",
+   "ram": "16 GB GDDR6 (Pro adds 2 GB DDR5)",
+   "control": "DualSense with adaptive triggers and high-fidelity haptics",
+   "ops": "A custom NVMe SSD (5.5 GB/s) all but eliminates loading; the Pro adds PSSR AI upscaling and stronger ray tracing.",
+   "history": "Redefined \"next-gen feel\" through the SSD and DualSense haptics; launch supply was constrained by the pandemic chip shortage. PS5 Pro is the first console built around ray tracing plus AI upscaling.",
+   "perf": "10.28 TFLOPS is a theoretical figure; variable frequency means CPU and GPU cannot both run flat out. The Pro lifts GPU compute by ~45% and ray tracing by 2–3×.",
+   "tagline": "Next-gen defined by the SSD and haptic feedback",
+   "games": [
+    "Ratchet & Clank: Rift Apart",
+    "Elden Ring",
+    "Marvel's Spider-Man 2"
+   ],
+   "price": "$499 / Digital $399 (Pro $699)"
+  },
+  "xbox": {
+   "name": "Xbox",
+   "year": "2001",
+   "media": "DVD-ROM",
+   "sales": "c. 24 million",
+   "cpu": "Custom Intel Pentium III @ 733 MHz",
+   "gpu": "NVIDIA NV2A @ 233 MHz",
+   "ram": "64 MB DDR",
+   "control": "The original oversized \"Duke\", later replaced by Controller S",
+   "ops": "An 8 GB hard drive (saves, custom soundtracks) and Ethernet port; Xbox Live launched in 2002 with unified online play and voice chat.",
+   "history": "Microsoft's first console brought PC architecture, a hard drive and networking into the living room; Halo set the standard for console shooters.",
+   "perf": "The most powerful sixth-generation console and the first with programmable shaders, but its high cost meant Microsoft lost money on every unit.",
+   "tagline": "Microsoft arrives with a hard drive and an Ethernet port",
+   "games": [
+    "Halo: Combat Evolved",
+    "Ninja Gaiden",
+    "Star Wars: Knights of the Old Republic"
+   ],
+   "price": "$299"
+  },
+  "xbox360": {
+   "name": "Xbox 360",
+   "year": "2005",
+   "media": "DVD-ROM / HD DVD (external add-on)",
+   "sales": "c. 84 million",
+   "cpu": "IBM Xenon, 3-core PowerPC @ 3.2 GHz",
+   "gpu": "ATI Xenos @ 500 MHz with 10 MB eDRAM",
+   "ram": "512 MB GDDR3 (unified)",
+   "control": "Xbox 360 wireless controller, widely regarded as a design benchmark",
+   "ops": "Xbox Live Marketplace introduced Achievements and a digital store; Kinect (2010) allowed controller-free play.",
+   "history": "First into the HD generation; Achievements and a unified online service became industry standards, and Microsoft reached parity with Sony in the West for the first time. The early \"red ring of death\" failures cost a fortune in warranty repairs.",
+   "perf": "Its unified-shader GPU was ahead of contemporary PC cards, and multiplatform games generally ran better on 360 than PS3.",
+   "tagline": "The start of the HD era and Achievements",
+   "games": [
+    "Halo 3",
+    "Gears of War",
+    "The Elder Scrolls V: Skyrim"
+   ],
+   "price": "$299 / $399"
+  },
+  "xboxone": {
+   "name": "Xbox One / One S / One X",
+   "year": "2013 / 2016 (S) / 2017 (X)",
+   "media": "Blu-ray (One S / X play UHD) / digital",
+   "sales": "c. 58 million (est.)",
+   "cpu": "AMD Jaguar 8-core @ 1.75 GHz (X: 2.3 GHz)",
+   "gpu": "AMD GCN 12 CUs, 1.31 TFLOPS (X: 40 CUs, 6 TFLOPS)",
+   "ram": "8 GB DDR3 + 32 MB ESRAM (X: 12 GB GDDR5)",
+   "control": "Xbox One controller with impulse triggers; Elite controller",
+   "ops": "Launched bundled with Kinect and pitched as a TV / media hub, later dropped. The One X was the most powerful console of its day, aimed at native 4K.",
+   "history": "A botched 2013 reveal over DRM and used games left it trailing PS4 all generation. Microsoft pivoted to Game Pass and cross-platform strategy, reshaping its business.",
+   "perf": "The launch GPU was ~40% weaker than PS4's, so multiplatform titles often ran 900p vs 1080p. The One X's 6 TFLOPS and 326 GB/s bandwidth enabled native 4K in many games.",
+   "tagline": "From living-room hub to Game Pass",
+   "games": [
+    "Forza Horizon 4",
+    "Halo 5",
+    "Gears 5"
+   ],
+   "price": "$499 (with Kinect)"
+  },
+  "xseries": {
+   "name": "Xbox Series X | S",
+   "year": "2020",
+   "media": "UHD Blu-ray (X) / digital only (S)",
+   "sales": "c. 30 million (est.; Microsoft does not disclose)",
+   "cpu": "AMD Zen 2 8-core @ 3.8 GHz (S: 3.6 GHz)",
+   "gpu": "AMD RDNA 2 52 CUs, 12.15 TFLOPS (S: 20 CUs, 4 TFLOPS)",
+   "ram": "16 GB GDDR6 (S: 10 GB)",
+   "control": "Xbox Wireless Controller with Share button and textured grips",
+   "ops": "The Velocity Architecture (NVMe SSD + hardware decompression) enables Quick Resume across games; Series S targets 1440p at $299.",
+   "history": "Microsoft replaced pure hardware competition with a two-console + Game Pass strategy. Series X has the highest paper compute of its generation; Series S lowered the entry price.",
+   "perf": "12.15 TFLOPS at fixed clocks is a theoretical peak; real multiplatform results trade blows with PS5. Series S's smaller memory became a common developer complaint.",
+   "tagline": "Strongest on paper, betting on subscriptions",
+   "games": [
+    "Halo Infinite",
+    "Forza Motorsport",
+    "Starfield"
+   ],
+   "price": "X $499 / S $299"
+  },
+  "fc": {
+   "name": "Family Computer / NES",
+   "year": "1983 (Japan) / 1985 (North America)",
+   "media": "ROM cartridge",
+   "sales": "c. 61.9 million",
+   "cpu": "Ricoh 2A03 (6502 core) @ 1.79 MHz",
+   "gpu": "Ricoh 2C02 PPU, 256×240, 25 colours on screen",
+   "ram": "2 KB main + 2 KB video",
+   "control": "Rectangular D-pad controller with A / B / Select / Start",
+   "ops": "Insert a cartridge and switch on; Japanese controllers were hard-wired and the second had a microphone. The NES used a front-loading slot to resemble a VCR.",
+   "history": "Rebuilt industry confidence after the 1983 crash with strict licensing and the Seal of Quality; the D-pad and Super Mario Bros. defined the grammar of modern games.",
+   "perf": "An 8-bit CPU with hardware scrolling was enough for smooth action games; later MMC mapper chips in cartridges pushed past the base hardware.",
+   "tagline": "The console that rebuilt the industry",
+   "games": [
+    "Super Mario Bros.",
+    "The Legend of Zelda",
+    "Contra"
+   ],
+   "price": "¥14,800 / $179"
+  },
+  "sfc": {
+   "name": "Super Famicom / SNES",
+   "year": "1990 (Japan) / 1991 (North America)",
+   "media": "ROM cartridge",
+   "sales": "c. 49.1 million",
+   "cpu": "Ricoh 5A22 (65C816 core) @ 3.58 MHz",
+   "gpu": "Dual PPU, 256×224, 256 colours on screen, Mode 7 scaling and rotation",
+   "ram": "128 KB main + 64 KB video",
+   "control": "Introduced L / R shoulder buttons; six-button face layout",
+   "ops": "Cartridges could carry enhancement chips such as Super FX (which rendered Star Fox's 3D polygons).",
+   "history": "Winner of the 16-bit war; Mode 7 and the Sony-designed SPC700 sound chip took 2D to its peak. The collapse of the Sony CD add-on deal directly spawned the PlayStation.",
+   "perf": "A low CPU clock was offset by the PPU's layers and effects; many classics relied on in-cartridge enhancement chips.",
+   "tagline": "The peak of 2D expression",
+   "games": [
+    "Super Mario World",
+    "The Legend of Zelda: A Link to the Past",
+    "Chrono Trigger"
+   ],
+   "price": "¥25,000 / $199"
+  },
+  "n64": {
+   "name": "Nintendo 64",
+   "year": "1996",
+   "media": "ROM cartridge (up to 64 MB)",
+   "sales": "c. 32.9 million",
+   "cpu": "NEC VR4300 (MIPS R4300i) 64-bit @ 93.75 MHz",
+   "gpu": "SGI Reality Coprocessor @ 62.5 MHz with hardware Z-buffer and bilinear filtering",
+   "ram": "4 MB RDRAM (expandable to 8 MB)",
+   "control": "Three-pronged controller introducing the analogue stick and Z trigger; Rumble Pak slot",
+   "ops": "Four controller ports for built-in four-player; cartridges had no load times but limited capacity, forcing compressed cutscenes and audio.",
+   "history": "Super Mario 64 and Ocarina of Time established the camera and control conventions of 3D games; sticking with cartridges drove third parties, notably Square, to Sony.",
+   "perf": "Hardware anti-aliasing and Z-buffering made images steadier than PS1, but a 4 KB texture cache and memory bandwidth limits caused its trademark blurry textures.",
+   "tagline": "The 3D era, opened by an analogue stick",
+   "games": [
+    "Super Mario 64",
+    "The Legend of Zelda: Ocarina of Time",
+    "GoldenEye 007"
+   ],
+   "price": "¥25,000 / $199"
+  },
+  "gc": {
+   "name": "GameCube",
+   "year": "2001",
+   "media": "8 cm mini-DVD (1.5 GB)",
+   "sales": "c. 21.7 million",
+   "cpu": "IBM Gekko PowerPC @ 485 MHz",
+   "gpu": "ATI/ArtX Flipper @ 162 MHz with 3 MB embedded memory",
+   "ram": "24 MB 1T-SRAM + 16 MB DRAM",
+   "control": "GameCube controller with a large central A button and analogue shoulders",
+   "ops": "A cube with a carry handle, focused purely on games with no DVD playback; a GBA could be connected as a second screen.",
+   "history": "Nintendo's first disc console — solid hardware, but the small mini-disc capacity and a \"kids' console\" image limited third-party support, and it finished last in its generation.",
+   "perf": "Efficient and easy to develop for, frequently outperforming PS2; the Gekko + Flipper combination was carried straight into the Wii.",
+   "tagline": "The purple cube with a handle",
+   "games": [
+    "Super Smash Bros. Melee",
+    "The Legend of Zelda: The Wind Waker",
+    "Resident Evil 4"
+   ],
+   "price": "¥25,000 / $199"
+  },
+  "wii": {
+   "name": "Wii",
+   "year": "2006",
+   "media": "12 cm disc / GameCube disc",
+   "sales": "c. 101.6 million",
+   "cpu": "IBM Broadway PowerPC @ 729 MHz",
+   "gpu": "ATI Hollywood @ 243 MHz",
+   "ram": "88 MB",
+   "control": "Wii Remote + Nunchuk with infrared pointing and accelerometers",
+   "ops": "Play by swinging the remote; Wii Sports drew in family members who never played games. GameCube backward compatibility and Virtual Console downloads of classics.",
+   "history": "Abandoned the power race to open a blue ocean with motion control, becoming Nintendo's best-selling home console and forcing Sony and Microsoft into their own motion schemes.",
+   "perf": "Essentially an overclocked GameCube with 480p output only; the power gap dried up third-party support in its later years.",
+   "tagline": "A blue-ocean revolution, one swing at a time",
+   "games": [
+    "Wii Sports",
+    "Super Mario Galaxy",
+    "The Legend of Zelda: Twilight Princess"
+   ],
+   "price": "¥25,000 / $249"
+  },
+  "wiiu": {
+   "name": "Wii U",
+   "year": "2012",
+   "media": "Wii U disc (25 GB) / Wii disc",
+   "sales": "c. 13.56 million",
+   "cpu": "IBM Espresso 3-core PowerPC @ 1.24 GHz",
+   "gpu": "AMD Latte @ 550 MHz with 32 MB eDRAM",
+   "ram": "2 GB DDR3",
+   "control": "GamePad — a large controller with a 6.2-inch touchscreen",
+   "ops": "The GamePad worked as a second screen or for off-TV play within range of the console — an idea the Switch later perfected.",
+   "history": "Confusing naming and positioning led consumers to mistake it for a Wii accessory; a commercial failure, but its dual-screen ideas and games like Breath of the Wild paved the way for Switch.",
+   "perf": "Nintendo's first HD console, on par with PS3 / Xbox 360 and a generation behind its new rivals.",
+   "tagline": "The misunderstood dual-screen pioneer",
+   "games": [
+    "Super Mario 3D World",
+    "Splatoon",
+    "Mario Kart 8"
+   ],
+   "price": "$299 / $349"
+  },
+  "switch": {
+   "name": "Nintendo Switch / OLED",
+   "year": "2017 / 2021 (OLED)",
+   "media": "Game card / digital download",
+   "sales": "over 150 million",
+   "cpu": "NVIDIA Tegra X1, 4× ARM Cortex-A57 @ 1.02 GHz",
+   "gpu": "NVIDIA Maxwell 256 CUDA cores, 768 MHz docked / 307–460 MHz handheld",
+   "ram": "4 GB LPDDR4",
+   "control": "Detachable Joy-Con with HD Rumble, IR camera and motion",
+   "ops": "Three modes: docked to a TV, tabletop with the kickstand, or handheld. Split the Joy-Con for instant two-player. The OLED model upgraded the screen to 7 inches.",
+   "history": "The hybrid form factor ended Nintendo's separate handheld and home lines and became its best-selling hardware, proving that portability plus exclusives matters more than raw power.",
+   "perf": "A mobile SoC with roughly a quarter to a third of Xbox One's performance, clocked lower in handheld mode; big third-party games lean on dynamic resolution or cloud streaming.",
+   "tagline": "Home console and handheld in one",
+   "games": [
+    "The Legend of Zelda: Breath of the Wild",
+    "Animal Crossing: New Horizons",
+    "Super Mario Odyssey"
+   ],
+   "price": "¥29,980 / $299"
+  },
+  "switch2": {
+   "name": "Nintendo Switch 2",
+   "year": "2025",
+   "media": "Game card / game-key card / digital",
+   "sales": "over 15 million in the first year (est.)",
+   "cpu": "Custom NVIDIA T239, 8× ARM Cortex-A78C",
+   "gpu": "NVIDIA Ampere 1536 CUDA cores with DLSS and hardware ray tracing",
+   "ram": "12 GB LPDDR5X",
+   "control": "Joy-Con 2 with magnetic attachment, usable as a mouse",
+   "ops": "7.9-inch 1080p 120 Hz LCD; up to 4K docked. Adds GameChat voice/video and the C button. Backward-compatible with Switch games.",
+   "history": "Nintendo's first console named as a direct sequel — continuing rather than reinventing the hybrid form, signalling that Switch is now the company's long-term platform.",
+   "perf": "Roughly 4–6× the Switch on paper, relying on DLSS to reach 4K; power limits are noticeable in handheld mode. Public information is limited and some figures come from teardowns.",
+   "tagline": "A direct successor that keeps the hybrid form",
+   "games": [
+    "Mario Kart World",
+    "Donkey Kong Bananza",
+    "Zelda: Tears of the Kingdom — Switch 2 Edition"
+   ],
+   "price": "¥49,980 / $449"
+  },
+  "xbw-fc": {
+   "name": "Subor Famicom clone",
+   "year": "from 1991",
+   "media": "Famicom-compatible cartridge (60-pin)",
+   "sales": "undisclosed; estimated tens of millions across generations",
+   "cpu": "6502-compatible core (NES-on-a-chip) @ 1.79 MHz",
+   "gpu": "PPU-compatible, 256×240",
+   "ram": "2 KB + 2 KB (same as Famicom)",
+   "control": "Two Famicom-style controllers; some models included a light gun",
+   "ops": "Insert a cartridge and switch on; \"N-in-1\" multicarts bundled Super Mario Bros., Contra and Battle City. Far cheaper than an official Famicom.",
+   "history": "Zhongshan Subor launched Famicom clones around 1991, bringing Famicom games into ordinary Chinese homes at very low prices and forming the shared memory of mainland China's first generation of gamers. They were clones, not licensed products.",
+   "perf": "Hardware capability essentially identical to the Famicom; the single-chip design cut costs but introduced compatibility and sound differences.",
+   "tagline": "The first game console in Chinese homes",
+   "games": [
+    "Super Mario Bros.",
+    "Contra",
+    "Battle City"
+   ],
+   "price": "approx. ¥200–400 RMB"
+  },
+  "xbw-study": {
+   "name": "Subor Learning Machine (SB-486 / SB-2000 etc.)",
+   "year": "1993 – 2000s",
+   "media": "Famicom-compatible cartridges + learning cartridges",
+   "sales": "over 20 million cumulative (company claim)",
+   "cpu": "6502-compatible core @ 1.79 MHz",
+   "gpu": "PPU-compatible, 256×240",
+   "ram": "2 KB + 2 KB, expanded on some models",
+   "control": "Full-size keyboard unit + two controllers; mouse support on some models",
+   "ops": "A learning cartridge offered typing practice, Wubi input, BASIC programming and simple word processing; a game cartridge turned it into a Famicom clone. Jackie Chan's 1994 commercial (\"Subor, endless fun\") made it a household name.",
+   "history": "Marketed as a \"learning machine\" to get past parents' objections to games, it was both a computer primer and a games machine for 1990s Chinese families — one of China's most successful home-grown game hardware brands.",
+   "perf": "Still 8-bit Famicom hardware underneath; the \"learning\" functions were constrained by 2 KB of RAM and no storage. Its value lay in positioning, not technology.",
+   "tagline": "\"Endless fun\" — the learning machine",
+   "games": [
+    "Typing practice",
+    "G-BASIC programming",
+    "Wubi input"
+   ],
+   "price": "approx. ¥300–500 RMB"
+  },
+  "xbw-late": {
+   "name": "Later Subor retro / motion consoles",
+   "year": "2010s – 2018",
+   "media": "Built-in games / SD card",
+   "sales": "undisclosed",
+   "cpu": "Low-power ARM or MIPS SoC (varies by model)",
+   "gpu": "Integrated graphics running multi-system emulators",
+   "ram": "a few hundred MB",
+   "control": "Motion controllers / retro-style pads",
+   "ops": "Hundreds of built-in Famicom / Mega Drive / arcade games via emulation; some models offered motion sports games. The 2018 \"Subor Z+\" custom-AMD PC console was cancelled for lack of funding.",
+   "history": "The brand tried repeatedly to reinvent itself after the Famicom era — retro consoles, motion consoles, a high-end PC console — without recapturing its early success; the company entered debt liquidation around 2020.",
+   "perf": "Emulation of 8- and 16-bit games only; enough performance for classics but no original content or ecosystem.",
+   "tagline": "A nostalgic brand's many reinventions",
+   "games": [
+    "Built-in Famicom collection",
+    "Motion sports",
+    "Mega Drive emulation"
+   ],
+   "price": "¥200–1,000 RMB"
+  },
+  "steammachine2015": {
+   "name": "Steam Machine (first generation)",
+   "year": "2015",
+   "media": "Digital (Steam)",
+   "sales": "estimated under 500,000",
+   "cpu": "OEM-defined (various Intel / AMD configurations)",
+   "gpu": "OEM-defined (mostly NVIDIA GTX)",
+   "ram": "4 – 16 GB depending on manufacturer",
+   "control": "Steam Controller with dual trackpads and gyro",
+   "ops": "Ran SteamOS (Debian-based Linux); built by third parties such as Alienware and Zotac in many configurations.",
+   "history": "Valve's first attempt to counter the Windows ecosystem with a Linux console. Poor Linux compatibility, PC-level pricing and no unified spec made it a commercial failure — but the lessons led directly to Proton and the Steam Deck.",
+   "perf": "Performance depended entirely on the OEM build, from entry-level to high-end, which left consumers unable to understand what it was.",
+   "tagline": "Valve's first shot at the living room",
+   "games": [
+    "Portal 2",
+    "Half-Life 2",
+    "Dota 2"
+   ],
+   "price": "$449–$4,999 (by OEM)"
+  },
+  "steamdeck": {
+   "name": "Steam Deck LCD / OLED",
+   "year": "2022 / 2023 (OLED)",
+   "media": "Digital (Steam) / microSD",
+   "sales": "estimated over 5 million",
+   "cpu": "AMD Zen 2 4-core / 8-thread @ 2.4 – 3.5 GHz",
+   "gpu": "AMD RDNA 2 8 CUs @ 1.0 – 1.6 GHz, c. 1.6 TFLOPS",
+   "ram": "16 GB LPDDR5 (OLED: 6400 MT/s)",
+   "control": "Dual sticks, dual trackpads, gyro and four back buttons",
+   "ops": "Runs SteamOS 3 (Arch Linux + Proton) and plays most of the Steam library directly; a desktop mode makes it a full Linux PC. The OLED model has a 7.4-inch HDR 90 Hz screen and 30–50% more battery life.",
+   "history": "Proved the x86 handheld PC viable and triggered Windows handhelds from ASUS, Lenovo and others; Proton moved Linux gaming from \"unusable\" to \"mostly works\".",
+   "perf": "About 1.6 TFLOPS is enough for most AAA games at 800p (30–60 fps); the 15 W TDP ceiling is the main constraint and FSR upscaling is routine.",
+   "tagline": "Proof that the x86 handheld works",
+   "games": [
+    "Elden Ring",
+    "Hades",
+    "Baldur's Gate 3"
+   ],
+   "price": "$399 / OLED $549"
+  },
+  "steammachine2026": {
+   "name": "Steam Machine (2026)",
+   "year": "June 2026",
+   "media": "Digital (Steam)",
+   "sales": "just launched",
+   "cpu": "AMD Zen 4 6-core / 12-thread, up to 4.8 GHz",
+   "gpu": "Semi-custom AMD RDNA 3 with 28 CUs and c. 8 GB GDDR6, targeting 4K 60 fps with FSR",
+   "ram": "16 GB DDR5",
+   "control": "New Steam Controller with magnetic sticks, trackpads and gyro",
+   "ops": "A roughly 15 cm cube running SteamOS — plug into a TV and play; 4K output, HDMI 2.1, Wi-Fi 6E, library and saves shared with Steam Deck.",
+   "history": "Valve returns to the living room a decade later. Unlike 2015, Valve designed a single hardware spec itself and leans on a mature Proton ecosystem — widely seen as a direct challenge to PS5 and Xbox Series.",
+   "perf": "Over 6× the Steam Deck's GPU compute on paper; Valve claims \"4K 60 fps with FSR\". Real results depend on Proton compatibility and the power design and await broad testing.",
+   "tagline": "Valve returns to the living room after a decade",
+   "games": [
+    "Counter-Strike 2",
+    "Dota 2",
+    "Half-Life: Alyx (VR)"
+   ],
+   "price": "per official announcement"
+  },
+  "atari2600": {
+   "name": "Atari 2600",
+   "year": "1977",
+   "media": "ROM cartridge",
+   "sales": "c. 30 million",
+   "cpu": "MOS 6507 @ 1.19 MHz",
+   "gpu": "TIA (Television Interface Adaptor), generating the picture scanline by scanline",
+   "ram": "128 bytes",
+   "control": "The CX40 single-button joystick; paddle controllers also available",
+   "ops": "Insert a cartridge and flip the power and difficulty switches; the woodgrain panel and four metal toggles are its trademark. Programmers had to \"race the beam\", drawing each scanline in real time.",
+   "history": "Brought cartridge-based gaming to the mass market with 30 million units and spawned third-party publishers such as Activision; the flood of poor games in 1983 triggered the crash that nearly ended the North American console industry.",
+   "perf": "128 bytes of RAM and a frame-buffer-less TIA made development brutally constrained — and produced remarkable programming ingenuity.",
+   "tagline": "The first true mass-market game console",
+   "games": [
+    "Pitfall!",
+    "Space Invaders",
+    "Adventure"
+   ],
+   "price": "$199"
+  },
+  "sms": {
+   "name": "Sega Master System",
+   "year": "1985 (Japan, as Mark III) / 1986 (North America)",
+   "media": "ROM cartridge / Sega Card",
+   "sales": "c. 13 million (mainly Europe and Brazil)",
+   "cpu": "Zilog Z80A @ 3.58 MHz",
+   "gpu": "VDP (TMS9918 derivative), 256×192, 32 colours on screen",
+   "ram": "8 KB main + 16 KB video",
+   "control": "Two-button pad; light gun and 3D glasses supported on some models",
+   "ops": "Plug in and play; some models had a built-in game (such as Alex Kidd) that ran with no cartridge inserted.",
+   "history": "Sega's first direct challenge to Nintendo in home consoles. Crushed by the Famicom in Japan and North America, it enjoyed long success in Europe and Brazil (via Tec Toy), laying the channel groundwork for the Mega Drive.",
+   "perf": "Slightly stronger than the Famicom on paper (more colours, higher resolution), but its third-party line-up never matched Nintendo's exclusive licensing system.",
+   "tagline": "The 8-bit challenger that bloomed in Europe and Brazil",
+   "games": [
+    "Alex Kidd in Miracle World",
+    "Phantasy Star",
+    "Sonic the Hedgehog (8-bit)"
+   ],
+   "price": "¥15,000 / $199"
+  },
+  "pce": {
+   "name": "PC Engine / TurboGrafx-16",
+   "year": "1987 (Japan) / 1989 (North America)",
+   "media": "HuCard / CD-ROM² (1988, the first console CD add-on)",
+   "sales": "c. 10 million",
+   "cpu": "HuC6280 (65C02 derivative) @ 7.16 MHz, 8-bit",
+   "gpu": "HuC6270 VDC + HuC6260 VCE, 16-bit graphics, 482 colours on screen",
+   "ram": "8 KB main + 64 KB video",
+   "control": "Two-button pad; a single controller port, requiring a multitap",
+   "ops": "Credit-card-sized HuCards plug in and play; the 1988 CD-ROM² add-on was the world's first console CD drive.",
+   "history": "A NEC / Hudson collaboration whose tiny body and \"16-bit\" marketing briefly outsold the Mega Drive in Japan, making it the second most popular Japanese console after the Famicom; pioneered console CD-ROM.",
+   "perf": "The CPU is really 8-bit, but twin graphics chips gave it 2D output close to 16-bit machines — a transitional \"8-bit CPU, 16-bit graphics\" design.",
+   "tagline": "16-bit graphics in a palm-sized box",
+   "games": [
+    "Bonk's Adventure",
+    "R-Type",
+    "Tengai Makyou II"
+   ],
+   "price": "¥24,800 / $199"
+  },
+  "md": {
+   "name": "Sega Mega Drive / Genesis",
+   "year": "1988 (Japan) / 1989 (North America)",
+   "media": "ROM cartridge (Mega-CD and 32X add-ons)",
+   "sales": "c. 30.75 million",
+   "cpu": "Motorola 68000 @ 7.6 MHz + Z80 @ 3.58 MHz (audio co-processor)",
+   "gpu": "VDP, 320×224, 64 colours on screen (512-colour palette)",
+   "ram": "64 KB main + 64 KB video",
+   "control": "Three-button pad; a six-button pad followed for fighting games",
+   "ops": "Plug in and play; the Mega-CD added disc games and FMV, the 32X a 32-bit upgrade — neither succeeded.",
+   "history": "One of the two protagonists of the 16-bit war. Sonic the Hedgehog and the aggressive \"Genesis does what Nintendon't\" campaign briefly put it ahead of the SNES in North America, and sports and mature titles attracted older players.",
+   "perf": "A faster 68000 clock than the SNES made for quicker action games, but fewer colours and a weaker sound chip — each had its strengths.",
+   "tagline": "Taking on Nintendo with Sonic and attitude",
+   "games": [
+    "Sonic the Hedgehog 2",
+    "Streets of Rage 2",
+    "Phantasy Star IV"
+   ],
+   "price": "¥21,000 / $189"
+  },
+  "neogeo": {
+   "name": "Neo Geo AES",
+   "year": "1990 (rental) / 1991 (retail)",
+   "media": "Large ROM cartridges (up to 716 Mbit)",
+   "sales": "c. 1 million",
+   "cpu": "Motorola 68000 @ 12 MHz + Z80 @ 4 MHz",
+   "gpu": "Custom LSPC2, 4,096 colours on screen, up to 380 sprites",
+   "ram": "64 KB main + 84 KB video",
+   "control": "Arcade-style four-button joystick",
+   "ops": "The home AES shared hardware with the arcade MVS and cartridges were interchangeable (with different pinouts). Cartridges cost $200–300 — \"the arcade at home\".",
+   "history": "SNK defined the high-end console with arcade-perfect visuals at prices far above its rivals, becoming a totem for core players and collectors; The King of Fighters and Metal Slug were born here.",
+   "perf": "2D sprite capability far beyond contemporary home consoles, but a $650 console and $300 cartridges guaranteed a niche.",
+   "tagline": "The arcade, brought home untouched",
+   "games": [
+    "The King of Fighters '98",
+    "Metal Slug",
+    "Fatal Fury"
+   ],
+   "price": "¥58,000 / $649"
+  },
+  "saturn": {
+   "name": "Sega Saturn",
+   "year": "1994 (Japan) / 1995 (North America)",
+   "media": "CD-ROM",
+   "sales": "c. 9.26 million",
+   "cpu": "Dual Hitachi SH-2 @ 28.6 MHz",
+   "gpu": "VDP1 (sprites and polygons) + VDP2 (background layers), quad-based rendering",
+   "ram": "2 MB main + 1.5 MB video + 512 KB audio",
+   "control": "Six-button pad; a later 3D pad added an analogue stick",
+   "ops": "A disc console with battery-backed saves. Its surprise early launch at E3 1995 caught retailers and developers off guard.",
+   "history": "Sega's 32-bit flagship excelled at 2D fighters and shooters, but the dual-CPU, quad-rendering architecture was hard to develop for and it lost the 3D era to PlayStation; it fared far better in Japan than in the West.",
+   "perf": "Twin CPUs had respectable theoretical power, but the lack of hardware transparency and triangle support made 3D development extremely difficult.",
+   "tagline": "Strong in 2D, trapped in 3D",
+   "games": [
+    "Virtua Fighter 2",
+    "Shining Force III",
+    "Panzer Dragoon Saga"
+   ],
+   "price": "¥44,800 / $399"
+  },
+  "dc": {
+   "name": "Sega Dreamcast",
+   "year": "1998 (Japan) / 1999 (North America)",
+   "media": "GD-ROM (1.2 GB)",
+   "sales": "c. 9.13 million",
+   "cpu": "Hitachi SH-4 @ 200 MHz",
+   "gpu": "NEC PowerVR2 @ 100 MHz, tile-based deferred rendering",
+   "ram": "16 MB main + 8 MB video + 2 MB audio",
+   "control": "Four-button pad with analogue stick; VMU memory card with its own screen",
+   "ops": "The first console with a built-in modem for online play; the VMU memory card had a small screen for standalone mini-games.",
+   "history": "Sega's last home console. Its hardware and online features were ahead of their time, but anticipation for PS2's DVD drive and Sega's finances forced discontinuation in 2001 and an exit from hardware; Sega became a third-party publisher.",
+   "perf": "The first sixth-generation console, between N64 and PS2 in power; PowerVR's deferred rendering was exceptionally efficient for its day.",
+   "tagline": "Ahead of its time — Sega's last console",
+   "games": [
+    "Shenmue",
+    "Crazy Taxi",
+    "Sonic Adventure"
+   ],
+   "price": "¥29,800 / $199"
+  },
+  "gameboy": {
+   "name": "Game Boy / Game Boy Color",
+   "year": "1989 / 1998 (Color)",
+   "media": "ROM cartridge",
+   "sales": "c. 119 million combined",
+   "cpu": "Sharp LR35902 (8-bit Z80/8080 hybrid) @ 4.19 MHz (Color: 8.39 MHz)",
+   "gpu": "160×144 four-shade monochrome STN LCD (Color: 56 colours on screen)",
+   "ram": "8 KB main + 8 KB video (Color: 32 KB + 16 KB)",
+   "control": "D-pad with A / B / Select / Start, inherited from the Famicom pad",
+   "ops": "15–30 hours on four AA batteries; a link cable enabled two-player — the origin of Pokémon trading. The Color model plays every Game Boy game.",
+   "history": "The showcase of Gunpei Yokoi's \"lateral thinking with withered technology\": a dated monochrome screen bought a low price and huge battery life, beating the colour Game Gear and Lynx. Tetris and Pokémon made it one of the most successful handhelds ever.",
+   "perf": "Roughly half a Famicom in raw power, but the trade-off on power draw and cost is exactly why it won.",
+   "tagline": "Winning the handheld war with \"withered technology\"",
+   "games": [
+    "Tetris",
+    "Pokémon Red / Green",
+    "The Legend of Zelda: Link's Awakening"
+   ],
+   "price": "¥12,500 / $89.99"
+  },
+  "gamegear": {
+   "name": "Sega Game Gear",
+   "year": "1990 (Japan) / 1991 (North America)",
+   "media": "ROM cartridge",
+   "sales": "c. 10.62 million",
+   "cpu": "Zilog Z80 @ 3.58 MHz",
+   "gpu": "160×144 backlit colour STN LCD, 32 colours on screen from a 4,096-colour palette",
+   "ram": "8 KB main + 16 KB video",
+   "control": "D-pad and two buttons, landscape grip",
+   "ops": "Essentially a landscape Master System that could run MS cartridges via an adapter; a TV tuner turned it into a portable television. Six AA batteries lasted only 3–5 hours.",
+   "history": "Sega's head-on answer to the Game Boy — technically superior with a backlit colour screen, it lost on battery life, size and price, becoming the classic case of \"specs don't equal victory\".",
+   "perf": "Far better visuals than the Game Boy, but the backlit screen's power draw sealed its fate.",
+   "tagline": "A colour screen that lost to battery life",
+   "games": [
+    "Sonic the Hedgehog (GG)",
+    "Shinobi",
+    "Columns"
+   ],
+   "price": "¥19,800 / $149.99"
+  },
+  "gba": {
+   "name": "Game Boy Advance / SP",
+   "year": "2001 / 2003 (SP)",
+   "media": "ROM cartridge (backward-compatible with GB / GBC)",
+   "sales": "c. 81.51 million",
+   "cpu": "ARM7TDMI 32-bit @ 16.78 MHz + Z80-compatible core for GB games",
+   "gpu": "240×160 reflective TFT, 512 colours on screen from 32,768, hardware scaling and rotation",
+   "ram": "32 KB internal + 256 KB external + 96 KB video",
+   "control": "Added L / R shoulder buttons; landscape grip",
+   "ops": "The original had no backlight and needed ambient light; the 2003 SP clamshell added a front light and a built-in lithium battery, fixing the Game Boy line's two biggest pain points.",
+   "history": "Put SNES-class 2D in your pocket with a flood of SNES ports; choosing ARM set Nintendo's handhelds on a different silicon path from its home consoles.",
+   "perf": "2D close to the SNES, with Mode 7-style hardware effects; no native 3D, though games like V-Rally faked it in software.",
+   "tagline": "A Super Nintendo in your pocket",
+   "games": [
+    "Pokémon Ruby / Sapphire",
+    "The Legend of Zelda: The Minish Cap",
+    "Phoenix Wright: Ace Attorney"
+   ],
+   "price": "¥9,800 / $99.99"
+  },
+  "ds": {
+   "name": "Nintendo DS / DS Lite / DSi",
+   "year": "2004 / 2006 (Lite) / 2008 (DSi)",
+   "media": "DS Game Card + GBA slot (dropped on DSi)",
+   "sales": "c. 154 million (among Nintendo's best-selling hardware)",
+   "cpu": "ARM946E-S @ 67 MHz + ARM7TDMI @ 33 MHz",
+   "gpu": "Dual 256×192 screens, resistive touch on the lower; 3D engine up to 2,048 triangles per frame",
+   "ram": "4 MB",
+   "control": "D-pad, four face buttons, L / R, stylus and microphone",
+   "ops": "A clamshell with two screens and touch on the lower one; built-in Wi-Fi for online play and PictoChat doodling. The DSi added two cameras and the DSiWare store.",
+   "history": "The \"third pillar\" strategy sidestepped a power race with the PSP through touch and dual screens; Brain Age and Nintendogs pushed handhelds to non-gamers, and sales rank alongside PS2 as the highest ever.",
+   "perf": "3D capability around N64 level, but touch interaction was its real competitive edge.",
+   "tagline": "Sidestepping the power race with touch and two screens",
+   "games": [
+    "Brain Age",
+    "Pokémon Diamond / Pearl",
+    "New Super Mario Bros."
+   ],
+   "price": "¥15,000 / $149.99"
+  },
+  "psp": {
+   "name": "PlayStation Portable",
+   "year": "2004 (Japan) / 2005 (North America)",
+   "media": "UMD disc / Memory Stick digital download",
+   "sales": "c. 80 million",
+   "cpu": "MIPS R4000 32-bit @ up to 333 MHz (initially capped at 222 MHz)",
+   "gpu": "Custom GPU @ 166 MHz with 2 MB embedded VRAM, c. 33 million triangles/s",
+   "ram": "32 MB (64 MB from the 2000 model)",
+   "control": "PlayStation button layout with a single analogue nub; 4.3-inch 480×272 widescreen",
+   "ops": "UMD discs also carried films; Wi-Fi, web browsing, music and video positioned it as a pocket media centre. The PSP Go (2009) dropped UMD for digital only.",
+   "history": "Sony's first handheld brought near-PS2 visuals and AAA-scale games to the pocket; Monster Hunter Portable made it a social phenomenon in Japan, and it was one of the most actively hacked and homebrewed handhelds.",
+   "perf": "3D power around 60–70% of a PS2, far above the DS, but slow UMD loading and high power draw were persistent weaknesses.",
+   "tagline": "PS2-class graphics in your pocket",
+   "games": [
+    "Monster Hunter Portable 2nd G",
+    "God of War: Chains of Olympus",
+    "GTA: Liberty City Stories"
+   ],
+   "price": "¥19,800 / $249.99"
+  },
+  "3ds": {
+   "name": "Nintendo 3DS / New 3DS",
+   "year": "2011 / 2014 (New 3DS)",
+   "media": "3DS Game Card (backward-compatible with DS) / eShop",
+   "sales": "c. 75.94 million",
+   "cpu": "Dual-core ARM11 @ 268 MHz (New 3DS: quad-core @ 804 MHz)",
+   "gpu": "DMP PICA200 @ 268 MHz; 800×240 glasses-free 3D upper screen",
+   "ram": "128 MB FCRAM (New 3DS: 256 MB)",
+   "control": "D-pad, four buttons, Circle Pad, L / R (New 3DS added the C-stick and ZL / ZR)",
+   "ops": "Glasses-free 3D on the top screen (parallax barrier, switchable) and touch on the bottom; StreetPass was its social hook. A high launch price forced a steep cut within months and the \"Ambassador\" programme.",
+   "history": "Nintendo's last dedicated handheld line. The 3D gimmick faded quickly, but Pokémon X / Y, Animal Crossing and others sustained a near-decade life until the Switch replaced it.",
+   "perf": "3D capability between GameCube and Wii; the New 3DS's quad-core CPU markedly improved ports such as Xenoblade Chronicles.",
+   "tagline": "Glasses-free 3D and Nintendo's last dedicated handheld",
+   "games": [
+    "Pokémon X / Y",
+    "Animal Crossing: New Leaf",
+    "The Legend of Zelda: A Link Between Worlds"
+   ],
+   "price": "¥25,000 / $249.99"
+  },
+  "vita": {
+   "name": "PlayStation Vita",
+   "year": "2011 (Japan) / 2012 (West)",
+   "media": "PS Vita card / digital download",
+   "sales": "estimated 10–15 million (Sony never disclosed)",
+   "cpu": "Quad-core ARM Cortex-A9 @ up to 2 GHz (clocked lower in practice)",
+   "gpu": "PowerVR SGX543MP4+",
+   "ram": "512 MB + 128 MB video",
+   "control": "Dual analogue sticks (a handheld first), 5-inch OLED touchscreen, rear touchpad, two cameras, gyro",
+   "ops": "The first twin-stick handheld with a lavish OLED screen for 2011; supported PS4 Remote Play. Its proprietary, overpriced memory cards were widely criticised.",
+   "history": "Near-perfect hardware for its year, but first-party support dried up quickly as Sony focused on PS4; it became a haven for indies and mid-sized Japanese studios — and Sony's last handheld.",
+   "perf": "Roughly a third of a PS3 and well ahead of the 3DS, but that power never translated into enough exclusive hits.",
+   "tagline": "Perfect hardware, abandoned — Sony's last handheld",
+   "games": [
+    "Gravity Rush",
+    "Uncharted: Golden Abyss",
+    "Persona 4 Golden"
+   ],
+   "price": "¥24,980 / $249.99"
+  },
+  "rogally": {
+   "name": "ASUS ROG Ally / Ally X",
+   "year": "2023 / 2024 (Ally X)",
+   "media": "Digital (Windows: Steam / Xbox / Epic etc.)",
+   "sales": "estimated over 1 million (incl. Ally X)",
+   "cpu": "AMD Ryzen Z1 Extreme, Zen 4 8-core / 16-thread up to 5.1 GHz",
+   "gpu": "AMD RDNA 3 12 CUs up to 2.7 GHz, c. 8.6 TFLOPS",
+   "ram": "16 GB LPDDR5 (Ally X: 24 GB LPDDR5X-7500)",
+   "control": "Dual sticks, Xbox layout, back buttons, gyro; the Ally X has a larger battery and ergonomic grips",
+   "ops": "7-inch 1080p 120 Hz screen running Windows 11 with the Armoury Crate launcher; any PC storefront can be installed. The original supported XG Mobile external GPUs; the Ally X doubled the battery to 80 Wh.",
+   "history": "The first mainstream big-brand Windows handheld, a year after Steam Deck, proving PC makers would follow the category — while exposing Windows's handheld usability and sleep problems.",
+   "perf": "The Z1 Extreme has ~5× the Steam Deck's paper compute, but Windows overhead and power limits shrink the real gap at 15–25 W; it only pulls clearly ahead at 30 W.",
+   "tagline": "The first mainstream Windows handheld",
+   "games": [
+    "Cyberpunk 2077",
+    "Elden Ring",
+    "Forza Horizon 5"
+   ],
+   "price": "$699 (Ally X $799)"
+  },
+  "legiongo": {
+   "name": "Lenovo Legion Go / Go S",
+   "year": "2023 / 2025 (Go S)",
+   "media": "Digital (Windows or SteamOS)",
+   "sales": "undisclosed",
+   "cpu": "AMD Ryzen Z1 Extreme (Go S: Z2 Go / Z1 Extreme)",
+   "gpu": "AMD RDNA 3 12 CUs, c. 8.6 TFLOPS (Z2 Go: RDNA 2 12 CUs)",
+   "ram": "16 GB LPDDR5X (Go S: 16 / 32 GB)",
+   "control": "Detachable TrueStrike controllers (Joy-Con style); the right one stands up as an FPS mouse",
+   "ops": "An 8.8-inch 2560×1600 144 Hz screen with a kickstand; detach the controllers for tabletop mode. The 2025 Legion Go S shipped an official SteamOS version — the first non-Valve SteamOS handheld.",
+   "history": "Brought the Switch's detachable-controller idea to PC handhelds and in 2025 became Valve's first SteamOS licensing partner, marking the OS's spread to third-party hardware.",
+   "perf": "Same chip as the ROG Ally but a higher-resolution screen; native 1600p is demanding, so 1200p or upscaled 800p is common.",
+   "tagline": "Detachable controllers and the first third-party SteamOS handheld",
+   "games": [
+    "Baldur's Gate 3",
+    "Starfield",
+    "Death Stranding"
+   ],
+   "price": "$699 (Go S $599 / SteamOS $549)"
+  },
+  "msiclaw": {
+   "name": "MSI Claw / Claw 8 AI+",
+   "year": "2024 / 2025 (8 AI+)",
+   "media": "Digital (Windows)",
+   "sales": "undisclosed",
+   "cpu": "Intel Core Ultra 7 155H (8 AI+: Core Ultra 7 258V, Lunar Lake)",
+   "gpu": "Intel Arc 8 Xe cores (8 AI+: Arc 140V)",
+   "ram": "16 GB LPDDR5 (8 AI+: 32 GB LPDDR5X)",
+   "control": "Hall-effect sticks and triggers, Xbox layout",
+   "ops": "7-inch 1080p 120 Hz (8 AI+: 8-inch) running Windows 11 with MSI Center M. The original suffered severe driver and compatibility problems; the 8 AI+ on Lunar Lake vastly improved battery life and performance.",
+   "history": "The only mainstream Windows handheld to stick with Intel. The original's immature drivers hurt its reputation, but the Lunar Lake model proved Intel integrated graphics competitive in the handheld power envelope.",
+   "perf": "The original trailed the Z1 Extreme at 15–25 W; the Claw 8 AI+'s Arc 140V overtakes it at the same power with longer battery life.",
+   "tagline": "The alternative that stuck with Intel",
+   "games": [
+    "Black Myth: Wukong",
+    "Hades II",
+    "EA Sports FC"
+   ],
+   "price": "$699 (8 AI+ $899)"
+  },
+  "rogxboxally": {
+   "name": "ROG Xbox Ally / Ally X",
+   "year": "October 2025",
+   "media": "Digital (Windows 11 + Xbox full-screen experience)",
+   "sales": "just launched",
+   "cpu": "AMD Ryzen Z2 A (Ally) / Ryzen AI Z2 Extreme, Zen 5 8-core (Ally X)",
+   "gpu": "RDNA 2 8 CUs (Ally) / RDNA 3.5 16 CUs (Ally X)",
+   "ram": "16 GB LPDDR5 (Ally) / 24 GB LPDDR5X-8000 (Ally X)",
+   "control": "Xbox-style grips and layout with a dedicated Xbox button for the full-screen UI; impulse triggers on the Ally X",
+   "ops": "Co-designed by Microsoft and ASUS. Boots straight into the \"Xbox full-screen experience\", hiding the Windows desktop to cut overhead; aggregates Xbox, Steam, Epic and other libraries with Game Pass and cloud gaming.",
+   "history": "Microsoft's first entry into handhelds under the Xbox brand, via an OEM partner rather than its own hardware. The full-screen experience is Microsoft's direct answer to Steam Deck-style console OSs and hints at the PC-like direction of the next Xbox.",
+   "perf": "The Ally X's Z2 Extreme is the strongest handheld APU to date, clearly ahead of the Z1 Extreme at 25–35 W; the base Ally's Z2 A is only Steam Deck-class.",
+   "tagline": "Microsoft enters handhelds under the Xbox name",
+   "games": [
+    "Halo Infinite",
+    "Forza Horizon 5",
+    "Call of Duty (Game Pass)"
+   ],
+   "price": "$599 (Ally X $999)"
+  }
+ },
+ "brands": {
+  "ps": {
+   "label": "PlayStation"
+  },
+  "xbox": {
+   "label": "Xbox"
+  },
+  "nintendo": {
+   "label": "Nintendo"
+  },
+  "xiaobawang": {
+   "label": "Subor",
+   "short": "SUBOR"
+  },
+  "steam": {
+   "label": "Steam"
+  },
+  "sega": {
+   "label": "Sega"
+  },
+  "classic": {
+   "label": "Other classics"
+  },
+  "winpc": {
+   "label": "Windows handhelds"
+  },
+  "handheld": {
+   "label": "Classic handhelds"
+  }
+ },
+ "generations": {
+  "1": {
+   "name": "Gen 1 · Television games are born",
+   "years": "1972 – 1977",
+   "desc": "The Magnavox Odyssey and Atari's home Pong defined the idea of plugging games into a TV. Games were fixed in hardware with no cartridges, built from discrete logic."
+  },
+  "2": {
+   "name": "Gen 2 · Cartridges and microprocessors",
+   "years": "1976 – 1983",
+   "desc": "The Fairchild Channel F introduced swappable ROM cartridges and the Atari 2600 took them mainstream. The 1983 North American crash nearly ended the home console business."
+  },
+  "3": {
+   "name": "Gen 3 · The 8-bit era and the Famicom",
+   "years": "1983 – 1990",
+   "desc": "Nintendo's Famicom rebuilt confidence with strict third-party licensing, and Super Mario Bros. defined the side-scrolling platformer. In China the market was served by Famicom clones such as Subor."
+  },
+  "4": {
+   "name": "Gen 4 · The 16-bit war",
+   "years": "1987 – 1996",
+   "desc": "Super Famicom and Sega Mega Drive went head to head; Mode 7 scaling, richer palettes and sound chips took 2D to its peak."
+  },
+  "5": {
+   "name": "Gen 5 · 3D and the compact disc",
+   "years": "1993 – 2002",
+   "desc": "Sony entered with the PlayStation, and CD-ROM's capacity and low cost overwhelmed cartridges. The N64 kept cartridges but defined 3D control with its analogue stick."
+  },
+  "6": {
+   "name": "Gen 6 · DVD and early online",
+   "years": "1998 – 2006",
+   "desc": "PS2 rode DVD playback to become the best-selling console ever. Microsoft entered with the Xbox, bringing a hard drive and Xbox Live online play. Sega left the hardware business."
+  },
+  "7": {
+   "name": "Gen 7 · HD and motion control",
+   "years": "2005 – 2013",
+   "desc": "Xbox 360 and PS3 entered the HD era and popularised online services and digital stores; the Wii opened a casual blue ocean with motion control and outsold both."
+  },
+  "8": {
+   "name": "Gen 8 · Unified on x86",
+   "years": "2012 – 2020",
+   "desc": "PS4 and Xbox One both used semi-custom AMD x86 APUs, converging console and PC architecture. Nintendo went its own way with the Switch's hybrid form."
+  },
+  "9": {
+   "name": "Gen 9 · SSDs, ray tracing and handheld PCs",
+   "years": "2020 – present",
+   "desc": "PS5 and Xbox Series are defined by NVMe SSDs and hardware ray tracing. Steam Deck proved the x86 handheld, followed by Windows handhelds from ASUS, Lenovo and MSI and Microsoft's ROG Xbox Ally; Valve returned to the living room in 2026. Switch 2 continues the hybrid form."
+  }
+ },
+ "compare": {
+  "PlayStation 5": {
+   "cpu": "Zen 2 8-core @ 3.5 GHz",
+   "gpu": "RDNA 2 · 36 CU · 10.28 TFLOPS",
+   "storage": "825 GB / 1 TB NVMe (5.5 GB/s)",
+   "target": "4K 30–60 fps, ray tracing",
+   "form": "Home console"
+  },
+  "PlayStation 5 Pro": {
+   "cpu": "Zen 2 8-core @ 3.85 GHz",
+   "gpu": "RDNA · 60 CU · c. 16.7 TFLOPS, PSSR",
+   "storage": "2 TB NVMe",
+   "target": "4K 60 fps, enhanced ray tracing",
+   "form": "Home console"
+  },
+  "Xbox Series X": {
+   "cpu": "Zen 2 8-core @ 3.8 GHz",
+   "gpu": "RDNA 2 · 52 CU · 12.15 TFLOPS",
+   "storage": "1 TB NVMe (2.4 GB/s)",
+   "target": "4K 60 fps, up to 120 fps",
+   "form": "Home console"
+  },
+  "Xbox Series S": {
+   "cpu": "Zen 2 8-core @ 3.6 GHz",
+   "gpu": "RDNA 2 · 20 CU · 4 TFLOPS",
+   "storage": "512 GB / 1 TB NVMe",
+   "target": "1440p 60 fps",
+   "form": "Home console (digital only)"
+  },
+  "Steam Deck OLED": {
+   "cpu": "Zen 2 4-core @ 2.4–3.5 GHz",
+   "gpu": "RDNA 2 · 8 CU · c. 1.6 TFLOPS",
+   "storage": "512 GB / 1 TB NVMe + microSD",
+   "target": "800p 30–60 fps",
+   "form": "Handheld PC"
+  },
+  "Steam Machine (2026)": {
+   "cpu": "Zen 4 6-core up to 4.8 GHz",
+   "gpu": "RDNA 3 · 28 CU · 8 GB GDDR6",
+   "storage": "512 GB / 2 TB NVMe",
+   "target": "4K 60 fps (with FSR)",
+   "form": "Home console (SteamOS)"
+  },
+  "Nintendo Switch 2": {
+   "sub": "2025 · docked estimate",
+   "cpu": "ARM Cortex-A78C 8-core (custom T239)",
+   "gpu": "Ampere · 1536 CUDA · DLSS / ray tracing",
+   "storage": "256 GB UFS + microSD Express",
+   "target": "1080p handheld / up to 4K docked (DLSS)",
+   "form": "Hybrid"
+  },
+  "ROG Ally X": {
+   "sub": "2024 · Windows handheld",
+   "cpu": "Zen 4 8-core up to 5.1 GHz (Z1 Extreme)",
+   "gpu": "RDNA 3 · 12 CU · c. 8.6 TFLOPS",
+   "storage": "1 TB NVMe + microSD",
+   "target": "1080p 30–60 fps (15–30 W)",
+   "form": "Windows handheld"
+  },
+  "ROG Xbox Ally X": {
+   "sub": "2025 · Windows handheld",
+   "cpu": "Zen 5 8-core (Ryzen AI Z2 Extreme)",
+   "gpu": "RDNA 3.5 · 16 CU",
+   "storage": "1 TB NVMe + microSD",
+   "target": "1080p 60 fps (25–35 W)",
+   "form": "Windows handheld (Xbox full-screen)"
+  }
+ }
+}

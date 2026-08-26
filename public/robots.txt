@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gma-web.vercel.app/sitemap.xml

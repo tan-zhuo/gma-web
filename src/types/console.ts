@@ -23,6 +23,20 @@ export interface Console {
   games: string[]
   /** 首发价 */
   price: string
+  /** 可比较的数值参数（近似值） */
+  hw: ConsoleHw
+}
+
+export interface ConsoleHw {
+  cpuMHz: number
+  cores: number
+  /** GPU FP32 GFLOPS（估算，0 = 无可编程 3D 硬件） */
+  gflops: number
+  ramMB: number
+  storageGB: number | null
+  /** 首发美元价（近似） */
+  usd: number | null
+  year: number
 }
 
 export interface Generation {
