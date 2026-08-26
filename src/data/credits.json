@@ -174,5 +174,61 @@
     "artist": "AOMAF2024 from Wedel, Germany",
     "license": "CC0",
     "bg": "alpha"
+  },
+  "sms": {
+    "file": "/consoles/sms.jpg",
+    "title": "File:Sega-Master-System-Set.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Sega-Master-System-Set.jpg",
+    "artist": "Evan-Amos",
+    "license": "Public domain",
+    "bg": "light"
+  },
+  "md": {
+    "file": "/consoles/md.jpg",
+    "title": "File:Sega-Mega-Drive-JP-Mk1-Console-Set.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Sega-Mega-Drive-JP-Mk1-Console-Set.jpg",
+    "artist": "Evan-Amos",
+    "license": "Public domain",
+    "bg": "light"
+  },
+  "saturn": {
+    "file": "/consoles/saturn.png",
+    "title": "File:Sega-Saturn-Console-Set-Mk1.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Sega-Saturn-Console-Set-Mk1.png",
+    "artist": "Evan-Amos",
+    "license": "Public domain",
+    "bg": "alpha"
+  },
+  "dc": {
+    "file": "/consoles/dc.png",
+    "title": "File:Dreamcast-Console-Set.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Dreamcast-Console-Set.png",
+    "artist": "Evan-Amos",
+    "license": "CC BY-SA 3.0",
+    "bg": "alpha"
+  },
+  "atari2600": {
+    "file": "/consoles/atari2600.jpg",
+    "title": "File:Atari-2600-Wood-4Sw-Set.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Atari-2600-Wood-4Sw-Set.jpg",
+    "artist": "Evan-Amos",
+    "license": "Public domain",
+    "bg": "light"
+  },
+  "pce": {
+    "file": "/consoles/pce.jpg",
+    "title": "File:PC-Engine-Console-Set.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:PC-Engine-Console-Set.jpg",
+    "artist": "Evan-Amos",
+    "license": "Public domain",
+    "bg": "light"
+  },
+  "neogeo": {
+    "file": "/consoles/neogeo.jpg",
+    "title": "File:Neo-Geo-AES-Console-Set.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Neo-Geo-AES-Console-Set.jpg",
+    "artist": "Evan-Amos",
+    "license": "CC BY-SA 3.0",
+    "bg": "light"
   }
 }

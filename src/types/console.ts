@@ -1,4 +1,4 @@
-export type Brand = 'ps' | 'xbox' | 'nintendo' | 'xiaobawang' | 'steam'
+export type Brand = 'ps' | 'xbox' | 'nintendo' | 'xiaobawang' | 'steam' | 'sega' | 'classic'
 export type Shape = 'flat' | 'tall' | 'cube' | 'handheld'
 export type Filter = Brand | 'all'
 

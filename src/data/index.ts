@@ -6,13 +6,13 @@ export const GENERATIONS = raw.generations as Generation[]
 export const CONSOLES = raw.consoles as Console[]
 export const COMPARE = raw.compare as CompareRow[]
 
-export const BRAND_ORDER: Brand[] = ['ps', 'xbox', 'nintendo', 'xiaobawang', 'steam']
+export const BRAND_ORDER: Brand[] = ['ps', 'xbox', 'nintendo', 'sega', 'xiaobawang', 'steam', 'classic']
 
 export const NAV_LINKS = [
-  { id: 'timeline', label: '世代时间线' },
-  { id: 'series', label: '核心系列' },
-  { id: 'compare', label: '性能对比' },
-  { id: 'about', label: '关于' },
+  { to: '/timeline', label: '世代时间线' },
+  { to: '/consoles', label: '核心系列' },
+  { to: '/compare', label: '性能对比' },
+  { to: '/about', label: '关于' },
 ] as const
 
 import creditsRaw from './credits.json'

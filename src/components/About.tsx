@@ -1,11 +1,11 @@
 import { CONSOLES, CREDITS } from '@/data'
-import { SectionHead } from './SectionHead'
+import { PageHead } from './PageHead'
 
 export function About() {
   return (
-    <section id="about" className="py-20 max-[720px]:py-14 scroll-mt-[70px]">
+    <section className="pb-20 max-[720px]:pb-14">
+      <PageHead no="04" tag="About" title="关于本站" desc="编纂原则、数据来源与图片许可。" />
       <div className="container-x">
-        <SectionHead no="04" tag="About" title="关于本站" />
         <div className="grid grid-cols-[1.2fr_1fr] max-[900px]:grid-cols-1 gap-6">
           <div className="glass rounded-2xl p-8 max-[720px]:p-6">
             <h3 className="font-display text-[18px] text-white mb-3">编纂原则</h3>

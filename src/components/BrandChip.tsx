@@ -7,6 +7,8 @@ const STYLES: Record<Brand | '', string> = {
   nintendo: 'border-nintendo-l text-nintendo-l bg-nintendo-l/10',
   steam: 'border-steam-l text-steam-l bg-steam-l/10',
   xiaobawang: 'border-xiaobawang-l text-xiaobawang-l bg-xiaobawang-l/10',
+  sega: 'border-sega-l text-sega-l bg-sega-l/10',
+  classic: 'border-classic-l text-classic-l bg-classic-l/10',
 }
 
 export function BrandChip({ label, brand }: { label: string; brand: Brand | '' }) {

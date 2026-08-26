@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { NAV_LINKS } from '@/data'
 
 export function Footer() {
@@ -9,12 +10,12 @@ export function Footer() {
           <p className="text-[13px] text-muted max-w-[380px]">人类游戏机历史档案。从 1972 到 2026，记录每一台改变行业的机器，以及它们为什么重要。</p>
         </div>
         <div>
-          <div className="label text-accent2 mb-3">Sections</div>
-          <ul className="grid gap-1.5 text-[13.5px]">{NAV_LINKS.map((l) => <li key={l.id}><a href={`#${l.id}`} className="text-[#c5c9d0] hover:text-white transition-colors">{l.label}</a></li>)}</ul>
+          <div className="label text-accent2 mb-3">Pages</div>
+          <ul className="grid gap-1.5 text-[13.5px]">{NAV_LINKS.map((l) => <li key={l.to}><Link to={l.to} className="text-[#c5c9d0] hover:text-white transition-colors">{l.label}</Link></li>)}</ul>
         </div>
         <div>
           <div className="label text-accent2 mb-3">Stack</div>
-          <ul className="grid gap-1.5 text-[13.5px] text-[#c5c9d0]"><li>Vite · React 19 · TypeScript</li><li>Tailwind CSS v4</li><li>图片：Wikimedia Commons</li></ul>
+          <ul className="grid gap-1.5 text-[13.5px] text-[#c5c9d0]"><li>Vite · React 19 · TypeScript</li><li>Tailwind CSS v4 · React Router</li><li>图片：Wikimedia Commons</li></ul>
         </div>
       </div>
       <div className="border-t border-line"><div className="container-x py-5 text-[12px] text-muted flex justify-between flex-wrap gap-2"><span>© 2026 Console Archive</span><span className="font-head">1972 — 2026 · 9 GENERATIONS</span></div></div>

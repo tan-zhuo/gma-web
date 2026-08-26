@@ -1,17 +1,17 @@
 import { GENERATIONS } from '@/data'
 import { BrandChip } from './BrandChip'
-import { SectionHead } from './SectionHead'
+import { PageHead } from './PageHead'
 
 export function Timeline() {
   return (
-    <section id="timeline" className="py-20 max-[720px]:py-14 scroll-mt-[70px]">
-      <div className="container-x">
-        <SectionHead
+    <section className="pb-20 max-[720px]:pb-14">
+      <PageHead
           no="01"
           tag="Timeline"
           title="九代世代时间线"
           desc="「世代」并非官方标准，而是按硬件能力跃迁与主要厂商发布周期归纳的行业共识。每一代都有一个决定性的技术或市场转折。"
         />
+      <div className="container-x">
         <div className="relative pl-12 max-[720px]:pl-8 before:content-[''] before:absolute before:left-[13px] max-[720px]:before:left-[7px] before:top-3 before:bottom-3 before:w-0.5 before:bg-gradient-to-b before:from-accent before:via-accent2 before:to-white/10">
           {GENERATIONS.map((g, i) => (
             <article

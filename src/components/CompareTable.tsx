@@ -1,15 +1,15 @@
 import { COMPARE } from '@/data'
-import { SectionHead } from './SectionHead'
+import { PageHead } from './PageHead'
 
 const COLS = ['机型', 'CPU', 'GPU', '内存', '存储', '目标性能', '形态']
 const MAX = Math.max(...COMPARE.map((r) => r.tflops ?? 0))
 
 export function CompareTable() {
   return (
-    <section id="compare" className="py-20 max-[720px]:py-14 scroll-mt-[70px]">
-      <div className="container-x">
-        <SectionHead no="03" tag="Benchmark" title="当代性能横向对比"
+    <section className="pb-20 max-[720px]:pb-14">
+      <PageHead no="03" tag="Benchmark" title="当代性能横向对比"
           desc="第九代主机与 Steam 硬件的账面规格。GPU 一栏附 FP32 TFLOPS 相对条，仅反映理论峰值——不同架构之间不可直接换算为帧率。" />
+      <div className="container-x">
         <div className="overflow-x-auto glass rounded-2xl">
           <table className="w-full min-w-[960px] text-[13.5px] border-collapse">
             <thead>

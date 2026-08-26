@@ -19,6 +19,14 @@
     "steam": {
       "label": "Steam",
       "short": "STEAM"
+    },
+    "sega": {
+      "label": "世嘉",
+      "short": "SEGA"
+    },
+    "classic": {
+      "label": "其他经典",
+      "short": "CLASSIC"
     }
   },
   "generations": [
@@ -49,11 +57,11 @@
       "desc": "Fairchild Channel F 首创可更换 ROM 卡带，Atari 2600 将其推向大众市场。1983 年北美「雅达利大崩溃」几乎终结了家用机产业。",
       "chips": [
         [
-          "Fairchild Channel F",
-          ""
+          "Atari 2600",
+          "classic"
         ],
         [
-          "Atari 2600",
+          "Fairchild Channel F",
           ""
         ],
         [
@@ -78,7 +86,7 @@
         ],
         [
           "Sega Master System",
-          ""
+          "sega"
         ],
         [
           "小霸王 FC 兼容机",
@@ -97,16 +105,16 @@
           "nintendo"
         ],
         [
-          "Sega Mega Drive / Genesis",
-          ""
+          "Sega Mega Drive",
+          "sega"
         ],
         [
-          "PC Engine / TurboGrafx-16",
-          ""
+          "PC Engine",
+          "classic"
         ],
         [
           "Neo Geo",
-          ""
+          "classic"
         ]
       ]
     },
@@ -126,7 +134,7 @@
         ],
         [
           "Sega Saturn",
-          ""
+          "sega"
         ],
         [
           "小霸王学习机 SB-486",
@@ -154,7 +162,7 @@
         ],
         [
           "Sega Dreamcast",
-          ""
+          "sega"
         ]
       ]
     },
@@ -764,6 +772,167 @@
         "半条命：Alyx（需 VR）"
       ],
       "price": "以官方公布为准"
+    },
+    {
+      "id": "atari2600",
+      "brand": "classic",
+      "shape": "flat",
+      "name": "Atari 2600",
+      "year": "1977",
+      "media": "ROM 卡带",
+      "sales": "约 3,000 万台",
+      "cpu": "MOS 6507 @ 1.19 MHz",
+      "gpu": "TIA（Television Interface Adaptor），逐扫描线生成画面",
+      "ram": "128 字节",
+      "control": "单摇杆 + 单键的 CX40 摇杆，另有旋钮控制器",
+      "ops": "插入卡带、拨动电源与难度开关即可游玩；木纹面板与四个金属拨杆是其标志。程序员需要「追着电子束」逐行写画面。",
+      "history": "把可换卡带游戏机推向大众市场，销量三千万台，催生了 Activision 等第三方开发商；1983 年因劣质游戏泛滥引发「雅达利大崩溃」，几乎终结北美家用机产业。",
+      "perf": "128 字节内存与无帧缓冲的 TIA 芯片让开发极端受限，却也逼出了大量精巧的编程技巧。",
+      "tagline": "第一台真正意义上的大众游戏机",
+      "games": [
+        "Pitfall!",
+        "Space Invaders",
+        "Adventure"
+      ],
+      "price": "$199"
+    },
+    {
+      "id": "sms",
+      "brand": "sega",
+      "shape": "flat",
+      "name": "Sega Master System",
+      "year": "1985（日本 Mark III）/ 1986（北美）",
+      "media": "ROM 卡带 / Sega Card",
+      "sales": "约 1,300 万台（欧洲与巴西为主）",
+      "cpu": "Zilog Z80A @ 3.58 MHz",
+      "gpu": "VDP（TMS9918 衍生），256×192，同屏 32 色",
+      "ram": "8 KB 主内存 + 16 KB 显存",
+      "control": "双键手柄，部分型号内置光枪与 3D 眼镜支持",
+      "ops": "插卡即玩；部分机型内置游戏（如《Alex Kidd》），无卡带开机即可进入。",
+      "history": "世嘉首次正面挑战任天堂的家用机。在日本与北美被 FC 压制，却在欧洲和巴西（Tec Toy 代理）取得长期成功，为 Mega Drive 打下渠道基础。",
+      "perf": "硬件规格略优于 FC（更多颜色、更高分辨率），但第三方阵容远不及任天堂的独占授权体系。",
+      "tagline": "在欧洲与巴西开花的 8 位挑战者",
+      "games": [
+        "Alex Kidd in Miracle World",
+        "Phantasy Star",
+        "Sonic the Hedgehog（8 位版）"
+      ],
+      "price": "¥15,000 / $199"
+    },
+    {
+      "id": "pce",
+      "brand": "classic",
+      "shape": "flat",
+      "name": "PC Engine / TurboGrafx-16",
+      "year": "1987（日本）/ 1989（北美）",
+      "media": "HuCard 卡 / CD-ROM²（1988，全球首个主机光驱扩展）",
+      "sales": "约 1,000 万台",
+      "cpu": "HuC6280（65C02 衍生）@ 7.16 MHz，8 位",
+      "gpu": "HuC6270 VDC + HuC6260 VCE，16 位图形，同屏 482 色",
+      "ram": "8 KB 主内存 + 64 KB 显存",
+      "control": "双键手柄，默认仅一个手柄口，需扩展分线器",
+      "ops": "信用卡大小的 HuCard 插入即玩；1988 年推出 CD-ROM² 扩展，是全球第一个主机光驱附件。",
+      "history": "NEC 与 Hudson 合作，以极小的机身与「16 位」宣传在日本一度压过 Mega Drive，成为 FC 之后日本第二受欢迎的主机；首创主机 CD-ROM 扩展。",
+      "perf": "CPU 实为 8 位，但双图形芯片让其 2D 表现接近 16 位机，被视为「8 位 CPU + 16 位图形」的过渡设计。",
+      "tagline": "巴掌大的 16 位图形机",
+      "games": [
+        "Bonk's Adventure",
+        "R-Type",
+        "天外魔境 II"
+      ],
+      "price": "¥24,800 / $199"
+    },
+    {
+      "id": "md",
+      "brand": "sega",
+      "shape": "flat",
+      "name": "Sega Mega Drive / Genesis",
+      "year": "1988（日本）/ 1989（北美）",
+      "media": "ROM 卡带（另有 Mega-CD、32X 扩展）",
+      "sales": "约 3,075 万台",
+      "cpu": "Motorola 68000 @ 7.6 MHz + Z80 @ 3.58 MHz（音频协处理）",
+      "gpu": "VDP，320×224，同屏 64 色（调色板 512 色）",
+      "ram": "64 KB 主内存 + 64 KB 显存",
+      "control": "三键手柄，后推出六键手柄以适配格斗游戏",
+      "ops": "插卡即玩；Mega-CD 提供光盘游戏与 FMV，32X 提供 32 位升级，但均未获成功。",
+      "history": "16 位战争的主角之一。以《刺猬索尼克》与「Genesis does what Nintendon't」的激进营销在北美一度反超 SNES，也因体育游戏与成人向内容吸引了年长玩家。",
+      "perf": "68000 主频高于 SNES，动作游戏速度更快；但颜色数与音源逊于 SNES，各有所长。",
+      "tagline": "用索尼克与营销正面硬刚任天堂",
+      "games": [
+        "刺猬索尼克 2",
+        "怒之铁拳 2",
+        "梦幻之星 IV"
+      ],
+      "price": "¥21,000 / $189"
+    },
+    {
+      "id": "neogeo",
+      "brand": "classic",
+      "shape": "flat",
+      "name": "Neo Geo AES",
+      "year": "1990（租赁）/ 1991（零售）",
+      "media": "大型 ROM 卡带（最高 716 Mbit）",
+      "sales": "约 100 万台",
+      "cpu": "Motorola 68000 @ 12 MHz + Z80 @ 4 MHz",
+      "gpu": "定制 LSPC2，同屏 4,096 色，最多 380 个精灵",
+      "ram": "64 KB 主内存 + 84 KB 显存",
+      "control": "街机同款四键摇杆手柄",
+      "ops": "家用版 AES 与街机版 MVS 硬件相同，卡带可互换（针脚不同）。卡带售价高达 200–300 美元，定位「把街机搬回家」。",
+      "history": "SNK 以「街机原版画质」定义高端游戏机市场，价格远超同期主机，成为核心玩家与收藏家的图腾；《拳皇》《合金弹头》系列均诞生于此。",
+      "perf": "2D 精灵能力远超同期家用机，但 700 美元售价与 300 美元卡带注定小众。",
+      "tagline": "把街机原封不动搬回家",
+      "games": [
+        "拳皇 '98",
+        "合金弹头",
+        "饿狼传说"
+      ],
+      "price": "¥58,000 / $649"
+    },
+    {
+      "id": "saturn",
+      "brand": "sega",
+      "shape": "flat",
+      "name": "Sega Saturn",
+      "year": "1994（日本）/ 1995（北美）",
+      "media": "CD-ROM",
+      "sales": "约 926 万台",
+      "cpu": "双 Hitachi SH-2 @ 28.6 MHz",
+      "gpu": "VDP1（精灵与多边形）+ VDP2（背景层），基于四边形渲染",
+      "ram": "2 MB 主内存 + 1.5 MB 显存 + 512 KB 音频",
+      "control": "六键手柄，后推出 3D 手柄（含模拟摇杆）",
+      "ops": "光盘游戏机；内置电池保存进度。1995 年 E3 突然提前发售，导致零售商与开发者措手不及。",
+      "history": "世嘉在 32 位时代的主力，2D 格斗与射击游戏表现出色，但双 CPU + 四边形渲染架构开发困难，在 3D 时代输给 PlayStation；在日本表现远好于西方。",
+      "perf": "双 CPU 理论算力不弱，但缺乏透明与三角形硬件支持，3D 游戏开发难度极高。",
+      "tagline": "强于 2D、困于 3D 的双核架构",
+      "games": [
+        "VR 战士 2",
+        "光明力量 III",
+        "Panzer Dragoon Saga"
+      ],
+      "price": "¥44,800 / $399"
+    },
+    {
+      "id": "dc",
+      "brand": "sega",
+      "shape": "flat",
+      "name": "Sega Dreamcast",
+      "year": "1998（日本）/ 1999（北美）",
+      "media": "GD-ROM（1.2 GB）",
+      "sales": "约 913 万台",
+      "cpu": "Hitachi SH-4 @ 200 MHz",
+      "gpu": "NEC PowerVR2 @ 100 MHz，基于贴片延迟渲染",
+      "ram": "16 MB 主内存 + 8 MB 显存 + 2 MB 音频",
+      "control": "四键手柄 + 模拟摇杆，可插 VMU 可视记忆卡",
+      "ops": "首台内置调制解调器的主机，可上网与在线对战；VMU 记忆卡带小屏幕，可独立玩迷你游戏。",
+      "history": "世嘉最后一台家用机。硬件与网络功能超前，但 PS2 的 DVD 预期与世嘉财务危机导致 2001 年停产并退出硬件业务，世嘉转型为第三方厂商。",
+      "perf": "第六代首发机型，性能介于 N64 与 PS2 之间；PowerVR 的延迟渲染在同期极具效率。",
+      "tagline": "超前于时代的最后一台世嘉主机",
+      "games": [
+        "莎木",
+        "疯狂出租车",
+        "索尼克大冒险"
+      ],
+      "price": "¥29,800 / $199"
     }
   ],
   "compare": [

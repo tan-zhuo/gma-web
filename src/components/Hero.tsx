@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { BRAND_ORDER, CONSOLES, CREDITS, GENERATIONS } from '@/data'
 
 const STATS: [string | number, string][] = [
@@ -29,8 +30,8 @@ export function Hero() {
             从 8 位芯片到光线追踪，从红白机到 Steam Machine。九代世代脉络、23 台核心机型的规格与操作方式，以及每台机器「为什么重要」——一份中文优先、硬核可查的家用游戏机演进归档。
           </p>
           <div className="flex gap-3 flex-wrap mb-12">
-            <a href="#series" className="btn btn-primary">浏览核心系列 <span className="arr">→</span></a>
-            <a href="#timeline" className="btn btn-ghost">九代时间线</a>
+            <Link to="/consoles" className="btn btn-primary">浏览核心系列 <span className="arr">→</span></Link>
+            <Link to="/timeline" className="btn btn-ghost">九代时间线</Link>
           </div>
           <div className="glass rounded-2xl grid grid-cols-4 max-[520px]:grid-cols-2 divide-x divide-white/8 max-[520px]:divide-x-0">
             {STATS.map(([n, label]) => (
