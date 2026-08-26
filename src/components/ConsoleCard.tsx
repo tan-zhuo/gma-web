@@ -1,6 +1,6 @@
 import { BRANDS } from '@/data'
 import type { Console } from '@/types/console'
-import { Console3D } from './Console3D'
+import { ConsoleArt } from './ConsoleArt'
 
 interface Props { console: Console; index: number; onOpen: (id: string) => void }
 
@@ -25,7 +25,7 @@ export function ConsoleCard({ console: c, index, onOpen }: Props) {
           {BRANDS[c.brand].short}
         </span>
         <span className="absolute top-3 right-3 z-[2] font-head text-[11px] text-muted">{shortYear(c.year)}</span>
-        <Console3D shape={c.shape} />
+        <ConsoleArt id={c.id} />
       </div>
 
       <div className="px-5 pt-4.5 pb-5 flex flex-col gap-2.5 flex-1">

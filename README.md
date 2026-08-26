@@ -27,7 +27,7 @@ src/
   components/
     Nav / Hero / SectionHead
     Timeline / BrandChip
-    ConsoleGrid / FilterTabs / ConsoleCard / Console3D / DetailModal
+    ConsoleGrid / FilterTabs / ConsoleCard / ConsoleArt / DetailModal
     CompareTable / About / Footer
 prototype/index.html       方案 A 单文件原型（保留作参考，可直接打开）
 docs/DESIGN.md             设计说明
@@ -36,4 +36,4 @@ docs/DESIGN.md             设计说明
 ## 添加 / 修改机型
 
 编辑 `src/data/consoles.json` 的 `consoles` 数组即可，字段见 `src/types/console.ts`。
-`shape` 取值 `flat | tall | cube | handheld`，控制卡片里 3D 主机块的形状。
+机型插图在 `src/components/ConsoleArt.tsx` 中按 `id` 查找（SVG 手绘），新增机型请同时补一张插图，否则回退为 PS1 插图。
