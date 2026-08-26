@@ -4,30 +4,31 @@ import { SectionHead } from './SectionHead'
 
 export function Timeline() {
   return (
-    <section id="timeline" className="py-18 max-[680px]:py-13 scroll-mt-[70px]">
-      <div className="max-w-[1200px] mx-auto px-6">
+    <section id="timeline" className="py-20 max-[720px]:py-14 scroll-mt-[70px]">
+      <div className="container-x">
         <SectionHead
+          no="01"
           tag="Timeline"
           title="九代世代时间线"
-          desc="业界通行的「世代」划分并非官方标准，而是按硬件能力跃迁与主要厂商发布周期归纳。以下以主流共识划分，标注每代的关键机型与技术转折。"
+          desc="「世代」并非官方标准，而是按硬件能力跃迁与主要厂商发布周期归纳的行业共识。每一代都有一个决定性的技术或市场转折。"
         />
-        <div className="relative pl-10 max-[680px]:pl-[30px] before:content-[''] before:absolute before:left-[11px] before:top-2 before:bottom-2 before:w-0.5 before:bg-gradient-to-b before:from-accent before:via-accent2 before:to-white/10">
-          {GENERATIONS.map((g) => (
+        <div className="relative pl-12 max-[720px]:pl-8 before:content-[''] before:absolute before:left-[13px] max-[720px]:before:left-[7px] before:top-3 before:bottom-3 before:w-0.5 before:bg-gradient-to-b before:from-accent before:via-accent2 before:to-white/10">
+          {GENERATIONS.map((g, i) => (
             <article
               key={g.n}
-              className="relative mb-7 glass rounded-2xl px-6.5 py-6 max-[680px]:p-4.5 transition-all hover:border-accent/35 hover:translate-x-1
-                before:content-[''] before:absolute before:-left-9 max-[680px]:before:-left-[26px] before:top-[30px] before:w-3.5 before:h-3.5 before:rounded-full before:bg-bg before:border-[3px] before:border-accent before:shadow-[0_0_14px_rgba(0,240,255,.6)]"
+              className="gen glass rounded-2xl px-7 py-6 max-[720px]:p-5 mb-5 transition-all hover:border-line-2 hover:translate-x-1 anim-fade-up
+                before:content-[''] before:absolute before:-left-[43px] max-[720px]:before:-left-[29px] before:top-7 before:w-4 before:h-4 before:rounded-full before:bg-bg before:border-[3px] before:border-accent before:shadow-[0_0_16px_rgba(0,240,255,.7)]"
+              style={{ animationDelay: `${i * 50}ms` }}
             >
-              <div className="flex items-baseline gap-3.5 flex-wrap mb-2">
-                <span className="font-head text-[13px] text-accent tracking-[.2em]">GEN {String(g.n).padStart(2, '0')}</span>
-                <h3 className="font-head text-xl text-white font-bold">{g.name}</h3>
-                <span className="font-head text-muted text-sm ml-auto">{g.years}</span>
+              <span className="wm">{String(g.n).padStart(2, '0')}</span>
+              <div className="flex items-center gap-3 flex-wrap mb-2 relative">
+                <span className="font-head text-[11px] text-bg bg-accent px-2 py-0.5 rounded">GEN {String(g.n).padStart(2, '0')}</span>
+                <span className="font-head text-[12px] text-muted">{g.years}</span>
               </div>
-              <p className="text-[#c5c9d0] text-[15px] mb-3.5">{g.desc}</p>
-              <div className="flex flex-wrap gap-2">
-                {g.chips.map(([label, brand]) => (
-                  <BrandChip key={label} label={label} brand={brand} />
-                ))}
+              <h3 className="font-display text-[21px] text-white mb-2 relative">{g.name}</h3>
+              <p className="text-[#c5c9d0] text-[15px] mb-4 max-w-[820px] relative">{g.desc}</p>
+              <div className="flex flex-wrap gap-2 relative">
+                {g.chips.map(([label, brand]) => <BrandChip key={label} label={label} brand={brand} />)}
               </div>
             </article>
           ))}

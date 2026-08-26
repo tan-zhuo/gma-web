@@ -17,6 +17,12 @@ export interface Console {
   ops: string
   history: string
   perf: string
+  /** 一句话定位 */
+  tagline: string
+  /** 代表作 */
+  games: string[]
+  /** 首发价 */
+  price: string
 }
 
 export interface Generation {
@@ -37,6 +43,8 @@ export interface CompareRow {
   storage: string
   target: string
   form: string
+  /** FP32 TFLOPS，未知为 null */
+  tflops: number | null
 }
 
 export interface BrandMeta {

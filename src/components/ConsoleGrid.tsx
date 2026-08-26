@@ -9,23 +9,17 @@ import { SectionHead } from './SectionHead'
 export function ConsoleGrid() {
   const [filter, setFilter] = useState<Filter>('all')
   const [openId, setOpenId] = useState<string | null>(null)
-
   const list = useMemo(() => (filter === 'all' ? CONSOLES : CONSOLES.filter((c) => c.brand === filter)), [filter])
   const selected = useMemo(() => CONSOLES.find((c) => c.id === openId) ?? null, [openId])
 
   return (
-    <section id="series" className="py-18 max-[680px]:py-13 scroll-mt-[70px]">
-      <div className="max-w-[1200px] mx-auto px-6">
-        <SectionHead
-          tag="Core Series"
-          title="核心系列详解"
-          desc="点击「详情」查看每台机器的核心规格、操作方式、历史意义与性能讲解。所有规格以公开资料为准。"
-        />
+    <section id="series" className="py-20 max-[720px]:py-14 scroll-mt-[70px]">
+      <div className="container-x">
+        <SectionHead no="02" tag="Core Series" title="核心系列详解"
+          desc="五个系列、23 台机器。每张卡片给出定位、核心规格、代表作与首发价；点击「查看档案」展开操作方式、历史意义与性能讲解。" />
         <FilterTabs value={filter} onChange={setFilter} />
-        <div key={filter} className="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] max-[680px]:grid-cols-1 gap-5.5">
-          {list.map((c, i) => (
-            <ConsoleCard key={c.id} console={c} index={i} onOpen={setOpenId} />
-          ))}
+        <div key={filter} className="grid grid-cols-[repeat(auto-fill,minmax(320px,1fr))] max-[720px]:grid-cols-1 gap-6">
+          {list.map((c, i) => <ConsoleCard key={c.id} console={c} index={i} onOpen={setOpenId} />)}
         </div>
       </div>
       <DetailModal console={selected} onClose={() => setOpenId(null)} />
