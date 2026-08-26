@@ -1,8 +1,9 @@
 import { useEffect, useRef } from 'react'
-import { BRANDS, CREDITS } from '@/data'
+import { BRANDS, CREDITS, LOGOS } from '@/data'
 import { useLockBody } from '@/hooks/useLockBody'
 import type { Console } from '@/types/console'
 import { ConsoleImage } from './ConsoleImage'
+import { BrandMark } from './BrandMark'
 
 interface Props { console: Console | null; onClose: () => void }
 
@@ -37,7 +38,7 @@ export function DetailModal({ console: c, onClose }: Props) {
         {/* header */}
         <div className="card-visual relative px-8 pt-8 pb-6 max-[720px]:px-5 max-[720px]:pt-6 grid grid-cols-[1fr_260px] max-[720px]:grid-cols-1 gap-6 items-center border-b border-line">
           <div className="relative z-[1]">
-            <div className="inline-flex items-center gap-2 font-head text-[10px] tracking-[.2em] px-2.5 py-1 rounded-md text-white mb-3" style={{ background: 'var(--brand)' }}>{BRANDS[c.brand].label.toUpperCase()}</div>
+            <div className="flex items-center gap-3 mb-3"><BrandMark brand={c.brand} className="h-5 max-w-[110px]" />{LOGOS[c.brand] && <span className="text-xs text-muted">{BRANDS[c.brand].label}</span>}</div>
             <h2 id="modal-title" className="font-display text-[30px] max-[720px]:text-[24px] text-white">{c.name}</h2>
             <p className="text-[15px] mt-1 mb-4" style={{ color: 'var(--brand-l)' }}>{c.tagline}</p>
             <div className="flex flex-wrap gap-2">

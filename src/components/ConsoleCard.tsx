@@ -1,4 +1,4 @@
-import { BRANDS } from '@/data'
+import { BrandMark } from './BrandMark'
 import type { Console } from '@/types/console'
 import { ConsoleImage } from './ConsoleImage'
 
@@ -9,9 +9,7 @@ export function ConsoleCard({ console: c, index, onOpen }: Props) {
   return (
     <article data-brand={c.brand} className="card group glass rounded-[20px] overflow-hidden flex flex-col anim-fade-up" style={{ animationDelay: `${index * 40}ms` }}>
       <div className="card-visual h-[200px] relative flex items-center justify-center overflow-hidden [perspective:900px]">
-        <span className="absolute top-3.5 left-3.5 z-[4] inline-flex items-center gap-1.5 font-head text-[10px] tracking-[.15em] px-2.5 py-1.5 rounded-md text-white" style={{ background: 'var(--brand)', boxShadow: '0 0 14px var(--brand-glow)' }}>
-          {BRANDS[c.brand].short}
-        </span>
+        <span className="absolute top-3.5 left-3.5 z-[4]"><BrandMark brand={c.brand} badge /></span>
         <span className="absolute top-3.5 right-3.5 z-[4] font-head text-[11px] text-white/70 bg-black/40 px-2 py-1 rounded-md backdrop-blur">{shortYear(c.year)}</span>
         <ConsoleImage id={c.id} name={c.name} />
       </div>
