@@ -39,7 +39,7 @@ export function Nav() {
               <li key={l.to}><NavLink to={path(l.to)} onClick={() => setOpen(false)} className={({ isActive }) => `block py-3 border-b border-line text-[15px] ${isActive ? 'text-accent' : 'text-text'}`}>{t.nav[l.key]}</NavLink></li>
             ))}
             <li className="py-3 flex items-center justify-between gap-3">
-              <LangSwitch />
+              <LangSwitch align="left" />
               <a href={SITE_LINKS.repo} target="_blank" rel="noreferrer" className="text-sm text-muted hover:text-white">GitHub ↗</a>
             </li>
           </ul>

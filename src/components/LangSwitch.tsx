@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { LANGS, useBarePath, useLang } from '@/i18n'
 
-export function LangSwitch({ className = '' }: { className?: string }) {
+export function LangSwitch({ className = '', align = 'right' }: { className?: string; align?: 'left' | 'right' }) {
   const { lang, t } = useLang()
   const bare = useBarePath()
   const [open, setOpen] = useState(false)
@@ -27,7 +27,7 @@ export function LangSwitch({ className = '' }: { className?: string }) {
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden className={`transition-transform ${open ? 'rotate-180' : ''}`}><path d="m6 9 6 6 6-6" /></svg>
       </button>
       {open && (
-        <ul role="menu" className="absolute right-0 top-[calc(100%+6px)] min-w-[150px] z-[60] py-1.5 rounded-xl border border-line-2 bg-[#151824]/95 backdrop-blur-xl shadow-[0_16px_40px_rgba(0,0,0,.5)] anim-pop">
+        <ul role="menu" className={`absolute ${align === 'right' ? 'right-0' : 'left-0'} top-[calc(100%+6px)] min-w-[150px] z-[60] py-1.5 rounded-xl border border-line-2 bg-[#151824]/95 backdrop-blur-xl shadow-[0_16px_40px_rgba(0,0,0,.5)] anim-pop`}>
           {LANGS.map((l) => (
             <li key={l.code} role="none">
               <Link role="menuitem" to={hrefFor(l.prefix)} hrefLang={l.htmlLang} lang={l.htmlLang} onClick={() => setOpen(false)} aria-current={l.code === lang ? 'true' : undefined}
