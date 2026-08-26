@@ -4,6 +4,7 @@ import { BRANDS, BRAND_ORDER, CONSOLES, GENERATIONS } from '@/data'
 import { Hero } from '@/components/Hero'
 import { SectionHead } from '@/components/SectionHead'
 import { ConsoleImage } from '@/components/ConsoleImage'
+import { BrandMark } from '@/components/BrandMark'
 
 const PICKS = ['ps2', 'wii', 'switch', 'fc', 'xbox360', 'steamdeck']
 
@@ -26,7 +27,7 @@ export function Home() {
               return (
                 <Link key={b} to={`/consoles?brand=${b}`} data-brand={b} className="card glass rounded-2xl p-5 relative overflow-hidden group">
                   <span className="absolute -right-6 -top-6 w-28 h-28 rounded-full blur-2xl opacity-60" style={{ background: 'var(--brand-glow)' }} />
-                  <div className="font-head text-[10px] tracking-[.2em] text-white px-2 py-1 rounded inline-block mb-4" style={{ background: 'var(--brand)' }}>{BRANDS[b].short}</div>
+                  <div className="h-9 flex items-center mb-4 relative"><BrandMark brand={b} className="h-7 max-w-[140px]" /></div>
                   <div className="font-display text-[20px] text-white">{BRANDS[b].label}</div>
                   <div className="text-xs text-muted mt-1 font-head">{years}</div>
                   <div className="mt-4 flex items-center justify-between text-[13px]">

@@ -1,0 +1,38 @@
+{
+  "ps": {
+    "file": "/logos/ps.svg",
+    "title": "File:PlayStation logo.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:PlayStation_logo.svg",
+    "license": "Public domain"
+  },
+  "xbox": {
+    "file": "/logos/xbox.svg",
+    "title": "File:Xbox one logo.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Xbox_one_logo.svg",
+    "license": "Public domain"
+  },
+  "nintendo": {
+    "file": "/logos/nintendo.svg",
+    "title": "File:Nintendo.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Nintendo.svg",
+    "license": "Public domain"
+  },
+  "sega": {
+    "file": "/logos/sega.svg",
+    "title": "File:SEGA logo.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:SEGA_logo.svg",
+    "license": "Public domain"
+  },
+  "steam": {
+    "file": "/logos/steam.svg",
+    "title": "File:Steam icon logo.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Steam_icon_logo.svg",
+    "license": "Public domain"
+  },
+  "winpc": {
+    "file": "/logos/winpc.svg",
+    "title": "File:Windows logo - 2021.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Windows_logo_-_2021.svg",
+    "license": "Public domain"
+  }
+}

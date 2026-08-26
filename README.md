@@ -40,3 +40,7 @@ docs/DESIGN.md             设计说明
 
 编辑 `src/data/consoles.json` 的 `consoles` 数组即可，字段见 `src/types/console.ts`。
 机型图片：`public/consoles/<id>.jpg|png` + `src/data/credits.json` 记录来源/作者/许可（Wikimedia Commons）。没有图片的机型回退为 `src/components/ConsoleArt.tsx` 中的 SVG 示意图。
+
+## 许可
+
+代码：MIT（见 `LICENSE`）。机型照片来自 Wikimedia Commons，各自许可见 `src/data/credits.json` 与站内「关于」页；品牌 Logo 为各公司商标，仅用于标识。

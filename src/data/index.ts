@@ -24,3 +24,7 @@ export const SITE_LINKS = {
   blog: 'https://tanzhuo.xyz',
   author: 'tanzhuo',
 } as const
+
+import logosRaw from './logos.json'
+export interface BrandLogo { file: string; title: string; page: string; license: string }
+export const LOGOS = logosRaw as Partial<Record<Brand, BrandLogo>>

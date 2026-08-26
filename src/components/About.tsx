@@ -1,4 +1,5 @@
-import { CONSOLES, CREDITS, SITE_LINKS } from '@/data'
+import { BRANDS, CONSOLES, CREDITS, LOGOS, SITE_LINKS } from '@/data'
+import type { Brand } from '@/types/console'
 import { PageHead } from './PageHead'
 
 export function About() {
@@ -37,7 +38,15 @@ export function About() {
               <li key={c.id} className="flex gap-2 min-w-0"><span className="text-white shrink-0">{c.name}</span>
                 <span className="text-muted truncate"><a href={k.page} target="_blank" rel="noreferrer" className="underline hover:text-accent">{k.title.replace(/^File:/, '')}</a> · {k.artist} · {k.license}</span></li>) })}
           </ul>
-          <p className="px-8 max-[720px]:px-6 pb-5 text-[11px] text-muted">未列出的机型使用本站自绘示意图。CC BY-SA 图片依许可要求署名，如需再利用请遵循相应许可。</p>
+          <div className="px-8 max-[720px]:px-6 pb-2 text-xs text-[#c5c9d0]">
+            <div className="label text-accent2 mb-2">Brand Logos</div>
+            <ul className="grid grid-cols-2 max-[900px]:grid-cols-1 gap-x-8 gap-y-1.5">
+              {(Object.keys(LOGOS) as Brand[]).map((b) => { const l = LOGOS[b]!; return (
+                <li key={b} className="flex gap-2 min-w-0"><span className="text-white shrink-0">{BRANDS[b].label}</span>
+                  <span className="text-muted truncate"><a href={l.page} target="_blank" rel="noreferrer" className="underline hover:text-accent">{l.title.replace(/^File:/, '')}</a> · {l.license}</span></li>) })}
+            </ul>
+          </div>
+          <p className="px-8 max-[720px]:px-6 pb-5 pt-3 text-[11px] text-muted">未列出的机型使用本站自绘示意图。CC BY-SA 图片依许可要求署名，如需再利用请遵循相应许可。PlayStation、Xbox、Nintendo、SEGA、Steam、Windows 等名称与 Logo 为各自公司的商标，本站仅用于标识，与各公司无关联。</p>
         </details>
       </div>
     </section>

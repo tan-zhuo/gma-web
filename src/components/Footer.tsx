@@ -25,7 +25,7 @@ export function Footer() {
           <ul className="grid gap-1.5 text-[13.5px] text-[#c5c9d0]"><li>Vite · React 19 · TypeScript</li><li>Tailwind CSS v4 · React Router</li><li>图片：Wikimedia Commons</li></ul>
         </div>
       </div>
-      <div className="border-t border-line"><div className="container-x py-5 text-[12px] text-muted flex justify-between flex-wrap gap-2"><span>© 2026 Console Archive · <a href={SITE_LINKS.blog} target="_blank" rel="noreferrer" className="hover:text-white">{SITE_LINKS.author}</a> · <a href={SITE_LINKS.repo} target="_blank" rel="noreferrer" className="hover:text-white">开源仓库</a></span><span className="font-head">1972 — 2026 · 9 GENERATIONS</span></div></div>
+      <div className="border-t border-line"><div className="container-x py-5 text-[12px] text-muted flex justify-between flex-wrap gap-2"><span>© 2026 Console Archive · <a href={SITE_LINKS.blog} target="_blank" rel="noreferrer" className="hover:text-white">{SITE_LINKS.author}</a> · <a href={SITE_LINKS.repo} target="_blank" rel="noreferrer" className="hover:text-white">MIT 开源</a></span><span className="font-head">1972 — 2026 · 9 GENERATIONS</span></div></div>
     </footer>
   )
 }
