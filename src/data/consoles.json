@@ -31,6 +31,10 @@
     "winpc": {
       "label": "Windows 掌机",
       "short": "WIN PC"
+    },
+    "handheld": {
+      "label": "经典掌机",
+      "short": "HANDHELD"
     }
   },
   "generations": [
@@ -119,6 +123,14 @@
         [
           "Neo Geo",
           "classic"
+        ],
+        [
+          "Game Boy",
+          "handheld"
+        ],
+        [
+          "Game Gear",
+          "handheld"
         ]
       ]
     },
@@ -167,6 +179,10 @@
         [
           "Sega Dreamcast",
           "sega"
+        ],
+        [
+          "Game Boy Advance",
+          "handheld"
         ]
       ]
     },
@@ -187,6 +203,14 @@
         [
           "Wii",
           "nintendo"
+        ],
+        [
+          "Nintendo DS",
+          "handheld"
+        ],
+        [
+          "PSP",
+          "handheld"
         ]
       ]
     },
@@ -215,6 +239,14 @@
         [
           "Steam Machine (2015)",
           "steam"
+        ],
+        [
+          "3DS",
+          "handheld"
+        ],
+        [
+          "PS Vita",
+          "handheld"
         ]
       ]
     },
@@ -1037,6 +1069,167 @@
         "使命召唤（Game Pass）"
       ],
       "price": "$599（Ally X $999）"
+    },
+    {
+      "id": "gameboy",
+      "brand": "handheld",
+      "shape": "handheld",
+      "name": "Game Boy / Game Boy Color",
+      "year": "1989 / 1998（Color）",
+      "media": "ROM 卡带",
+      "sales": "合计约 1.19 亿台",
+      "cpu": "Sharp LR35902（8 位，Z80 / 8080 混合）@ 4.19 MHz（Color：8.39 MHz）",
+      "gpu": "160×144 单色 4 阶灰度 STN 液晶（Color：同屏 56 色）",
+      "ram": "8 KB 主内存 + 8 KB 显存（Color：32 KB + 16 KB）",
+      "control": "十字键 + A / B / Select / Start，与 FC 手柄同源",
+      "ops": "4 节 AA 电池可续航 15–30 小时；通信线可双人对战——《宝可梦》的交换玩法正是由此而来。Color 版本向下兼容全部 GB 游戏。",
+      "history": "横井军平「枯萎技术的水平思考」的代表作：用落后的单色屏幕换来极低售价与超长续航，击败了彩屏的 Game Gear 与 Lynx。《俄罗斯方块》与《宝可梦》让它成为史上最成功的掌机之一。",
+      "perf": "性能仅相当于 FC 的一半，但功耗与成本上的取舍才是它胜出的原因。",
+      "tagline": "用「落后技术」赢下掌机战争",
+      "games": [
+        "俄罗斯方块",
+        "宝可梦 红 / 绿",
+        "塞尔达传说：织梦岛"
+      ],
+      "price": "¥12,500 / $89.99"
+    },
+    {
+      "id": "gamegear",
+      "brand": "handheld",
+      "shape": "handheld",
+      "name": "Sega Game Gear",
+      "year": "1990（日本）/ 1991（北美）",
+      "media": "ROM 卡带",
+      "sales": "约 1,062 万台",
+      "cpu": "Zilog Z80 @ 3.58 MHz",
+      "gpu": "160×144 彩色背光 STN 液晶，同屏 32 色（调色板 4,096 色）",
+      "ram": "8 KB 主内存 + 16 KB 显存",
+      "control": "十字键 + 双键，横向握持",
+      "ops": "本质是横置的 Master System，可通过转接器运行 MS 卡带；电视调谐器附件可当便携电视。6 节 AA 电池仅续航 3–5 小时。",
+      "history": "世嘉对 Game Boy 的正面回应，彩色背光屏在技术上全面领先，却因续航短、体积大、售价高而落败，成为「参数不等于胜利」的经典案例。",
+      "perf": "画面远优于 Game Boy，但背光屏的耗电量决定了它的命运。",
+      "tagline": "彩屏领先却输给续航的挑战者",
+      "games": [
+        "刺猬索尼克（GG 版）",
+        "Shinobi",
+        "Columns"
+      ],
+      "price": "¥19,800 / $149.99"
+    },
+    {
+      "id": "gba",
+      "brand": "handheld",
+      "shape": "handheld",
+      "name": "Game Boy Advance / SP",
+      "year": "2001 / 2003（SP）",
+      "media": "ROM 卡带（向下兼容 GB / GBC）",
+      "sales": "约 8,151 万台",
+      "cpu": "ARM7TDMI 32 位 @ 16.78 MHz + Z80 兼容核心（GB 兼容）",
+      "gpu": "240×160 反射式 TFT，同屏 512 色（调色板 32,768 色），硬件缩放旋转",
+      "ram": "32 KB 内部 + 256 KB 外部 + 96 KB 显存",
+      "control": "新增 L / R 肩键，横向握持",
+      "ops": "初代无背光需借光游玩，2003 年 SP 翻盖版加入前光与内置锂电池，解决了 GB 系列十余年的两大痛点。",
+      "history": "把 SNES 级别的 2D 表现装进口袋，大量 SNES 名作移植；ARM 架构的选择让任天堂掌机从此走上与家用机不同的芯片路线。",
+      "perf": "2D 能力接近 SNES，有硬件 Mode 7 式效果；无原生 3D，但《V-Rally》等靠软件渲染实现了伪 3D。",
+      "tagline": "装进口袋的超级任天堂",
+      "games": [
+        "宝可梦 红宝石 / 蓝宝石",
+        "塞尔达传说：缩小帽",
+        "逆转裁判"
+      ],
+      "price": "¥9,800 / $99.99"
+    },
+    {
+      "id": "ds",
+      "brand": "handheld",
+      "shape": "handheld",
+      "name": "Nintendo DS / DS Lite / DSi",
+      "year": "2004 / 2006（Lite）/ 2008（DSi）",
+      "media": "DS 游戏卡 + GBA 卡带槽（DSi 取消）",
+      "sales": "约 1.54 亿台（任天堂销量最高硬件之一）",
+      "cpu": "ARM946E-S @ 67 MHz + ARM7TDMI @ 33 MHz",
+      "gpu": "双 256×192 屏幕，下屏电阻触摸；3D 引擎每帧最多 2,048 个三角形",
+      "ram": "4 MB",
+      "control": "十字键 + 四键 + L / R + 触摸笔 + 麦克风",
+      "ops": "翻盖双屏，下屏触摸；内置 Wi-Fi 可在线对战与 PictoChat 涂鸦聊天。DSi 增加双摄像头与 DSiWare 数字商店。",
+      "history": "以触摸与双屏的「第三支柱」策略避开与 PSP 的性能竞争，《脑锻炼》《任天狗》把掌机推向非玩家群体，销量与 PS2 并列史上前二。",
+      "perf": "3D 能力约在 N64 水平，但触摸交互才是它的核心竞争力。",
+      "tagline": "用触摸与双屏避开性能竞争",
+      "games": [
+        "脑锻炼",
+        "宝可梦 钻石 / 珍珠",
+        "New 超级马力欧兄弟"
+      ],
+      "price": "¥15,000 / $149.99"
+    },
+    {
+      "id": "psp",
+      "brand": "handheld",
+      "shape": "handheld",
+      "name": "PlayStation Portable",
+      "year": "2004（日本）/ 2005（北美）",
+      "media": "UMD 光盘 / Memory Stick 数字下载",
+      "sales": "约 8,000 万台",
+      "cpu": "MIPS R4000 32 位 @ 最高 333 MHz（初期锁 222 MHz）",
+      "gpu": "定制 GPU @ 166 MHz，2 MB 嵌入式显存，约 3,300 万三角形/秒",
+      "ram": "32 MB（2000 型起 64 MB）",
+      "control": "PS 布局按键 + 单模拟摇杆，宽屏 4.3 英寸 480×272",
+      "ops": "UMD 光盘可播放电影；支持 Wi-Fi、网页浏览、音乐视频播放，定位「掌上多媒体中心」。PSP Go（2009）取消 UMD 改为纯数字。",
+      "history": "索尼首次进入掌机市场，以接近 PS2 的画面把 3A 级体验带到掌上，在日本因《怪物猎人 携带版》成为社交现象；也是破解与自制软件最活跃的掌机之一。",
+      "perf": "3D 能力接近 PS2 的 60–70%，远超同期 DS，但 UMD 读盘慢、耗电高是长期短板。",
+      "tagline": "把 PS2 级画面装进口袋",
+      "games": [
+        "怪物猎人 携带版 2nd G",
+        "战神：奥林匹斯之链",
+        "GTA：自由城故事"
+      ],
+      "price": "¥19,800 / $249.99"
+    },
+    {
+      "id": "3ds",
+      "brand": "handheld",
+      "shape": "handheld",
+      "name": "Nintendo 3DS / New 3DS",
+      "year": "2011 / 2014（New 3DS）",
+      "media": "3DS 游戏卡（向下兼容 DS）/ eShop 数字下载",
+      "sales": "约 7,594 万台",
+      "cpu": "双核 ARM11 @ 268 MHz（New 3DS：四核 @ 804 MHz）",
+      "gpu": "DMP PICA200 @ 268 MHz，上屏 800×240 裸眼 3D",
+      "ram": "128 MB FCRAM（New 3DS：256 MB）",
+      "control": "十字键 + 四键 + 滑动摇杆 + L / R（New 3DS 增加 C 摇杆与 ZL / ZR）",
+      "ops": "上屏裸眼 3D（视差屏障，可关闭），下屏触摸；擦肩通信与 StreetPass 是其社交特色。首发定价过高，半年后大幅降价并推出「大使计划」补偿。",
+      "history": "任天堂最后一台独立掌机产品线。裸眼 3D 噱头很快被冷落，但凭《宝可梦 X / Y》《动物森友会》等作品维持了近十年生命周期，直到被 Switch 取代。",
+      "perf": "3D 能力介于 GameCube 与 Wii 之间；New 3DS 的四核 CPU 显著改善了《异度神剑》等移植作。",
+      "tagline": "裸眼 3D 与任天堂最后的独立掌机",
+      "games": [
+        "宝可梦 X / Y",
+        "动物森友会：新叶",
+        "塞尔达传说：众神的三角力量 2"
+      ],
+      "price": "¥25,000 / $249.99"
+    },
+    {
+      "id": "vita",
+      "brand": "handheld",
+      "shape": "handheld",
+      "name": "PlayStation Vita",
+      "year": "2011（日本）/ 2012（欧美）",
+      "media": "PS Vita 卡 / 数字下载",
+      "sales": "估计 1,000–1,500 万台（索尼未公布）",
+      "cpu": "四核 ARM Cortex-A9 @ 最高 2 GHz（实际锁频）",
+      "gpu": "PowerVR SGX543MP4+",
+      "ram": "512 MB + 128 MB 显存",
+      "control": "双模拟摇杆（掌机首次）、5 英寸 OLED 触摸屏、背面触摸板、双摄像头、陀螺仪",
+      "ops": "首款双摇杆掌机，OLED 屏在 2011 年极为奢侈；支持 PS4 远程游玩。专有存储卡定价过高被普遍诟病。",
+      "history": "硬件在当年堪称完美，但第一方支持很快枯竭，索尼转而专注 PS4；最终成为独立游戏与日式中小厂商的乐园，也是索尼最后一台掌机。",
+      "perf": "性能接近 PS3 的三分之一，远超 3DS，但没有转化为足够的独占大作。",
+      "tagline": "硬件完美却被放弃的最后一台索尼掌机",
+      "games": [
+        "重力眩晕",
+        "神秘海域：黄金深渊",
+        "女神异闻录 4 黄金版"
+      ],
+      "price": "¥24,980 / $249.99"
     }
   ],
   "compare": [

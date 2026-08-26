@@ -6,7 +6,7 @@ export const GENERATIONS = raw.generations as Generation[]
 export const CONSOLES = raw.consoles as Console[]
 export const COMPARE = raw.compare as CompareRow[]
 
-export const BRAND_ORDER: Brand[] = ['ps', 'xbox', 'nintendo', 'sega', 'xiaobawang', 'steam', 'winpc', 'classic']
+export const BRAND_ORDER: Brand[] = ['ps', 'xbox', 'nintendo', 'sega', 'xiaobawang', 'steam', 'handheld', 'winpc', 'classic']
 
 export const NAV_LINKS = [
   { to: '/timeline', label: '世代时间线' },
@@ -18,3 +18,9 @@ export const NAV_LINKS = [
 import creditsRaw from './credits.json'
 import type { ImageCredit } from '@/types/credit'
 export const CREDITS = creditsRaw as Record<string, ImageCredit>
+
+export const SITE_LINKS = {
+  repo: 'https://github.com/tan-zhuo/gma-web',
+  blog: 'https://tanzhuo.xyz',
+  author: 'tanzhuo',
+} as const

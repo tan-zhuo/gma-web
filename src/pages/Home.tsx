@@ -16,9 +16,9 @@ export function Home() {
       {/* brands */}
       <section className="py-16 max-[720px]:py-10">
         <div className="container-x">
-          <SectionHead no="01" tag="Series" title="按系列浏览" desc="八个系列、34 台机器。选一个厂商进入，或直接查看全部。"
+          <SectionHead no="01" tag="Series" title="按系列浏览" desc="九个系列、41 台机器。选一个厂商进入，或直接查看全部。"
             aside={<Link to="/consoles" className="btn btn-ghost">全部机型 <span className="arr">→</span></Link>} />
-          <div className="grid grid-cols-4 max-[900px]:grid-cols-2 gap-4">
+          <div className="grid grid-cols-3 max-[900px]:grid-cols-2 gap-4">
             {BRAND_ORDER.map((b) => {
               const list = CONSOLES.filter((c) => c.brand === b)
               const ys = list.flatMap((c) => c.year.match(/\d{4}/g) ?? []).map(Number)

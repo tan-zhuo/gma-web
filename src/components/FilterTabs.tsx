@@ -4,7 +4,7 @@ import type { Brand, Filter } from '@/types/console'
 interface Props { value: Filter; onChange: (f: Filter) => void }
 
 const COUNT = (b: Filter) => (b === 'all' ? CONSOLES.length : CONSOLES.filter((c) => c.brand === b).length)
-const DOT: Record<Brand, string> = { ps: 'var(--color-ps-l)', xbox: 'var(--color-xbox-l)', nintendo: 'var(--color-nintendo-l)', xiaobawang: 'var(--color-xiaobawang-l)', steam: 'var(--color-steam-l)', sega: 'var(--color-sega-l)', classic: 'var(--color-classic-l)', winpc: 'var(--color-winpc-l)' }
+const DOT: Record<Brand, string> = { ps: 'var(--color-ps-l)', xbox: 'var(--color-xbox-l)', nintendo: 'var(--color-nintendo-l)', xiaobawang: 'var(--color-xiaobawang-l)', steam: 'var(--color-steam-l)', sega: 'var(--color-sega-l)', classic: 'var(--color-classic-l)', winpc: 'var(--color-winpc-l)', handheld: 'var(--color-handheld-l)' }
 const TABS: [Filter, string][] = [['all', '全部'], ...BRAND_ORDER.map((b) => [b, BRANDS[b].label] as [Filter, string])]
 
 export function FilterTabs({ value, onChange }: Props) {

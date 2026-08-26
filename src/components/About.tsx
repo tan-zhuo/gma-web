@@ -1,4 +1,4 @@
-import { CONSOLES, CREDITS } from '@/data'
+import { CONSOLES, CREDITS, SITE_LINKS } from '@/data'
 import { PageHead } from './PageHead'
 
 export function About() {
@@ -19,6 +19,10 @@ export function About() {
                 <li key={t} className="flex gap-2.5"><span className="text-accent mt-[3px]">▸</span>{t}</li>
               ))}
             </ul>
+            <div className="mt-5 pt-4 border-t border-line flex flex-wrap gap-2">
+              <a href={SITE_LINKS.repo} target="_blank" rel="noreferrer" className="btn btn-ghost btn-sm">GitHub 开源仓库 ↗</a>
+              <a href={SITE_LINKS.blog} target="_blank" rel="noreferrer" className="btn btn-ghost btn-sm">作者博客 ↗</a>
+            </div>
           </div>
         </div>
         <details className="glass rounded-2xl mt-6 group/credits">

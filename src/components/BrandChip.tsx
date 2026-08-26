@@ -8,6 +8,7 @@ const STYLES: Record<Brand | '', string> = {
   steam: 'border-steam-l text-steam-l bg-steam-l/10',
   xiaobawang: 'border-xiaobawang-l text-xiaobawang-l bg-xiaobawang-l/10',
   sega: 'border-sega-l text-sega-l bg-sega-l/10',
+  handheld: 'border-handheld-l text-handheld-l bg-handheld-l/10',
   winpc: 'border-winpc-l text-winpc-l bg-winpc-l/10',
   classic: 'border-classic-l text-classic-l bg-classic-l/10',
 }
