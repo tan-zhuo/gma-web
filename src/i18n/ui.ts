@@ -51,8 +51,8 @@ const zh = {
   },
   footer: { blurb: '人类游戏机历史档案。从 1972 到 2026，记录每一台改变行业的机器，以及它们为什么重要。', pages: 'Pages', links: 'Links', stack: 'Stack', repo: 'GitHub 开源仓库 ↗', blog: '作者博客 tanzhuo.xyz ↗', images: '图片：Wikimedia Commons', mit: 'MIT 开源', gens: '1972 — 2026 · 9 GENERATIONS' },
   versus: {
-    tag: 'Versus', title: '任选两台机器对决', desc: '从 41 台机器里任选两台，逐项比较 CPU 频率、核心数、GPU 算力、内存、存储、首发价与年份。进度条按对数比例绘制，跨代对比也能看清差距。',
-    sideA: '机器 A', sideB: '机器 B', swap: '交换', na: '—', lowerBetter: '（越低越好）',
+    tag: 'Versus', title: '任选两台机器对决', desc: '从 41 台机器里任选两台，逐项比较 CPU 频率、核心数、GPU 算力、内存、存储、首发价与年份。进度条默认按线性比例绘制，中间标出倍数；跨越几十年的对比可切换到对数刻度。',
+    sideA: '机器 A', sideB: '机器 B', swap: '交换', na: '—', lowerBetter: '（越低越好）', scale: '比例', linear: '线性', logScale: '对数', yearsApart: '年',
     metrics: { cpuMHz: 'CPU 频率', cores: 'CPU 核心', gflops: 'GPU 算力', ramMB: '内存', storageGB: '内置存储', usd: '首发价（美元）', year: '发售年' },
     scoreLabel: '硬件项胜出数（不含年份与价格）',
     note: '数值为公开规格或估算值（早期机型的 GPU 算力按 0 处理，表示无可编程 3D 硬件；卡带机型无内置存储）。跨架构、跨年代的数字只能说明量级，不代表实际游戏体验。',
@@ -107,8 +107,8 @@ const en: UI = {
   },
   footer: { blurb: 'A history of video game consoles. From 1972 to 2026, every machine that changed the industry — and why.', pages: 'Pages', links: 'Links', stack: 'Stack', repo: 'GitHub repository ↗', blog: 'Author\'s blog tanzhuo.xyz ↗', images: 'Images: Wikimedia Commons', mit: 'MIT licensed', gens: '1972 — 2026 · 9 GENERATIONS' },
   versus: {
-    tag: 'Versus', title: 'Head-to-head: any two machines', desc: 'Pick any two of the 41 machines and compare CPU clock, cores, GPU compute, memory, storage, launch price and year side by side. Bars use a log scale so cross-generation match-ups stay readable.',
-    sideA: 'Machine A', sideB: 'Machine B', swap: 'Swap', na: '—', lowerBetter: '(lower is better)',
+    tag: 'Versus', title: 'Head-to-head: any two machines', desc: 'Pick any two of the 41 machines and compare CPU clock, cores, GPU compute, memory, storage, launch price and year side by side. Bars are linear by default with the multiplier shown in the middle; switch to a log scale for match-ups decades apart.',
+    sideA: 'Machine A', sideB: 'Machine B', swap: 'Swap', na: '—', lowerBetter: '(lower is better)', scale: 'Scale', linear: 'Linear', logScale: 'Log', yearsApart: 'yrs',
     metrics: { cpuMHz: 'CPU clock', cores: 'CPU cores', gflops: 'GPU compute', ramMB: 'Memory', storageGB: 'Built-in storage', usd: 'Launch price (USD)', year: 'Release year' },
     scoreLabel: 'Hardware categories won (excluding year and price)',
     note: 'Figures are public specs or estimates (GPU compute is 0 for early machines with no programmable 3D hardware; cartridge systems have no built-in storage). Numbers across architectures and decades show scale only, not real-world experience.',
@@ -161,8 +161,8 @@ const ja: UI = {
   },
   footer: { blurb: 'ゲーム機の歴史アーカイブ。1972 年から 2026 年まで、業界を変えたすべてのマシンと、その理由を記録します。', pages: 'Pages', links: 'Links', stack: 'Stack', repo: 'GitHub リポジトリ ↗', blog: '作者のブログ tanzhuo.xyz ↗', images: '画像：Wikimedia Commons', mit: 'MIT ライセンス', gens: '1972 — 2026 · 9 GENERATIONS' },
   versus: {
-    tag: 'Versus', title: '任意の 2 台で対決', desc: '41 機種から 2 台を選び、CPU クロック、コア数、GPU 性能、メモリ、ストレージ、発売価格、発売年を項目ごとに比較。バーは対数スケールなので世代を超えた比較でも差が読み取れます。',
-    sideA: 'マシン A', sideB: 'マシン B', swap: '入れ替え', na: '—', lowerBetter: '（低いほど良い）',
+    tag: 'Versus', title: '任意の 2 台で対決', desc: '41 機種から 2 台を選び、CPU クロック、コア数、GPU 性能、メモリ、ストレージ、発売価格、発売年を項目ごとに比較。バーは標準では線形比率で、中央に倍率を表示します。数十年離れた比較では対数スケールに切り替えられます。',
+    sideA: 'マシン A', sideB: 'マシン B', swap: '入れ替え', na: '—', lowerBetter: '（低いほど良い）', scale: 'スケール', linear: '線形', logScale: '対数', yearsApart: '年',
     metrics: { cpuMHz: 'CPU クロック', cores: 'CPU コア数', gflops: 'GPU 性能', ramMB: 'メモリ', storageGB: '内蔵ストレージ', usd: '発売価格（米ドル）', year: '発売年' },
     scoreLabel: 'ハードウェア項目の勝利数（年と価格を除く）',
     note: '数値は公開スペックまたは推定値です（初期の機種の GPU 性能はプログラマブル 3D ハードウェアがないため 0 として扱い、カートリッジ機には内蔵ストレージがありません）。アーキテクチャや年代を超えた数字は規模の目安であり、実際のゲーム体験を表すものではありません。',

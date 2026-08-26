@@ -23,12 +23,20 @@ const METRICS: Metric[] = [
   { key: 'year', fmt: (v) => String(v) },
 ]
 
-/** share of the bar for side A, using log scale where spans are huge */
-function share(a: number, b: number, log?: boolean): number {
+/** share of the bar for side A — linear ratio by default, log scale as an option for huge spans */
+function share(a: number, b: number, log: boolean): number {
   if (a <= 0 && b <= 0) return 0.5
   const f = (x: number) => (log ? Math.log10(Math.max(x, 0) + 1) : Math.max(x, 0))
   const fa = f(a), fb = f(b)
   return fa + fb === 0 ? 0.5 : fa / (fa + fb)
+}
+/** human-readable multiplier between the two values */
+function ratio(a: number, b: number): string {
+  if (a === b) return '='
+  const hi = Math.max(a, b), lo = Math.min(a, b)
+  if (lo <= 0) return '∞'
+  const r = hi / lo
+  return r >= 100 ? `${Math.round(r).toLocaleString()}×` : r >= 10 ? `${r.toFixed(0)}×` : `${r.toFixed(1)}×`
 }
 
 function Picker({ value, onChange, exclude, label }: { value: string; onChange: (id: string) => void; exclude: string; label: string }) {
@@ -67,6 +75,7 @@ export function Versus() {
   const [params, setParams] = useSearchParams()
   const [a, setA] = useState(params.get('a') ?? 'ps5')
   const [b, setB] = useState(params.get('b') ?? 'xseries')
+  const [log, setLog] = useState(false)
   const ca = data.consoles.find((c) => c.id === a) ?? data.consoles[0]
   const cb = data.consoles.find((c) => c.id === b) ?? data.consoles[1]
   const pick = (side: 'a' | 'b', id: string) => {
@@ -78,12 +87,13 @@ export function Versus() {
 
   const rows = useMemo(() => METRICS.map((m) => {
     const va = ca.hw[m.key], vb = cb.hw[m.key]
-    if (va == null || vb == null) return { m, va, vb, s: 0.5, winner: 0 as 0 | 1 | 2 }
-    let s = share(va, vb, m.log)
+    if (va == null || vb == null) return { m, va, vb, s: 0.5, winner: 0 as 0 | 1 | 2, r: '' }
+    let s = share(va, vb, log && !!m.log)
     if (m.lowerBetter) s = 1 - s
-    const winner: 0 | 1 | 2 = va === vb ? 0 : (m.lowerBetter ? va < vb : va > vb) ? 1 : 2
-    return { m, va, vb, s, winner }
-  }), [ca, cb])
+    const winner: 0 | 1 | 2 = m.key === 'year' || va === vb ? 0 : (m.lowerBetter ? va < vb : va > vb) ? 1 : 2
+    const r = m.key === 'year' ? `${Math.abs(va - vb)} ${tv.yearsApart}` : ratio(va, vb)
+    return { m, va, vb, s, winner, r }
+  }), [ca, cb, log, tv])
   const score = rows.reduce((acc, r) => { if (r.m.key === 'year' || r.m.key === 'usd') return acc; if (r.winner === 1) acc[0]++; if (r.winner === 2) acc[1]++; return acc }, [0, 0])
 
   return (
@@ -94,7 +104,13 @@ export function Versus() {
           <h2 className="font-display text-white text-[clamp(22px,3vw,30px)]">{tv.title}</h2>
           <p className="text-muted text-[14px] mt-1.5 max-w-[720px]">{tv.desc}</p>
         </div>
-        <button type="button" onClick={swap} className="btn btn-ghost btn-sm">⇄ {tv.swap}</button>
+        <div className="flex items-center gap-2 flex-wrap">
+          <div className="tabs !gap-1" role="group" aria-label={tv.scale}>
+            <button type="button" className="tab !h-8 !px-3 text-[12.5px]" aria-selected={!log} onClick={() => setLog(false)}>{tv.linear}</button>
+            <button type="button" className="tab !h-8 !px-3 text-[12.5px]" aria-selected={log} onClick={() => setLog(true)}>{tv.logScale}</button>
+          </div>
+          <button type="button" onClick={swap} className="btn btn-ghost btn-sm">⇄ {tv.swap}</button>
+        </div>
       </div>
 
       <div className="grid grid-cols-[1fr_auto_1fr] max-[720px]:grid-cols-2 gap-4 max-[720px]:gap-3 items-end mb-5">
@@ -107,10 +123,13 @@ export function Versus() {
       </div>
 
       <div className="grid gap-3">
-        {rows.map(({ m, va, vb, s, winner }) => (
+        {rows.map(({ m, va, vb, s, winner, r }) => (
           <div key={m.key} className="grid grid-cols-[1fr_auto_1fr] max-[720px]:grid-cols-[1fr_1fr] items-center gap-x-3 gap-y-1">
             <div className={`text-[13.5px] max-[720px]:text-[12.5px] font-medium tabular-nums ${winner === 1 ? 'text-accent' : 'text-[#c9cdd5]'}`}>{va == null ? tv.na : m.fmt(va)}</div>
-            <div className="label text-muted text-center max-[720px]:order-first max-[720px]:col-span-2 max-[720px]:text-left !tracking-[.18em]">{tv.metrics[m.key]}{m.lowerBetter ? ` ${tv.lowerBetter}` : ''}</div>
+            <div className="text-center max-[720px]:order-first max-[720px]:col-span-2 max-[720px]:text-left max-[720px]:flex max-[720px]:items-baseline max-[720px]:gap-2">
+              <div className="label text-muted !tracking-[.18em]">{tv.metrics[m.key]}{m.lowerBetter ? ` ${tv.lowerBetter}` : ''}</div>
+              {r && <div className={`font-head text-[11px] mt-0.5 max-[720px]:mt-0 ${winner === 1 ? 'text-accent' : winner === 2 ? 'text-accent2' : 'text-muted'}`}>{winner === 1 ? '◀ ' : ''}{r}{winner === 2 ? ' ▶' : ''}</div>}
+            </div>
             <div className={`text-[13.5px] max-[720px]:text-[12.5px] font-medium text-right tabular-nums ${winner === 2 ? 'text-accent2' : 'text-[#c9cdd5]'}`}>{vb == null ? tv.na : m.fmt(vb)}</div>
             <div className="col-span-3 max-[720px]:col-span-2 h-2.5 rounded-full bg-white/6 overflow-hidden flex">
               <i className="block h-full rounded-l-full bg-gradient-to-r from-[#0090c8] to-accent transition-[width] duration-500" style={{ width: `${s * 100}%`, boxShadow: '0 0 10px rgba(0,240,255,.5)' }} />
