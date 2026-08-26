@@ -1,0 +1,178 @@
+{
+  "ps1": {
+    "file": "/consoles/ps1.jpg",
+    "title": "File:PSX-Console-wController.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:PSX-Console-wController.jpg",
+    "artist": "Evan-Amos",
+    "license": "Public domain",
+    "bg": "light"
+  },
+  "ps2": {
+    "file": "/consoles/ps2.jpg",
+    "title": "File:PS2-Fat-Console-Set.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:PS2-Fat-Console-Set.jpg",
+    "artist": "Evan-Amos",
+    "license": "Public domain",
+    "bg": "light"
+  },
+  "ps3": {
+    "file": "/consoles/ps3.jpg",
+    "title": "File:Sony-PlayStation-3-CECHA01-wController-L.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Sony-PlayStation-3-CECHA01-wController-L.jpg",
+    "artist": "Evan-Amos",
+    "license": "Public domain",
+    "bg": "light"
+  },
+  "ps4": {
+    "file": "/consoles/ps4.jpg",
+    "title": "File:PS4-Console-wDS4.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:PS4-Console-wDS4.jpg",
+    "artist": "Evan-Amos",
+    "license": "Public domain",
+    "bg": "light"
+  },
+  "ps5": {
+    "file": "/consoles/ps5.jpg",
+    "title": "File:PlayStation 5 and DualSense.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:PlayStation_5_and_DualSense.jpg",
+    "artist": "Osh33m",
+    "license": "CC BY-SA 4.0",
+    "bg": "dark"
+  },
+  "xbox": {
+    "file": "/consoles/xbox.jpg",
+    "title": "File:Xbox-console.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Xbox-console.jpg",
+    "artist": "Evan-Amos",
+    "license": "Public domain",
+    "bg": "light"
+  },
+  "xbox360": {
+    "file": "/consoles/xbox360.jpg",
+    "title": "File:Xbox-360-Pro-wController.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Xbox-360-Pro-wController.jpg",
+    "artist": "Evan-Amos",
+    "license": "Public domain",
+    "bg": "light"
+  },
+  "xseries": {
+    "file": "/consoles/xseries.jpg",
+    "title": "File:Xbox Series X 2.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Xbox_Series_X_2.jpg",
+    "artist": "Der. Bellemer",
+    "license": "CC BY-SA 4.0",
+    "bg": "photo"
+  },
+  "fc": {
+    "file": "/consoles/fc.jpg",
+    "title": "File:Nintendo-Famicom-Console-Set-FL.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Nintendo-Famicom-Console-Set-FL.jpg",
+    "artist": "Evan-Amos",
+    "license": "Public domain",
+    "bg": "light"
+  },
+  "sfc": {
+    "file": "/consoles/sfc.jpg",
+    "title": "File:Nintendo-Super-Famicom-Set-FL.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Nintendo-Super-Famicom-Set-FL.jpg",
+    "artist": "Evan-Amos",
+    "license": "Public domain",
+    "bg": "light"
+  },
+  "n64": {
+    "file": "/consoles/n64.jpg",
+    "title": "File:N64-Console-Set.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:N64-Console-Set.jpg",
+    "artist": "Evan-Amos",
+    "license": "Public domain",
+    "bg": "light"
+  },
+  "gc": {
+    "file": "/consoles/gc.jpg",
+    "title": "File:GameCube-Set.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:GameCube-Set.jpg",
+    "artist": "Evan-Amos",
+    "license": "Public domain",
+    "bg": "light"
+  },
+  "wii": {
+    "file": "/consoles/wii.png",
+    "title": "File:Wii-Console.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Wii-Console.png",
+    "artist": "Evan-Amos",
+    "license": "Public domain",
+    "bg": "alpha"
+  },
+  "wiiu": {
+    "file": "/consoles/wiiu.png",
+    "title": "File:Wii U Console and Gamepad.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Wii_U_Console_and_Gamepad.png",
+    "artist": "Takimata (edited by:Tokyoship)",
+    "license": "CC BY-SA 3.0",
+    "bg": "alpha"
+  },
+  "switch": {
+    "file": "/consoles/switch.jpg",
+    "title": "File:Nintendo-Switch-Console-Docked-wJoyConRB.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Nintendo-Switch-Console-Docked-wJoyConRB.jpg",
+    "artist": "Evan-Amos",
+    "license": "Public domain",
+    "bg": "light"
+  },
+  "xbw-fc": {
+    "file": "/consoles/xbw-fc.jpg",
+    "title": "File:Subor Liko KL-235 box set.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Subor_Liko_KL-235_box_set.jpg",
+    "artist": "Flickr 用户（见原页面）",
+    "license": "CC BY 2.0",
+    "bg": "photo"
+  },
+  "xbw-study": {
+    "file": "/consoles/xbw-study.jpg",
+    "title": "File:2009 Bay Area Maker Faire.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:2009_Bay_Area_Maker_Faire.jpg",
+    "artist": "Jeff Keyzer",
+    "license": "CC BY 2.0",
+    "bg": "photo"
+  },
+  "steamdeck": {
+    "file": "/consoles/steamdeck.png",
+    "title": "File:Steam Deck (front).png",
+    "page": "https://commons.wikimedia.org/wiki/File:Steam_Deck_(front).png",
+    "artist": "Liam Dawe/GamingOnLinux, PNG version by VulcanSphere",
+    "license": "CC BY-SA 4.0",
+    "bg": "alpha"
+  },
+  "steammachine2026": {
+    "file": "/consoles/steammachine2026.jpg",
+    "title": "File:Steam machine back.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Steam_machine_back.jpg",
+    "artist": "Masem",
+    "license": "CC BY-SA 4.0",
+    "bg": "photo"
+  },
+  "xboxone": {
+    "file": "/consoles/xboxone.jpg",
+    "title": "File:Xbox-One-Console-FL.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Xbox-One-Console-FL.jpg",
+    "artist": "Evan-Amos",
+    "license": "Public domain",
+    "bg": "light"
+  },
+  "steammachine2015": {
+    "file": "/consoles/steammachine2015.jpg",
+    "title": "File:Steam Machine from Gigabyte and Steam Controller.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Steam_Machine_from_Gigabyte_and_Steam_Controller.jpg",
+    "artist": "Sergey Galyonkin",
+    "license": "CC BY-SA 2.0",
+    "bg": "photo"
+  },
+  "switch2": {
+    "file": "/consoles/switch2.png",
+    "title": "File:Nintendo Switch 2 console in handheld mode.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Nintendo_Switch_2_console_in_handheld_mode.png",
+    "artist": "AOMAF2024 from Wedel, Germany",
+    "license": "CC0",
+    "bg": "alpha"
+  }
+}

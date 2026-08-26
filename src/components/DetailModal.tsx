@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
-import { BRANDS } from '@/data'
+import { BRANDS, CREDITS } from '@/data'
+import { ConsoleImage } from './ConsoleImage'
 import { useLockBody } from '@/hooks/useLockBody'
 import type { Console } from '@/types/console'
 
@@ -60,8 +61,15 @@ export function DetailModal({ console: c, onClose }: Props) {
           ×
         </button>
 
-        <div className="font-head text-[11px] tracking-[.2em] text-accent">{BRANDS[c.brand].label.toUpperCase()}</div>
-        <h2 id="modal-title" className="font-head text-[26px] text-white font-bold mt-1.5 mb-2.5">{c.name}</h2>
+        <div className="flex gap-6 max-[680px]:flex-col max-[680px]:gap-3 items-start mb-2">
+          <div className="flex-1 min-w-0">
+            <div className="font-head text-[11px] tracking-[.2em] text-accent">{BRANDS[c.brand].label.toUpperCase()}</div>
+            <h2 id="modal-title" className="font-head text-[26px] text-white font-bold mt-1.5 mb-2.5">{c.name}</h2>
+          </div>
+          <div className="w-[200px] max-[680px]:w-full h-[120px] shrink-0 flex items-center justify-center">
+            <ConsoleImage id={c.id} name={c.name} className="w-full h-full" />
+          </div>
+        </div>
         <div className="flex flex-wrap gap-2 mb-6">
           {([['年份', c.year], ['介质', c.media], ['销量', c.sales]] as const).map(([k, v]) => (
             <span key={k} className="text-xs px-3 py-1.25 rounded-full border border-line bg-white/4 text-[#d0d4da]">
@@ -94,6 +102,12 @@ export function DetailModal({ console: c, onClose }: Props) {
 
         <Block title="历史意义"><p className="text-[15px] text-[#d5d8de]">{c.history}</p></Block>
         <Block title="性能讲解"><p className="text-[15px] text-[#d5d8de]">{c.perf}</p></Block>
+        {CREDITS[c.id] && (
+          <p className="text-[11px] text-muted -mt-2">
+            图片：<a href={CREDITS[c.id].page} target="_blank" rel="noreferrer" className="underline hover:text-accent">{CREDITS[c.id].title.replace(/^File:/, '')}</a>
+            {' '}· {CREDITS[c.id].artist} · {CREDITS[c.id].license} · Wikimedia Commons
+          </p>
+        )}
       </div>
     </div>
   )

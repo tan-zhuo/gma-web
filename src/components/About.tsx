@@ -1,3 +1,4 @@
+import { CONSOLES, CREDITS } from '@/data'
 import { SectionHead } from './SectionHead'
 
 export function About() {
@@ -21,6 +22,27 @@ export function About() {
             </ul>
           </div>
         </div>
+        <details className="glass rounded-2xl mt-7 group/credits">
+          <summary className="cursor-pointer px-7 py-4 font-head text-[13px] text-white flex items-center gap-3 select-none">
+            <span className="text-accent2 transition-transform group-open/credits:rotate-90">▶</span>
+            图片来源与许可（Wikimedia Commons）
+            <span className="ml-auto text-muted font-body font-normal text-xs">{Object.keys(CREDITS).length} 张</span>
+          </summary>
+          <ul className="px-7 pb-6 grid grid-cols-2 max-[900px]:grid-cols-1 gap-x-8 gap-y-1.5 text-xs text-[#c5c9d0]">
+            {CONSOLES.filter((c) => CREDITS[c.id]).map((c) => {
+              const k = CREDITS[c.id]
+              return (
+                <li key={c.id} className="flex gap-2 min-w-0">
+                  <span className="text-white shrink-0">{c.name}</span>
+                  <span className="text-muted truncate">
+                    <a href={k.page} target="_blank" rel="noreferrer" className="underline hover:text-accent">{k.title.replace(/^File:/, '')}</a> · {k.artist} · {k.license}
+                  </span>
+                </li>
+              )
+            })}
+          </ul>
+          <p className="px-7 pb-5 text-[11px] text-muted">未列出的机型使用本站自绘示意图。CC BY-SA 图片依许可要求署名，如需再利用请遵循相应许可。</p>
+        </details>
       </div>
     </section>
   )

@@ -14,3 +14,7 @@ export const NAV_LINKS = [
   { id: 'compare', label: '性能对比' },
   { id: 'about', label: '关于' },
 ] as const
+
+import creditsRaw from './credits.json'
+import type { ImageCredit } from '@/types/credit'
+export const CREDITS = creditsRaw as Record<string, ImageCredit>
