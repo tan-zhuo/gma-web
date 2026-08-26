@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Console Archive — 人类游戏机历史档案</title>
+<meta name="description" content="从 1972 年到 2026 年，九代家用游戏机演进档案：PlayStation、Xbox、任天堂、小霸王、Steam 硬件。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0b0f;--bg2:#12141c;--card:rgba(22,25,35,.85);--border:rgba(255,255,255,.08);
+  --text:#e8eaed;--muted:#9aa0a6;--accent:#00f0ff;--accent2:#ff2d95;
+  --ps:#003791;--ps-l:#3a7bff;--xbox:#107c10;--xbox-l:#3ddc3d;--nintendo:#e60012;--nintendo-l:#ff4d5a;
+  --steam:#1b2838;--steam-l:#66c0f4;--xiaobawang:#ff6b00;--xiaobawang-l:#ff9a4d;
+  --font-head:'Orbitron',system-ui,sans-serif;--font-body:'Noto Sans SC',system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);line-height:1.7;font-weight:400;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-2;background:
+  radial-gradient(900px 600px at 10% -10%,rgba(0,240,255,.13),transparent 60%),
+  radial-gradient(800px 600px at 95% 15%,rgba(255,45,149,.11),transparent 60%),
+  radial-gradient(700px 500px at 50% 110%,rgba(0,240,255,.07),transparent 60%),var(--bg)}
+body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.35;
+  background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:48px 48px}
+a{color:inherit;text-decoration:none}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+h1,h2,h3,.logo{font-family:var(--font-head);letter-spacing:.02em}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:rgba(10,11,15,.7);border-bottom:1px solid var(--border)}
+.nav .container{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.logo{font-weight:900;font-size:18px;color:#fff;display:flex;align-items:center;gap:10px;white-space:nowrap}
+.logo i{width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent)}
+.logo span{color:var(--accent)}
+.nav ul{display:flex;gap:6px;list-style:none}
+.nav li a{display:block;padding:8px 14px;border-radius:8px;font-size:14px;color:var(--muted);transition:.2s}
+.nav li a:hover,.nav li a.active{color:#fff;background:rgba(255,255,255,.06)}
+
+/* HERO */
+.hero{padding:96px 0 72px;position:relative}
+.hero .eyebrow{font-family:var(--font-head);font-size:12px;letter-spacing:.3em;color:var(--accent);text-transform:uppercase;margin-bottom:18px}
+.hero h1{font-size:clamp(34px,6vw,64px);line-height:1.1;font-weight:900;background:linear-gradient(90deg,#fff 0%,#cfd8ff 50%,var(--accent) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:20px}
+.hero p.lead{font-size:18px;color:var(--muted);max-width:640px;margin-bottom:44px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:900px}
+.stat{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;backdrop-filter:blur(10px);position:relative;overflow:hidden}
+.stat::after{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(var(--accent),var(--accent2))}
+.stat b{display:block;font-family:var(--font-head);font-size:30px;font-weight:700;color:#fff;line-height:1.2}
+.stat small{color:var(--muted);font-size:13px}
+
+/* SECTION */
+section{padding:72px 0;scroll-margin-top:70px}
+.sec-head{margin-bottom:40px}
+.sec-head .tag{font-family:var(--font-head);font-size:11px;letter-spacing:.3em;color:var(--accent2);text-transform:uppercase}
+.sec-head h2{font-size:clamp(26px,4vw,38px);font-weight:700;color:#fff;margin:8px 0 10px}
+.sec-head p{color:var(--muted);max-width:720px}
+
+/* TIMELINE */
+.timeline{position:relative;padding-left:40px}
+.timeline::before{content:"";position:absolute;left:11px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--accent),var(--accent2),rgba(255,255,255,.1))}
+.gen{position:relative;margin-bottom:28px;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px 26px;backdrop-filter:blur(10px);transition:border-color .25s,transform .25s}
+.gen:hover{border-color:rgba(0,240,255,.35);transform:translateX(4px)}
+.gen::before{content:"";position:absolute;left:-36px;top:30px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--accent);box-shadow:0 0 14px rgba(0,240,255,.6)}
+.gen-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:8px}
+.gen-top .num{font-family:var(--font-head);font-size:13px;color:var(--accent);letter-spacing:.2em}
+.gen-top h3{font-size:20px;color:#fff;font-weight:700}
+.gen-top .years{color:var(--muted);font-size:14px;margin-left:auto;font-family:var(--font-head)}
+.gen p{color:#c5c9d0;font-size:15px;margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:12px;padding:4px 10px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.04);color:#d0d4da}
+.chip.ps{border-color:var(--ps-l);color:var(--ps-l);background:rgba(58,123,255,.1)}
+.chip.xbox{border-color:var(--xbox-l);color:var(--xbox-l);background:rgba(61,220,61,.1)}
+.chip.nintendo{border-color:var(--nintendo-l);color:var(--nintendo-l);background:rgba(255,77,90,.1)}
+.chip.steam{border-color:var(--steam-l);color:var(--steam-l);background:rgba(102,192,244,.1)}
+.chip.xiaobawang{border-color:var(--xiaobawang-l);color:var(--xiaobawang-l);background:rgba(255,154,77,.1)}
+
+/* TABS */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:32px}
+.tab{padding:9px 18px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.03);color:var(--muted);font-size:14px;cursor:pointer;font-family:var(--font-body);transition:.2s}
+.tab:hover{color:#fff;border-color:rgba(255,255,255,.2)}
+.tab.active{color:#0a0b0f;background:var(--accent);border-color:var(--accent);font-weight:500;box-shadow:0 0 18px rgba(0,240,255,.35)}
+
+/* GRID + CARD */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:18px;overflow:hidden;backdrop-filter:blur(10px);transition:transform .3s,border-color .3s,box-shadow .3s;display:flex;flex-direction:column;animation:fadeUp .4s both}
+.card:hover{transform:translateY(-6px);border-color:rgba(0,240,255,.35);box-shadow:0 20px 50px rgba(0,0,0,.5),0 0 0 1px rgba(0,240,255,.15)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.card-visual{height:180px;position:relative;display:flex;align-items:center;justify-content:center;perspective:700px;overflow:hidden;
+  background:radial-gradient(ellipse at 50% 120%,var(--brand-glow) 0%,transparent 60%),linear-gradient(160deg,#1a1e2a,#0b0c11)}
+.card-visual::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:24px 24px;mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%)}
+.badge{position:absolute;top:12px;left:12px;z-index:2;font-family:var(--font-head);font-size:10px;letter-spacing:.15em;padding:5px 10px;border-radius:6px;color:#fff;background:var(--brand);box-shadow:0 0 14px var(--brand-glow)}
+.year-tag{position:absolute;top:12px;right:12px;z-index:2;font-family:var(--font-head);font-size:11px;color:var(--muted)}
+/* 3D console block */
+.box3d{position:relative;width:140px;height:44px;transform-style:preserve-3d;transform:rotateX(52deg) rotateY(-28deg) rotateZ(8deg);transition:transform .55s cubic-bezier(.2,.8,.2,1)}
+.card:hover .box3d{transform:rotateX(18deg) rotateY(-14deg) scale(1.12)}
+.box3d.tall{width:80px;height:150px}
+.box3d.handheld{width:170px;height:70px}
+.box3d.cube{width:90px;height:90px}
+.box3d .f{position:absolute;inset:0;border-radius:6px;background:linear-gradient(135deg,#3a3f4e,#161922);border:1px solid rgba(255,255,255,.15);box-shadow:inset 0 0 0 1px rgba(0,0,0,.4)}
+.box3d .f.front{transform:translateZ(14px)}
+.box3d .f.front::before{content:"";position:absolute;left:12%;top:38%;width:40%;height:3px;border-radius:2px;background:var(--brand-l);box-shadow:0 0 8px var(--brand-l)}
+.box3d .f.front::after{content:"";position:absolute;right:10%;top:34%;width:10px;height:10px;border-radius:50%;background:var(--brand-l);box-shadow:0 0 10px var(--brand-l)}
+.box3d.handheld .f.front::before{left:34%;top:18%;width:32%;height:64%;border-radius:4px;background:linear-gradient(135deg,var(--brand-l),rgba(0,0,0,.6));box-shadow:0 0 12px var(--brand-glow)}
+.box3d.handheld .f.front::after{right:10%;top:40%}
+.box3d .f.back{transform:translateZ(-14px);background:#0e1016}
+.box3d .side{position:absolute;background:linear-gradient(#2a2e3b,#0d0f15);border:1px solid rgba(255,255,255,.08)}
+.box3d .side.l{left:0;top:0;width:28px;height:100%;transform:rotateY(-90deg) translateZ(14px);transform-origin:left}
+.box3d .side.r{right:0;top:0;width:28px;height:100%;transform:rotateY(90deg) translateZ(14px);transform-origin:right}
+.box3d .side.t{left:0;top:0;width:100%;height:28px;transform:rotateX(90deg) translateZ(14px);transform-origin:top;background:linear-gradient(90deg,#3d4353,#1a1d27)}
+.box3d .side.b{left:0;bottom:0;width:100%;height:28px;transform:rotateX(-90deg) translateZ(14px);transform-origin:bottom}
+.card-body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card-body h3{font-size:16px;color:#fff;font-weight:700;line-height:1.35}
+.card-meta{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12px;color:var(--muted)}
+.card-meta span b{color:#cfd3da;font-weight:500}
+.card-spec{font-size:13px;color:#b8bcc4;display:grid;gap:3px}
+.card-spec div{display:flex;gap:8px}
+.card-spec div i{font-style:normal;font-family:var(--font-head);font-size:10px;color:var(--accent);width:32px;flex-shrink:0;padding-top:4px;letter-spacing:.1em}
+.card-spec div span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.btn{margin-top:auto;align-self:flex-start;padding:9px 18px;border-radius:8px;border:1px solid var(--accent);background:transparent;color:var(--accent);font-family:var(--font-body);font-size:13px;cursor:pointer;transition:.2s;font-weight:500}
+.btn:hover{background:var(--accent);color:#0a0b0f;box-shadow:0 0 18px rgba(0,240,255,.4)}
+.card[data-brand=ps]{--brand:var(--ps);--brand-l:var(--ps-l);--brand-glow:rgba(58,123,255,.35)}
+.card[data-brand=xbox]{--brand:var(--xbox);--brand-l:var(--xbox-l);--brand-glow:rgba(61,220,61,.3)}
+.card[data-brand=nintendo]{--brand:var(--nintendo);--brand-l:var(--nintendo-l);--brand-glow:rgba(255,77,90,.32)}
+.card[data-brand=steam]{--brand:var(--steam);--brand-l:var(--steam-l);--brand-glow:rgba(102,192,244,.35)}
+.card[data-brand=xiaobawang]{--brand:var(--xiaobawang);--brand-l:var(--xiaobawang-l);--brand-glow:rgba(255,107,0,.35)}
+.empty{color:var(--muted);padding:40px;text-align:center;grid-column:1/-1}
+
+/* TABLE */
+.table-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:16px;background:var(--card);backdrop-filter:blur(10px)}
+table{width:100%;border-collapse:collapse;min-width:900px;font-size:14px}
+th,td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--border);vertical-align:top}
+th{font-family:var(--font-head);font-size:11px;letter-spacing:.15em;color:var(--accent);text-transform:uppercase;background:rgba(255,255,255,.03);white-space:nowrap}
+tr:last-child td{border-bottom:0}
+tbody tr:hover td{background:rgba(255,255,255,.03)}
+td:first-child{font-weight:500;color:#fff;white-space:nowrap}
+td .sub{display:block;font-size:12px;color:var(--muted)}
+.note{margin-top:14px;font-size:13px;color:var(--muted)}
+.note b{color:var(--accent2);font-weight:500}
+
+/* ABOUT */
+.about{display:grid;grid-template-columns:1.2fr 1fr;gap:28px}
+.panel{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;backdrop-filter:blur(10px)}
+.panel h3{font-size:17px;color:#fff;margin-bottom:12px}
+.panel p,.panel li{color:#c5c9d0;font-size:14px}
+.panel ul{padding-left:18px;display:grid;gap:6px}
+footer{padding:36px 0;border-top:1px solid var(--border);color:var(--muted);font-size:13px;text-align:center}
+footer span{font-family:var(--font-head);color:var(--accent)}
+
+/* MODAL */
+.modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(5,6,10,.75);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.modal.open{display:flex;animation:fade .2s}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.modal-box{width:min(760px,100%);max-height:90vh;overflow-y:auto;background:linear-gradient(160deg,#171a25,#0e1016);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:32px 34px;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 1px rgba(0,240,255,.1);animation:pop .25s cubic-bezier(.2,.8,.2,1)}
+@keyframes pop{from{opacity:0;transform:translateY(16px) scale(.98)}to{opacity:1;transform:none}}
+.modal-box::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;border-radius:20px 20px 0 0;background:linear-gradient(90deg,var(--brand,var(--accent)),var(--accent2))}
+.modal-close{position:absolute;top:14px;right:14px;width:36px;height:36px;border-radius:50%;border:1px solid var(--border);background:rgba(255,255,255,.05);color:#fff;font-size:18px;cursor:pointer;transition:.2s}
+.modal-close:hover{background:var(--accent2);border-color:var(--accent2)}
+.m-brand{font-family:var(--font-head);font-size:11px;letter-spacing:.2em;color:var(--accent)}
+.modal-box h2{font-size:26px;color:#fff;margin:6px 0 10px;font-weight:700}
+.m-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.m-meta span{font-size:12px;padding:5px 12px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.04);color:#d0d4da}
+.m-meta span b{color:var(--accent);font-weight:500;margin-right:4px}
+.m-sec{margin-bottom:22px}
+.m-sec h4{font-family:var(--font-head);font-size:11px;letter-spacing:.2em;color:var(--accent2);text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.m-sec h4::after{content:"";flex:1;height:1px;background:var(--border)}
+.m-sec p{font-size:15px;color:#d5d8de}
+.specs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.specs div{background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:10px;padding:12px 14px}
+.specs div i{font-style:normal;display:block;font-family:var(--font-head);font-size:10px;color:var(--accent);letter-spacing:.15em;margin-bottom:4px}
+.specs div span{font-size:13px;color:#e3e6ea}
+.ops-grid{display:grid;grid-template-columns:1fr;gap:10px}
+.ops-grid div{background:rgba(255,255,255,.03);border-left:2px solid var(--accent);padding:10px 14px;border-radius:0 8px 8px 0}
+.ops-grid div i{font-style:normal;font-size:12px;color:var(--muted);display:block;margin-bottom:2px}
+.ops-grid div span{font-size:14px;color:#d5d8de}
+
+@media (max-width:900px){.about{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:680px){
+  .nav ul{display:none}.nav .container{justify-content:center}
+  .hero{padding:64px 0 48px}.stats{gap:10px}.stat{padding:14px 16px}.stat b{font-size:22px}
+  section{padding:52px 0}.timeline{padding-left:30px}.gen{padding:18px}.gen::before{left:-26px}
+  .grid{grid-template-columns:1fr}.specs{grid-template-columns:1fr}.modal-box{padding:26px 20px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container">
+    <a href="#top" class="logo"><i></i>CONSOLE<span>ARCHIVE</span></a>
+    <ul>
+      <li><a href="#timeline">世代时间线</a></li>
+      <li><a href="#series">核心系列</a></li>
+      <li><a href="#compare">性能对比</a></li>
+      <li><a href="#about">关于</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="container">
+    <div class="eyebrow">Human Console History · 1972 — 2026</div>
+    <h1>人类游戏机<br>历史档案</h1>
+    <p class="lead">从 8 位芯片到光线追踪，从红白机到 Steam Machine。一份中文优先、硬核可查的家用游戏机演进归档：九代世代脉络、核心系列机型规格、操作方式、历史意义与性能边界。</p>
+    <div class="stats" id="stats"></div>
+  </div>
+</header>
+
+<section id="timeline">
+  <div class="container">
+    <div class="sec-head">
+      <div class="tag">Timeline</div>
+      <h2>九代世代时间线</h2>
+      <p>业界通行的「世代」划分并非官方标准，而是按硬件能力跃迁与主要厂商发布周期归纳。以下以主流共识划分，标注每代的关键机型与技术转折。</p>
+    </div>
+    <div class="timeline" id="timelineList"></div>
+  </div>
+</section>
+
+<section id="series">
+  <div class="container">
+    <div class="sec-head">
+      <div class="tag">Core Series</div>
+      <h2>核心系列详解</h2>
+      <p>点击「详情」查看每台机器的核心规格、操作方式、历史意义与性能讲解。所有规格以公开资料为准。</p>
+    </div>
+    <div class="tabs" id="tabs" role="tablist"></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section id="compare">
+  <div class="container">
+    <div class="sec-head">
+      <div class="tag">Benchmark</div>
+      <h2>当代性能横向对比</h2>
+      <p>第九代主机与 Steam 硬件的账面规格对比。GPU 算力以 FP32 TFLOPS 表示，仅反映理论峰值。</p>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>机型</th><th>CPU</th><th>GPU</th><th>内存</th><th>存储</th><th>目标性能</th><th>形态</th></tr></thead>
+        <tbody id="compareBody"></tbody>
+      </table>
+    </div>
+    <p class="note"><b>注：</b>以上均为理论值，实际表现受游戏优化、功耗策略、分辨率缩放（DLSS / FSR / PSSR）等影响；不同架构的 TFLOPS 不可直接换算为帧率。Switch 2 部分参数为公开信息与拆解推断，非官方完整公布。</p>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="sec-head">
+      <div class="tag">About</div>
+      <h2>关于本站</h2>
+    </div>
+    <div class="about">
+      <div class="panel">
+        <h3>编纂原则</h3>
+        <p>本站是一份以中文为第一语言的游戏机历史归档。内容强调「为什么重要」而非「有多厉害」：每台机器的历史意义部分尽量客观说明其对行业、技术或市场的实际影响；性能讲解部分明确区分理论峰值与实际体验的边界。</p>
+        <p style="margin-top:10px">小霸王系列作为中国市场的特殊存在，同时具备「FC 兼容机」与「学习机」双重身份，本站按其真实定位而非情怀滤镜进行记录。</p>
+      </div>
+      <div class="panel">
+        <h3>数据说明</h3>
+        <ul>
+          <li>销量数据来自厂商财报与公开统计，截至 2026 年年中。</li>
+          <li>发售年份标注首发地区；存在地区差异时以「/」分隔。</li>
+          <li>Switch 2、Steam Machine (2026) 等新机型规格以公开发布信息为准，部分为推断。</li>
+          <li>世代划分采用主流共识，非官方标准。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="container"><span>CONSOLE ARCHIVE</span> · 人类游戏机历史档案 · 2026 · 纯 HTML / CSS / JS 实现，无外部依赖</div></footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="modal-box" id="modalBox">
+    <button class="modal-close" id="modalClose" aria-label="关闭">×</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<script>
+/* ========== DATA ========== */
+const BRANDS = {
+  ps:{label:'PlayStation',short:'PS'},
+  xbox:{label:'Xbox',short:'XBOX'},
+  nintendo:{label:'任天堂',short:'NINTENDO'},
+  xiaobawang:{label:'小霸王',short:'小霸王'},
+  steam:{label:'Steam',short:'STEAM'}
+};
+
+const GENERATIONS = [
+  {n:1,name:'第一代 · 电视游戏的诞生',years:'1972 – 1977',desc:'Magnavox Odyssey 与 Atari 家用 Pong 定义了「把游戏接到电视上」这件事。机器内置固定游戏，无可更换卡带，逻辑由分立电路实现。',chips:[['Magnavox Odyssey',''],['Atari Home Pong',''],['Coleco Telstar','']]},
+  {n:2,name:'第二代 · 卡带与微处理器',years:'1976 – 1983',desc:'Fairchild Channel F 首创可更换 ROM 卡带，Atari 2600 将其推向大众市场。1983 年北美「雅达利大崩溃」几乎终结了家用机产业。',chips:[['Fairchild Channel F',''],['Atari 2600',''],['Intellivision',''],['ColecoVision','']]},
+  {n:3,name:'第三代 · 8 位时代 / 红白机',years:'1983 – 1990',desc:'任天堂 Family Computer 以严格的第三方授权制度重建市场信心，《超级马力欧兄弟》确立横版平台游戏范式。中国市场则由小霸王等 FC 兼容机承接。',chips:[['Family Computer / NES','nintendo'],['Sega Master System',''],['小霸王 FC 兼容机','xiaobawang']]},
+  {n:4,name:'第四代 · 16 位战争',years:'1987 – 1996',desc:'Super Famicom 与 Sega Mega Drive 展开正面竞争，Mode 7 缩放旋转、更丰富的调色板与音源芯片让 2D 表现力达到顶峰。',chips:[['Super Famicom / SNES','nintendo'],['Sega Mega Drive / Genesis',''],['PC Engine / TurboGrafx-16',''],['Neo Geo','']]},
+  {n:5,name:'第五代 · 3D 与光盘',years:'1993 – 2002',desc:'索尼以 PlayStation 进入游戏机行业，CD-ROM 的大容量与低成本压倒卡带。N64 坚持卡带但用摇杆定义了 3D 操作标准。',chips:[['PlayStation','ps'],['Nintendo 64','nintendo'],['Sega Saturn',''],['小霸王学习机 SB-486','xiaobawang']]},
+  {n:6,name:'第六代 · DVD 与网络雏形',years:'1998 – 2006',desc:'PS2 借 DVD 播放功能成为史上最畅销主机。微软携 Xbox 入局，内置硬盘与 Xbox Live 把在线对战带进客厅。世嘉退出硬件业务。',chips:[['PlayStation 2','ps'],['Xbox','xbox'],['GameCube','nintendo'],['Sega Dreamcast','']]},
+  {n:7,name:'第七代 · 高清与体感',years:'2005 – 2013',desc:'Xbox 360 与 PS3 进入 HD 时代并普及在线服务与数字商店；Wii 以体感操作开辟休闲玩家蓝海，销量反超两台高性能对手。',chips:[['Xbox 360','xbox'],['PlayStation 3','ps'],['Wii','nintendo']]},
+  {n:8,name:'第八代 · x86 架构统一',years:'2012 – 2020',desc:'PS4 与 Xbox One 均采用 AMD 半定制 x86 APU，主机与 PC 架构趋同。任天堂以 Switch 的主机 / 掌机融合形态另辟蹊径。',chips:[['PlayStation 4 / Pro','ps'],['Xbox One / S / X','xbox'],['Wii U','nintendo'],['Switch','nintendo'],['Steam Machine (2015)','steam']]},
+  {n:9,name:'第九代 · SSD、光追与掌机 PC',years:'2020 – 至今',desc:'PS5 与 Xbox Series 以 NVMe SSD 与硬件光追为标志。Steam Deck 证明了 x86 掌机可行性，Valve 于 2026 年重返客厅主机市场。Switch 2 延续融合形态。',chips:[['PlayStation 5 / Pro','ps'],['Xbox Series X | S','xbox'],['Switch 2','nintendo'],['Steam Deck','steam'],['Steam Machine (2026)','steam']]}
+];
+
+const CONSOLES = [
+  /* ---------- PlayStation ---------- */
+  {id:'ps1',brand:'ps',shape:'flat',name:'PlayStation',year:'1994（日本）/ 1995（欧美）',media:'CD-ROM',sales:'约 1.02 亿台',
+   cpu:'MIPS R3000A 兼容 32 位 RISC @ 33.8 MHz',gpu:'定制 GPU，2D/3D 多边形光栅化，无硬件 Z-buffer',ram:'2 MB 主内存 + 1 MB 显存',
+   control:'数字手柄，1997 年推出 DualShock（双摇杆 + 震动）',
+   ops:'开盖放入 CD，按电源键启动；记忆卡插槽保存进度。DualShock 的双摇杆布局成为后续三十年手柄的基准。',
+   history:'索尼首次进入游戏机行业，凭 CD-ROM 的容量与低成本、对第三方开发者友好的政策，终结了任天堂对家用机市场的主导，并让游戏机走向成年玩家。',
+   perf:'首个可实用 3D 多边形的大众主机，但缺乏浮点单元与 Z-buffer，导致特有的贴图抖动与多边形扭曲。'},
+  {id:'ps2',brand:'ps',shape:'flat',name:'PlayStation 2',year:'2000',media:'DVD-ROM / CD-ROM',sales:'超过 1.55 亿台（史上最高）',
+   cpu:'Emotion Engine，MIPS R5900 @ 294.9 MHz，含两个向量单元',gpu:'Graphics Synthesizer @ 147 MHz，4 MB 嵌入式显存',ram:'32 MB RDRAM',
+   control:'DualShock 2，压感按键',
+   ops:'兼容 PS1 游戏与 DVD 影片播放，初期常被作为廉价 DVD 播放器购入。后期薄版机型体积大幅缩减。',
+   history:'以 DVD 播放功能和庞大游戏库成为史上最畅销游戏机，生命周期长达 13 年，奠定了索尼在第六代的绝对优势。',
+   perf:'Emotion Engine 的向量单元理论算力惊人，但编程难度高；实际画面表现依赖开发者对硬件的深度优化。'},
+  {id:'ps3',brand:'ps',shape:'flat',name:'PlayStation 3',year:'2006',media:'Blu-ray Disc',sales:'约 8,740 万台',
+   cpu:'Cell Broadband Engine @ 3.2 GHz，1 PPE + 7 SPE',gpu:'NVIDIA RSX @ 500 MHz，256 MB GDDR3',ram:'256 MB XDR + 256 MB GDDR3',
+   control:'Sixaxis / DualShock 3，六轴体感',
+   ops:'内置硬盘与 Wi-Fi，通过 PlayStation Network 下载游戏与更新。首发售价 599 美元引发争议。',
+   history:'蓝光光驱推动了高清影碟格式战的胜利；Cell 架构过于超前导致早期开发困难与高昂成本，索尼在本代失去市场领先地位。',
+   perf:'Cell 的 SPE 并行算力在充分优化下可弥补 RSX 的短板，但多平台游戏往往在 PS3 上表现不如 Xbox 360。'},
+  {id:'ps4',brand:'ps',shape:'flat',name:'PlayStation 4 / PS4 Pro',year:'2013 / 2016（Pro）',media:'Blu-ray Disc / 数字下载',sales:'约 1.17 亿台',
+   cpu:'AMD Jaguar 8 核 @ 1.6 GHz（Pro：2.13 GHz）',gpu:'AMD GCN 18 CU，1.84 TFLOPS（Pro：36 CU，4.2 TFLOPS）',ram:'8 GB GDDR5',
+   control:'DualShock 4，触摸板、光条、分享键',
+   ops:'一键「Share」录制分享成为标配；Pro 型号面向 4K 电视，使用棋盘渲染提升分辨率。',
+   history:'索尼在 E3 2013 以「不限制二手」与更低售价的策略赢得舆论，PS4 成为第八代绝对赢家；PS4 Pro 开创了「同代半代升级」的模式。',
+   perf:'x86 APU 让移植变得简单，开发效率大幅提升。Pro 的 4.2 TFLOPS 多用于棋盘渲染 4K，并非原生 4K。'},
+  {id:'ps5',brand:'ps',shape:'tall',name:'PlayStation 5 / Slim / Pro',year:'2020 / 2023（Slim）/ 2024（Pro）',media:'UHD Blu-ray / 数字下载（数字版无光驱）',sales:'超过 8,000 万台（2026 年中）',
+   cpu:'AMD Zen 2 8 核 @ 3.5 GHz',gpu:'AMD RDNA 2 36 CU，10.28 TFLOPS（Pro：60 CU，约 16.7 TFLOPS）',ram:'16 GB GDDR6（Pro 另加 2 GB DDR5）',
+   control:'DualSense，自适应扳机 + 高保真触觉反馈',
+   ops:'定制 NVMe SSD（5.5 GB/s）几乎消除加载时间；Pro 引入 PSSR AI 超分辨率与增强光追。',
+   history:'以 SSD 与 DualSense 的触觉反馈重新定义「次世代体验」，首发受疫情芯片短缺影响供不应求。PS5 Pro 是首台面向「光追 + AI 超分」的主机。',
+   perf:'10.28 TFLOPS 为理论值，可变频率设计意味着 CPU 与 GPU 不能同时满频。Pro 的 GPU 算力提升约 45%，光追性能提升 2–3 倍。'},
+
+  /* ---------- Xbox ---------- */
+  {id:'xbox',brand:'xbox',shape:'flat',name:'Xbox',year:'2001',media:'DVD-ROM',sales:'约 2,400 万台',
+   cpu:'Intel Pentium III 定制 @ 733 MHz',gpu:'NVIDIA NV2A @ 233 MHz',ram:'64 MB DDR',
+   control:'初代「Duke」大手柄，后改为 Controller S',
+   ops:'内置 8 GB 硬盘（可保存进度、自定义音乐）与以太网口，2002 年 Xbox Live 上线，提供统一的在线对战与语音服务。',
+   history:'微软进入游戏机行业的首作，用 PC 架构与内置硬盘 / 网口把在线游戏与数字服务带入客厅；《光环》奠定了主机 FPS 的标准。',
+   perf:'第六代性能最强的主机，是首台支持可编程着色器的家用机，但成本高昂导致微软每台亏损。'},
+  {id:'xbox360',brand:'xbox',shape:'tall',name:'Xbox 360',year:'2005',media:'DVD-ROM / HD DVD（外接）',sales:'约 8,400 万台',
+   cpu:'IBM Xenon，3 核 PowerPC @ 3.2 GHz',gpu:'ATI Xenos @ 500 MHz，10 MB eDRAM',ram:'512 MB GDDR3（统一内存）',
+   control:'Xbox 360 无线手柄，被公认为当代手柄设计典范',
+   ops:'Xbox Live Marketplace 建立成就系统与数字商店；2010 年推出 Kinect 体感摄像头，无需手柄即可操作。',
+   history:'率先进入 HD 世代，成就系统与统一在线服务成为行业标配，西方市场首次与索尼平分秋色。早期「三红」硬件故障造成巨额保修支出。',
+   perf:'统一着色器架构的 GPU 领先同期 PC 显卡，多平台游戏普遍在 360 上表现优于 PS3。'},
+  {id:'xboxone',brand:'xbox',shape:'flat',name:'Xbox One / One S / One X',year:'2013 / 2016（S）/ 2017（X）',media:'Blu-ray（One S / X 支持 UHD）/ 数字下载',sales:'约 5,800 万台（估计）',
+   cpu:'AMD Jaguar 8 核 @ 1.75 GHz（X：2.3 GHz）',gpu:'AMD GCN 12 CU，1.31 TFLOPS（X：40 CU，6 TFLOPS）',ram:'8 GB DDR3 + 32 MB ESRAM（X：12 GB GDDR5）',
+   control:'Xbox One 手柄，脉冲扳机震动；Elite 精英手柄',
+   ops:'首发捆绑 Kinect 并强调电视与多媒体整合，后取消。One X 是当时最强主机，主打原生 4K。',
+   history:'2013 年发布会因 DRM 与二手政策失误开局不利，本代落后 PS4。微软随后转向 Game Pass 订阅与跨平台策略，重塑其业务核心。',
+   perf:'初版 GPU 弱于 PS4 约 40%，多平台游戏常为 900p vs 1080p。One X 的 6 TFLOPS 与 326 GB/s 带宽支持不少游戏原生 4K。'},
+  {id:'xseries',brand:'xbox',shape:'cube',name:'Xbox Series X | S',year:'2020',media:'UHD Blu-ray（X）/ 纯数字（S）',sales:'约 3,000 万台（估计，微软未公布）',
+   cpu:'AMD Zen 2 8 核 @ 3.8 GHz（S：3.6 GHz）',gpu:'AMD RDNA 2 52 CU，12.15 TFLOPS（S：20 CU，4 TFLOPS）',ram:'16 GB GDDR6（S：10 GB）',
+   control:'Xbox 无线手柄，加入分享键与增强握把',
+   ops:'Velocity Architecture（NVMe SSD + 硬件解压）实现「快速恢复」多游戏切换；Series S 以 299 美元定位 1440p 入门。',
+   history:'微软以「双机型 + Game Pass」策略取代单纯硬件竞争；Series X 是账面算力最强的当代主机，Series S 则拉低了次世代入门门槛。',
+   perf:'12.15 TFLOPS 为固定频率的理论值，实际多平台表现与 PS5 互有胜负。Series S 内存较小，成为部分开发者抱怨的瓶颈。'},
+
+  /* ---------- Nintendo ---------- */
+  {id:'fc',brand:'nintendo',shape:'flat',name:'Family Computer / NES',year:'1983（日本）/ 1985（北美）',media:'ROM 卡带',sales:'约 6,190 万台',
+   cpu:'Ricoh 2A03（6502 核心）@ 1.79 MHz',gpu:'Ricoh 2C02 PPU，256×240，同屏 25 色',ram:'2 KB 主内存 + 2 KB 显存',
+   control:'方形十字键手柄，A / B / Select / Start',
+   ops:'插入卡带、打开电源；日版手柄直连主机，第二手柄带麦克风。北美 NES 采用前插式卡带以模仿录像机外观。',
+   history:'在「雅达利大崩溃」后以严格的授权制度与「品质保证印章」重建行业信心；十字键与《超级马力欧兄弟》定义了现代游戏的基本语法。',
+   perf:'8 位 CPU 与硬件卷轴支持在当时足以流畅运行动作游戏；后期卡带内的 MMC 扩展芯片突破了原始硬件限制。'},
+  {id:'sfc',brand:'nintendo',shape:'flat',name:'Super Famicom / SNES',year:'1990（日本）/ 1991（北美）',media:'ROM 卡带',sales:'约 4,910 万台',
+   cpu:'Ricoh 5A22（65C816 核心）@ 3.58 MHz',gpu:'双 PPU，256×224，同屏 256 色，Mode 7 缩放旋转',ram:'128 KB 主内存 + 64 KB 显存',
+   control:'首创肩键 L / R，六面按键布局',
+   ops:'卡带内可搭载 Super FX 等增强芯片（《星际火狐》的 3D 多边形即由此实现）。',
+   history:'16 位战争的最终赢家，Mode 7 与索尼设计的 SPC700 音源芯片让 2D 表现达到巅峰。与索尼合作 CD 扩展的破裂直接催生了 PlayStation。',
+   perf:'CPU 主频偏低，但 PPU 的图层与特效能力弥补了短板；大量经典作品依赖卡带内增强芯片。'},
+  {id:'n64',brand:'nintendo',shape:'flat',name:'Nintendo 64',year:'1996',media:'ROM 卡带（最大 64 MB）',sales:'约 3,290 万台',
+   cpu:'NEC VR4300（MIPS R4300i）64 位 @ 93.75 MHz',gpu:'SGI Reality Coprocessor @ 62.5 MHz，硬件 Z-buffer 与双线性过滤',ram:'4 MB RDRAM（可扩展至 8 MB）',
+   control:'三叉手柄，首创模拟摇杆与 Z 扳机，可插震动包',
+   ops:'四个手柄接口原生支持 4 人同乐；卡带无加载时间但容量有限，导致过场动画与音频被压缩。',
+   history:'《超级马力欧 64》与《塞尔达传说：时光之笛》确立了 3D 游戏的相机与操作范式；坚持卡带导致第三方（尤其 Square）转投索尼。',
+   perf:'硬件抗锯齿与 Z-buffer 让画面比 PS1 稳定，但 4 KB 贴图缓存与内存带宽瓶颈造成典型的模糊贴图。'},
+  {id:'gc',brand:'nintendo',shape:'cube',name:'GameCube',year:'2001',media:'8 cm 迷你光盘（1.5 GB）',sales:'约 2,170 万台',
+   cpu:'IBM Gekko PowerPC @ 485 MHz',gpu:'ATI/ArtX Flipper @ 162 MHz，3 MB 嵌入式显存',ram:'24 MB 1T-SRAM + 16 MB DRAM',
+   control:'GameCube 手柄，大 A 键中心布局，模拟肩键',
+   ops:'立方体外形带提手，专注纯游戏功能，不支持 DVD 播放；可连接 GBA 作为第二屏幕。',
+   history:'任天堂首台光盘主机，性能扎实但迷你光盘容量与「儿童向」印象限制了第三方支持，销量在本代垫底。',
+   perf:'架构高效、易于开发，实际画面表现常优于 PS2；Gekko + Flipper 的组合被 Wii 直接沿用。'},
+  {id:'wii',brand:'nintendo',shape:'tall',name:'Wii',year:'2006',media:'12 cm 光盘 / GameCube 光盘',sales:'约 1.016 亿台',
+   cpu:'IBM Broadway PowerPC @ 729 MHz',gpu:'ATI Hollywood @ 243 MHz',ram:'88 MB',
+   control:'Wii Remote 体感遥控器 + Nunchuk，红外指向 + 加速度计',
+   ops:'挥动遥控器即可操作，《Wii Sports》让不玩游戏的家庭成员也参与；支持 GameCube 向下兼容与 Virtual Console 经典游戏下载。',
+   history:'放弃性能竞争，以体感操作开辟蓝海市场，成为任天堂历史上最畅销的家用机，并迫使索尼与微软推出各自的体感方案。',
+   perf:'本质是超频版 GameCube，仅输出 480p，无高清能力；性能差距使其后期第三方支持迅速枯竭。'},
+  {id:'wiiu',brand:'nintendo',shape:'flat',name:'Wii U',year:'2012',media:'Wii U 光盘（25 GB）/ Wii 光盘',sales:'约 1,356 万台',
+   cpu:'IBM Espresso 3 核 PowerPC @ 1.24 GHz',gpu:'AMD Latte @ 550 MHz，32 MB eDRAM',ram:'2 GB DDR3',
+   control:'GamePad 带 6.2 英寸触摸屏的大型手柄',
+   ops:'GamePad 可作为第二屏幕或脱离电视独立游玩（需在主机信号范围内）；这一「离屏游玩」概念后来被 Switch 发扬。',
+   history:'命名与定位混乱导致消费者误认为是 Wii 配件，商业失败；但其双屏思路与《塞尔达传说：旷野之息》等作品为 Switch 铺路。',
+   perf:'任天堂首台高清主机，性能与 PS3 / Xbox 360 相当，落后同期新机一代。'},
+  {id:'switch',brand:'nintendo',shape:'handheld',name:'Nintendo Switch / OLED',year:'2017 / 2021（OLED）',media:'游戏卡 / 数字下载',sales:'超过 1.5 亿台',
+   cpu:'NVIDIA Tegra X1，4× ARM Cortex-A57 @ 1.02 GHz',gpu:'NVIDIA Maxwell 256 CUDA 核心，主机模式 768 MHz / 掌机模式 307–460 MHz',ram:'4 GB LPDDR4',
+   control:'Joy-Con 可拆分手柄，HD 震动、红外摄像头、体感',
+   ops:'三种模式：插入底座输出电视、桌面支架模式、掌机模式。Joy-Con 拆分即可双人游玩。OLED 版屏幕升级至 7 英寸。',
+   history:'主机 / 掌机融合形态终结了任天堂掌机与家用机两条产品线，成为任天堂销量最高的硬件；证明了「便携 + 独占内容」比原始性能更能定义产品。',
+   perf:'移动 SoC 性能约为 Xbox One 的 1/4 到 1/3，掌机模式下再降频。第三方大作依赖动态分辨率与云串流。'},
+  {id:'switch2',brand:'nintendo',shape:'handheld',name:'Nintendo Switch 2',year:'2025',media:'游戏卡 / 密钥卡 / 数字下载',sales:'首年超过 1,500 万台（估计）',
+   cpu:'NVIDIA 定制 T239，8× ARM Cortex-A78C',gpu:'NVIDIA Ampere 1536 CUDA 核心，支持 DLSS 与硬件光追',ram:'12 GB LPDDR5X',
+   control:'Joy-Con 2，磁吸连接，可作为鼠标使用',
+   ops:'7.9 英寸 1080p 120 Hz LCD 屏幕，底座模式最高 4K 输出；新增 GameChat 语音视频聊天与 C 键。向下兼容 Switch 游戏。',
+   history:'任天堂首次以「直接续作」命名新主机，延续融合形态而非重新定义，标志着 Switch 形态已成为公司的长期基础平台。',
+   perf:'账面算力约为 Switch 的 4–6 倍，依赖 DLSS 上采样达到 4K；掌机模式下功耗限制明显。公开信息有限，部分参数来自拆解推断。'},
+
+  /* ---------- 小霸王 ---------- */
+  {id:'xbw-fc',brand:'xiaobawang',shape:'flat',name:'小霸王 FC 兼容机',year:'1991 起',media:'FC 兼容卡带（60 针）',sales:'未公布，估计数千万台（含各代兼容机）',
+   cpu:'6502 兼容核心（NES-on-a-chip 单片方案）@ 1.79 MHz',gpu:'PPU 兼容，256×240',ram:'2 KB + 2 KB（与 FC 一致）',
+   control:'两个 FC 样式手柄，部分型号含光枪',
+   ops:'插入卡带、打开电源即可游玩；常见「N 合 1」卡带集合了《超级马力欧》《魂斗罗》《坦克大战》等。售价远低于原装 FC。',
+   history:'中山小霸王于 1991 年前后推出 FC 兼容机，以极低价格让 FC 游戏进入普通中国家庭，成为中国大陆第一代玩家的集体记忆。其身份是「兼容机」而非授权产品。',
+   perf:'硬件能力与原版 FC 基本一致；单片方案降低了成本但也带来兼容性与音色差异。'},
+  {id:'xbw-study',brand:'xiaobawang',shape:'flat',name:'小霸王学习机（SB-486 / SB-2000 等）',year:'1993 – 2000 年代',media:'FC 兼容卡带 + 学习卡带',sales:'累计超过 2,000 万台（据厂商宣传）',
+   cpu:'6502 兼容核心 @ 1.79 MHz',gpu:'PPU 兼容，256×240',ram:'2 KB + 2 KB，部分型号扩展',
+   control:'全尺寸键盘一体机 + 两个手柄，支持鼠标（部分型号）',
+   ops:'插入学习卡可练习打字、五笔、BASIC 编程、简单文字处理；插入游戏卡即为 FC 兼容机。1994 年成龙代言广告「小霸王其乐无穷」家喻户晓。',
+   history:'以「学习机」名义规避家长对游戏机的抵触，是 1990 年代中国家庭「电脑启蒙」与游戏娱乐的双重载体；也是中国最成功的本土游戏硬件品牌之一。',
+   perf:'本质仍是 8 位 FC 硬件，「学习」功能受限于 2 KB 内存与无存储能力；其价值在于市场定位而非技术。'},
+  {id:'xbw-late',brand:'xiaobawang',shape:'flat',name:'小霸王后期复古 / 体感机',year:'2010 年代 – 2018',media:'内置游戏 / SD 卡',sales:'未公布',
+   cpu:'ARM 或 MIPS 低功耗 SoC（型号各异）',gpu:'集成图形，支持多平台模拟器',ram:'数百 MB',
+   control:'体感手柄 / 复古手柄',
+   ops:'内置数百款 FC / MD / 街机模拟游戏，部分型号提供体感运动游戏；2018 年宣布的「小霸王 Z+」AMD 定制 PC 主机项目因资金问题失败。',
+   history:'品牌在 FC 时代之后多次尝试转型（复古机、体感机、高端 PC 主机），均未重现早期辉煌；2020 年前后公司陷入债务清算。',
+   perf:'以模拟器运行经典游戏为主，性能足以运行 8 / 16 位游戏，但缺乏原创内容与生态。'},
+
+  /* ---------- Steam ---------- */
+  {id:'steammachine2015',brand:'steam',shape:'flat',name:'Steam Machine（第一代）',year:'2015',media:'数字下载（Steam）',sales:'估计不足 50 万台',
+   cpu:'各 OEM 自定（Intel / AMD 多种配置）',gpu:'各 OEM 自定（NVIDIA GTX 系列为主）',ram:'4 – 16 GB，视厂商而定',
+   control:'Steam Controller，双触摸板 + 陀螺仪',
+   ops:'运行 SteamOS（Debian 系 Linux），由 Alienware、Zotac 等第三方厂商生产多种配置的主机。',
+   history:'Valve 试图用 Linux 主机对抗 Windows 生态的首次尝试。Linux 游戏兼容性差、定价与 PC 无异、缺乏统一规格，导致商业失败。但其经验直接催生了 Proton 兼容层与 Steam Deck。',
+   perf:'性能完全取决于 OEM 配置，从入门到高端跨度极大，反而让消费者无法理解「它是什么」。'},
+  {id:'steamdeck',brand:'steam',shape:'handheld',name:'Steam Deck LCD / OLED',year:'2022 / 2023（OLED）',media:'数字下载（Steam）/ microSD',sales:'估计超过 500 万台',
+   cpu:'AMD Zen 2 4 核 8 线程 @ 2.4 – 3.5 GHz',gpu:'AMD RDNA 2 8 CU @ 1.0 – 1.6 GHz，约 1.6 TFLOPS',ram:'16 GB LPDDR5（OLED：6400 MT/s）',
+   control:'内置双摇杆、双触摸板、陀螺仪、4 个背键',
+   ops:'运行 SteamOS 3（Arch Linux + Proton），可直接游玩绝大多数 Steam 游戏；支持桌面模式作为完整 Linux PC 使用。OLED 版屏幕升级为 7.4 英寸 HDR OLED 90 Hz，续航提升 30–50%。',
+   history:'证明了 x86 掌机 PC 的可行性，直接引发华硕 ROG Ally、联想 Legion Go 等 Windows 掌机跟进；Proton 使 Linux 游戏兼容性从「不可用」变为「基本可用」。',
+   perf:'约 1.6 TFLOPS 在 800p 分辨率下足以运行多数 3A 游戏（30–60 fps），15 W TDP 上限是主要约束；FSR 上采样是常规手段。'},
+  {id:'steammachine2026',brand:'steam',shape:'cube',name:'Steam Machine（2026）',year:'2026 年 6 月',media:'数字下载（Steam）',sales:'刚上市',
+   cpu:'AMD Zen 4 6 核 12 线程，最高 4.8 GHz',gpu:'AMD RDNA 3 半定制 28 CU，约 8 GB GDDR6，目标 4K 60 fps（配合 FSR）',ram:'16 GB DDR5',
+   control:'新一代 Steam Controller，磁吸摇杆 + 触摸板 + 陀螺仪',
+   ops:'约 15 cm 立方体形态，运行 SteamOS，接电视即用；支持 4K 输出、HDMI 2.1、Wi-Fi 6E。与 Steam Deck 同步游戏库与存档。',
+   history:'Valve 十年后重返客厅主机市场。与 2015 年不同，本次由 Valve 自行设计统一硬件规格并依托成熟的 Proton 生态，被视为对 PS5 / Xbox Series 的直接挑战。',
+   perf:'账面 GPU 算力约为 Steam Deck 的 6 倍以上，Valve 宣称「4K 60 fps 配合 FSR」；实际表现取决于 Proton 兼容性与功耗设计，尚待大规模验证。'}
+];
+
+const COMPARE = [
+  {name:'PlayStation 5',sub:'2020',cpu:'Zen 2 8 核 @ 3.5 GHz',gpu:'RDNA 2 · 36 CU · 10.28 TFLOPS',ram:'16 GB GDDR6',storage:'825 GB / 1 TB NVMe（5.5 GB/s）',target:'4K 30–60 fps，支持光追',form:'客厅主机'},
+  {name:'PlayStation 5 Pro',sub:'2024',cpu:'Zen 2 8 核 @ 3.85 GHz',gpu:'RDNA · 60 CU · 约 16.7 TFLOPS，PSSR',ram:'16 GB GDDR6 + 2 GB DDR5',storage:'2 TB NVMe',target:'4K 60 fps，增强光追',form:'客厅主机'},
+  {name:'Xbox Series X',sub:'2020',cpu:'Zen 2 8 核 @ 3.8 GHz',gpu:'RDNA 2 · 52 CU · 12.15 TFLOPS',ram:'16 GB GDDR6',storage:'1 TB NVMe（2.4 GB/s）',target:'4K 60 fps，最高 120 fps',form:'客厅主机'},
+  {name:'Xbox Series S',sub:'2020',cpu:'Zen 2 8 核 @ 3.6 GHz',gpu:'RDNA 2 · 20 CU · 4 TFLOPS',ram:'10 GB GDDR6',storage:'512 GB / 1 TB NVMe',target:'1440p 60 fps',form:'客厅主机（纯数字）'},
+  {name:'Steam Deck OLED',sub:'2023',cpu:'Zen 2 4 核 @ 2.4–3.5 GHz',gpu:'RDNA 2 · 8 CU · 约 1.6 TFLOPS',ram:'16 GB LPDDR5',storage:'512 GB / 1 TB NVMe + microSD',target:'800p 30–60 fps',form:'掌机 PC'},
+  {name:'Steam Machine (2026)',sub:'2026',cpu:'Zen 4 6 核 @ 最高 4.8 GHz',gpu:'RDNA 3 · 28 CU · 8 GB GDDR6',ram:'16 GB DDR5',storage:'512 GB / 2 TB NVMe',target:'4K 60 fps（配合 FSR）',form:'客厅主机（SteamOS）'},
+  {name:'Nintendo Switch 2',sub:'2025 · 公开信息有限',cpu:'ARM Cortex-A78C 8 核（定制 T239）',gpu:'Ampere · 1536 CUDA · 支持 DLSS / 光追',ram:'12 GB LPDDR5X',storage:'256 GB UFS + microSD Express',target:'掌机 1080p / 底座最高 4K（DLSS）',form:'主机 / 掌机融合'}
+];
+
+/* ========== RENDER ========== */
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+// Stats
+const stats=[[GENERATIONS.length,'主机世代'],[CONSOLES.length,'核心机型'],['54','年历史跨度'],[Object.keys(BRANDS).length,'厂商系列']];
+$('#stats').innerHTML=stats.map(([n,l])=>`<div class="stat"><b>${n}</b><small>${l}</small></div>`).join('');
+
+// Timeline
+$('#timelineList').innerHTML=GENERATIONS.map(g=>`
+  <article class="gen">
+    <div class="gen-top"><span class="num">GEN ${String(g.n).padStart(2,'0')}</span><h3>${esc(g.name)}</h3><span class="years">${esc(g.years)}</span></div>
+    <p>${esc(g.desc)}</p>
+    <div class="chips">${g.chips.map(([n,b])=>`<span class="chip ${b}">${esc(n)}</span>`).join('')}</div>
+  </article>`).join('');
+
+// Tabs
+const TABS=[['all','全部'],...Object.entries(BRANDS).map(([k,v])=>[k,v.label])];
+let current='all';
+const tabsEl=$('#tabs');
+tabsEl.innerHTML=TABS.map(([k,l])=>`<button class="tab${k==='all'?' active':''}" data-brand="${k}" role="tab">${l}</button>`).join('');
+tabsEl.addEventListener('click',e=>{
+  const b=e.target.closest('.tab');if(!b)return;
+  current=b.dataset.brand;
+  tabsEl.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active',t===b));
+  renderGrid();
+});
+
+// Grid
+function box3d(shape){return `<div class="box3d ${shape}"><div class="f back"></div><div class="side l"></div><div class="side r"></div><div class="side t"></div><div class="side b"></div><div class="f front"></div></div>`;}
+function renderGrid(){
+  const list=current==='all'?CONSOLES:CONSOLES.filter(c=>c.brand===current);
+  $('#grid').innerHTML=list.length?list.map((c,i)=>`
+    <article class="card" data-brand="${c.brand}" style="animation-delay:${i*40}ms">
+      <div class="card-visual"><span class="badge">${BRANDS[c.brand].short}</span><span class="year-tag">${esc(c.year.split(/[（(/]/)[0].trim())}</span>${box3d(c.shape)}</div>
+      <div class="card-body">
+        <h3>${esc(c.name)}</h3>
+        <div class="card-meta"><span>年份 <b>${esc(c.year)}</b></span><span>介质 <b>${esc(c.media)}</b></span></div>
+        <div class="card-spec">
+          <div><i>CPU</i><span title="${esc(c.cpu)}">${esc(c.cpu)}</span></div>
+          <div><i>GPU</i><span title="${esc(c.gpu)}">${esc(c.gpu)}</span></div>
+          <div><i>RAM</i><span title="${esc(c.ram)}">${esc(c.ram)}</span></div>
+        </div>
+        <button class="btn" data-id="${c.id}">详情 →</button>
+      </div>
+    </article>`).join(''):`<div class="empty">暂无机型</div>`;
+}
+renderGrid();
+$('#grid').addEventListener('click',e=>{const b=e.target.closest('.btn');if(b)openModal(b.dataset.id);});
+
+// Compare
+$('#compareBody').innerHTML=COMPARE.map(r=>`<tr><td>${esc(r.name)}<span class="sub">${esc(r.sub)}</span></td><td>${esc(r.cpu)}</td><td>${esc(r.gpu)}</td><td>${esc(r.ram)}</td><td>${esc(r.storage)}</td><td>${esc(r.target)}</td><td>${esc(r.form)}</td></tr>`).join('');
+
+// Modal
+const modal=$('#modal'),modalBox=$('#modalBox');let lastFocus=null;
+function openModal(id){
+  const c=CONSOLES.find(x=>x.id===id);if(!c)return;
+  modalBox.style.setProperty('--brand',`var(--${c.brand}-l)`);
+  $('#modalContent').innerHTML=`
+    <div class="m-brand">${BRANDS[c.brand].label.toUpperCase()}</div>
+    <h2 id="mTitle">${esc(c.name)}</h2>
+    <div class="m-meta"><span><b>年份</b>${esc(c.year)}</span><span><b>介质</b>${esc(c.media)}</span><span><b>销量</b>${esc(c.sales)}</span></div>
+    <div class="m-sec"><h4>核心规格</h4><div class="specs"><div><i>CPU</i><span>${esc(c.cpu)}</span></div><div><i>GPU</i><span>${esc(c.gpu)}</span></div><div><i>内存</i><span>${esc(c.ram)}</span></div></div></div>
+    <div class="m-sec"><h4>操作方式</h4><div class="ops-grid"><div><i>控制器</i><span>${esc(c.control)}</span></div><div><i>使用说明</i><span>${esc(c.ops)}</span></div></div></div>
+    <div class="m-sec"><h4>历史意义</h4><p>${esc(c.history)}</p></div>
+    <div class="m-sec"><h4>性能讲解</h4><p>${esc(c.perf)}</p></div>`;
+  lastFocus=document.activeElement;
+  modal.classList.add('open');document.body.style.overflow='hidden';
+  $('#modalClose').focus();
+}
+function closeModal(){modal.classList.remove('open');document.body.style.overflow='';if(lastFocus)lastFocus.focus();}
+$('#modalClose').addEventListener('click',closeModal);
+modal.addEventListener('click',e=>{if(e.target===modal)closeModal();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('open'))closeModal();});
+
+// Nav active state
+const links=[...document.querySelectorAll('.nav li a')];
+const io=new IntersectionObserver(entries=>{entries.forEach(en=>{if(en.isIntersecting){links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+en.target.id));}});},{rootMargin:'-40% 0px -55% 0px'});
+document.querySelectorAll('section[id]').forEach(s=>io.observe(s));
+</script>
+</body>
+</html>
