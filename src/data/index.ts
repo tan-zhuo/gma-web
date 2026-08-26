@@ -6,7 +6,7 @@ export const GENERATIONS = raw.generations as Generation[]
 export const CONSOLES = raw.consoles as Console[]
 export const COMPARE = raw.compare as CompareRow[]
 
-export const BRAND_ORDER: Brand[] = ['ps', 'xbox', 'nintendo', 'sega', 'xiaobawang', 'steam', 'classic']
+export const BRAND_ORDER: Brand[] = ['ps', 'xbox', 'nintendo', 'sega', 'xiaobawang', 'steam', 'winpc', 'classic']
 
 export const NAV_LINKS = [
   { to: '/timeline', label: '世代时间线' },

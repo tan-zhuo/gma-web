@@ -230,5 +230,37 @@
     "artist": "Evan-Amos",
     "license": "CC BY-SA 3.0",
     "bg": "light"
+  },
+  "rogally": {
+    "file": "/consoles/rogally.jpg",
+    "title": "File:Asus ROG Ally.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Asus_ROG_Ally.jpg",
+    "artist": "TheHDGamer2008",
+    "license": "CC BY-SA 4.0",
+    "bg": "photo"
+  },
+  "rogxboxally": {
+    "file": "/consoles/rogxboxally.jpg",
+    "title": "File:ROG XBOX ALLY and ROG XBOX ALLY X.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:ROG_XBOX_ALLY_and_ROG_XBOX_ALLY_X.jpg",
+    "artist": "Kyu3a",
+    "license": "CC BY-SA 4.0",
+    "bg": "photo"
+  },
+  "legiongo": {
+    "file": "/consoles/legiongo.jpg",
+    "title": "File:Lenovo Legion Go.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Lenovo_Legion_Go.jpg",
+    "artist": "TaurusEmerald",
+    "license": "CC BY-SA 4.0",
+    "bg": "photo"
+  },
+  "msiclaw": {
+    "file": "/consoles/msiclaw.jpg",
+    "title": "File:MSI Claw - Co poszło nie tak¿ (2160p 30fps AV1-128kbit AAC)-00.08.15.665.png",
+    "page": "https://commons.wikimedia.org/wiki/File:MSI_Claw_-_Co_posz%C5%82o_nie_tak%C2%BF_(2160p_30fps_AV1-128kbit_AAC)-00.08.15.665.png",
+    "artist": "ZMASLO",
+    "license": "CC BY 3.0",
+    "bg": "photo"
   }
 }

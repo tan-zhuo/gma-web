@@ -12,6 +12,7 @@
   --color-nintendo: #e60012; --color-nintendo-l: #ff4d5a;
   --color-steam: #1b2838; --color-steam-l: #66c0f4;
   --color-xiaobawang: #ff6b00; --color-xiaobawang-l: #ff9a4d;
+  --color-winpc: #5b2fd6; --color-winpc-l: #a78bfa;
   --color-sega: #0060a8; --color-sega-l: #2d8cff;
   --color-classic: #8a6a2a; --color-classic-l: #e0b25a;
   --font-head: 'Orbitron', system-ui, sans-serif;
@@ -117,6 +118,7 @@ body::after {
 [data-brand='nintendo']   { --brand: var(--color-nintendo);   --brand-l: var(--color-nintendo-l);   --brand-glow: rgba(255,77,90,.32); }
 [data-brand='steam']      { --brand: var(--color-steam);      --brand-l: var(--color-steam-l);      --brand-glow: rgba(102,192,244,.35); }
 [data-brand='sega']       { --brand: var(--color-sega);       --brand-l: var(--color-sega-l);       --brand-glow: rgba(45,120,255,.32); }
+[data-brand='winpc']      { --brand: var(--color-winpc);      --brand-l: var(--color-winpc-l);      --brand-glow: rgba(167,139,250,.32); }
 [data-brand='classic']    { --brand: var(--color-classic);    --brand-l: var(--color-classic-l);    --brand-glow: rgba(200,160,80,.32); }
 [data-brand='xiaobawang'] { --brand: var(--color-xiaobawang); --brand-l: var(--color-xiaobawang-l); --brand-glow: rgba(255,107,0,.35); }
 

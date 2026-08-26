@@ -8,7 +8,7 @@ export function CompareTable() {
   return (
     <section className="pb-20 max-[720px]:pb-14">
       <PageHead no="03" tag="Benchmark" title="当代性能横向对比"
-          desc="第九代主机与 Steam 硬件的账面规格。GPU 一栏附 FP32 TFLOPS 相对条，仅反映理论峰值——不同架构之间不可直接换算为帧率。" />
+          desc="第九代主机、Steam 硬件与 Windows 掌机的账面规格。GPU 一栏附 FP32 TFLOPS 相对条，仅反映理论峰值——不同架构之间不可直接换算为帧率。" />
       <div className="container-x">
         <div className="overflow-x-auto glass rounded-2xl">
           <table className="w-full min-w-[960px] text-[13.5px] border-collapse">

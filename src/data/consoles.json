@@ -27,6 +27,10 @@
     "classic": {
       "label": "其他经典",
       "short": "CLASSIC"
+    },
+    "winpc": {
+      "label": "Windows 掌机",
+      "short": "WIN PC"
     }
   },
   "generations": [
@@ -218,7 +222,7 @@
       "n": 9,
       "name": "第九代 · SSD、光追与掌机 PC",
       "years": "2020 – 至今",
-      "desc": "PS5 与 Xbox Series 以 NVMe SSD 与硬件光追为标志。Steam Deck 证明了 x86 掌机可行性，Valve 于 2026 年重返客厅主机市场。Switch 2 延续融合形态。",
+      "desc": "PS5 与 Xbox Series 以 NVMe SSD 与硬件光追为标志。Steam Deck 证明了 x86 掌机可行性，随即引来华硕、联想、微星的 Windows 掌机跟进，微软也以 ROG Xbox Ally 入局；Valve 于 2026 年重返客厅主机市场。Switch 2 延续融合形态。",
       "chips": [
         [
           "PlayStation 5 / Pro",
@@ -239,6 +243,14 @@
         [
           "Steam Machine (2026)",
           "steam"
+        ],
+        [
+          "ROG Ally",
+          "winpc"
+        ],
+        [
+          "ROG Xbox Ally",
+          "winpc"
         ]
       ]
     }
@@ -933,6 +945,98 @@
         "索尼克大冒险"
       ],
       "price": "¥29,800 / $199"
+    },
+    {
+      "id": "rogally",
+      "brand": "winpc",
+      "shape": "handheld",
+      "name": "ASUS ROG Ally / Ally X",
+      "year": "2023 / 2024（Ally X）",
+      "media": "数字下载（Windows：Steam / Xbox / Epic 等）",
+      "sales": "估计超过 100 万台（含 Ally X）",
+      "cpu": "AMD Ryzen Z1 Extreme，Zen 4 8 核 16 线程，最高 5.1 GHz",
+      "gpu": "AMD RDNA 3 12 CU @ 最高 2.7 GHz，约 8.6 TFLOPS",
+      "ram": "16 GB LPDDR5（Ally X：24 GB LPDDR5X-7500）",
+      "control": "内置双摇杆、Xbox 布局按键、背键、陀螺仪；Ally X 改用更大电池与人体工学握把",
+      "ops": "7 英寸 1080p 120 Hz 屏幕，运行 Windows 11 + Armoury Crate 启动器，可安装任何 PC 游戏平台；支持 XG Mobile 外接显卡（初代）。Ally X 电池翻倍至 80 Wh。",
+      "history": "Steam Deck 发布一年后的首个主流大厂 Windows 掌机，证明了传统 PC 厂商愿意跟进这一品类；同时也暴露了 Windows 在掌机上的操作与休眠问题。",
+      "perf": "Z1 Extreme 的账面算力约为 Steam Deck 的 5 倍，但 Windows 开销与功耗墙让实际优势在 15–25 W 区间明显缩小；30 W 模式下差距才拉开。",
+      "tagline": "第一台主流大厂 Windows 掌机",
+      "games": [
+        "赛博朋克 2077",
+        "艾尔登法环",
+        "极限竞速：地平线 5"
+      ],
+      "price": "$699（Ally X $799）"
+    },
+    {
+      "id": "legiongo",
+      "brand": "winpc",
+      "shape": "handheld",
+      "name": "Lenovo Legion Go / Go S",
+      "year": "2023 / 2025（Go S）",
+      "media": "数字下载（Windows 或 SteamOS）",
+      "sales": "未公布",
+      "cpu": "AMD Ryzen Z1 Extreme（Go S：Z2 Go / Z1 Extreme）",
+      "gpu": "AMD RDNA 3 12 CU，约 8.6 TFLOPS（Z2 Go：RDNA 2 12 CU）",
+      "ram": "16 GB LPDDR5X（Go S：16 / 32 GB）",
+      "control": "可拆卸 TrueStrike 手柄（类 Joy-Con），右手柄可竖立作为 FPS 鼠标使用",
+      "ops": "8.8 英寸 2560×1600 144 Hz 大屏 + 支架，手柄拆下可当桌面模式。2025 年 Legion Go S 推出官方 SteamOS 版本，是首台非 Valve 的 SteamOS 授权掌机。",
+      "history": "把 Switch 的可拆手柄思路带进 PC 掌机，并在 2025 年成为 Valve 开放 SteamOS 授权的第一个合作伙伴，标志着 SteamOS 开始向第三方硬件扩散。",
+      "perf": "与 ROG Ally 同芯片，但屏幕分辨率更高，原生 1600p 运行压力大，实际多用 1200p 或 800p 拉伸。",
+      "tagline": "可拆手柄 + 首台第三方 SteamOS 掌机",
+      "games": [
+        "博德之门 3",
+        "星空",
+        "死亡搁浅"
+      ],
+      "price": "$699（Go S $599 / SteamOS 版 $549）"
+    },
+    {
+      "id": "msiclaw",
+      "brand": "winpc",
+      "shape": "handheld",
+      "name": "MSI Claw / Claw 8 AI+",
+      "year": "2024 / 2025（8 AI+）",
+      "media": "数字下载（Windows）",
+      "sales": "未公布",
+      "cpu": "Intel Core Ultra 7 155H（8 AI+：Core Ultra 7 258V，Lunar Lake）",
+      "gpu": "Intel Arc 8 Xe 核心（8 AI+：Arc 140V）",
+      "ram": "16 GB LPDDR5（8 AI+：32 GB LPDDR5X）",
+      "control": "霍尔效应摇杆与扳机，Xbox 布局",
+      "ops": "7 英寸 1080p 120 Hz（8 AI+：8 英寸）；运行 Windows 11 + MSI Center M。初代驱动与兼容性问题严重，8 AI+ 换用 Lunar Lake 后续航与性能大幅改善。",
+      "history": "唯一坚持 Intel 平台的主流 Windows 掌机。初代因驱动不成熟口碑不佳，但 Lunar Lake 版本证明了 Intel 集显在掌机功耗区间已具竞争力。",
+      "perf": "初代在 15–25 W 下落后于 Z1 Extreme；Claw 8 AI+ 的 Arc 140V 在同功耗下反超，且续航更长。",
+      "tagline": "坚持 Intel 路线的另类选择",
+      "games": [
+        "黑神话：悟空",
+        "哈迪斯 II",
+        "FIFA / EA FC"
+      ],
+      "price": "$699（8 AI+ $899）"
+    },
+    {
+      "id": "rogxboxally",
+      "brand": "winpc",
+      "shape": "handheld",
+      "name": "ROG Xbox Ally / Ally X",
+      "year": "2025 年 10 月",
+      "media": "数字下载（Windows 11 + Xbox 全屏体验）",
+      "sales": "刚上市",
+      "cpu": "AMD Ryzen Z2 A（Ally）/ Ryzen AI Z2 Extreme，Zen 5 8 核（Ally X）",
+      "gpu": "RDNA 2 8 CU（Ally）/ RDNA 3.5 16 CU（Ally X）",
+      "ram": "16 GB LPDDR5（Ally）/ 24 GB LPDDR5X-8000（Ally X）",
+      "control": "Xbox 样式握把与按键布局，新增 Xbox 键呼出全屏 Xbox 界面；Ally X 带脉冲扳机",
+      "ops": "微软与华硕联合设计。开机直接进入「Xbox 全屏体验」，隐藏 Windows 桌面以降低开销；聚合 Xbox / Steam / Epic 等平台的游戏库，支持 Game Pass 与云游戏。",
+      "history": "微软首次以 Xbox 品牌进入掌机市场，且选择与 OEM 合作而非自研硬件；「Xbox 全屏体验」是微软对 Steam Deck 式主机化操作系统的直接回应，也预示了下一代 Xbox 的 PC 化方向。",
+      "perf": "Ally X 的 Z2 Extreme 是当前最强掌机 APU，RDNA 3.5 16 CU 在 25–35 W 下明显领先 Z1 Extreme；入门版 Ally 的 Z2 A 性能仅与 Steam Deck 相当。",
+      "tagline": "微软以 Xbox 之名进入掌机市场",
+      "games": [
+        "光环：无限",
+        "极限竞速：地平线 5",
+        "使命召唤（Game Pass）"
+      ],
+      "price": "$599（Ally X $999）"
     }
   ],
   "compare": [
@@ -1012,6 +1116,28 @@
       "target": "掌机 1080p / 底座最高 4K（DLSS）",
       "form": "主机 / 掌机融合",
       "tflops": 3.1
+    },
+    {
+      "name": "ROG Ally X",
+      "sub": "2024 · Windows 掌机",
+      "cpu": "Zen 4 8 核 @ 最高 5.1 GHz（Z1 Extreme）",
+      "gpu": "RDNA 3 · 12 CU · 约 8.6 TFLOPS",
+      "ram": "24 GB LPDDR5X",
+      "storage": "1 TB NVMe + microSD",
+      "target": "1080p 30–60 fps（15–30 W）",
+      "form": "Windows 掌机",
+      "tflops": 8.6
+    },
+    {
+      "name": "ROG Xbox Ally X",
+      "sub": "2025 · Windows 掌机",
+      "cpu": "Zen 5 8 核（Ryzen AI Z2 Extreme）",
+      "gpu": "RDNA 3.5 · 16 CU",
+      "ram": "24 GB LPDDR5X",
+      "storage": "1 TB NVMe + microSD",
+      "target": "1080p 60 fps（25–35 W）",
+      "form": "Windows 掌机（Xbox 全屏体验）",
+      "tflops": null
     }
   ]
 }
